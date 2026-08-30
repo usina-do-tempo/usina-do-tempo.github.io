@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentoria Regente · Turma Fundadora</title>
+<meta name="description" content="20 horas ao vivo para trocar o uso improvisado de IA por um método — com o ganho medido, tarefa por tarefa. Turma fundadora, R$ 997.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF8F4; --panel:#FFFFFF; --deep:#1E2A3A; --deep-ink:#F2EFE8;
+    --ink:#22262E; --muted:#5C6370; --accent:#9A6B15; --accent-soft:#F1E5CC;
+    --line:#E5E0D6; --ok:#3E6B4F;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:"Source Sans 3",system-ui,sans-serif;font-size:17px;line-height:1.6}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+  .wrap{max-width:680px;margin:0 auto;padding:0 1.25rem}
+
+  /* hero */
+  header.hero{background:var(--deep);color:var(--deep-ink);padding:3rem 0 3.4rem}
+  .brand{font-family:"IBM Plex Mono",monospace;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#C9A45C;margin-bottom:1.4rem}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(1.8rem,6vw,2.6rem);line-height:1.18;text-wrap:balance;color:#FFFFFF}
+  .hero p.lede{margin-top:1rem;font-size:1.08rem;color:#C7CCD4;max-width:54ch}
+  .hero .lede b{color:#fff}
+  .cta{display:inline-block;margin-top:1.8rem;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;padding:.9rem 1.8rem;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+  .cta:hover{filter:brightness(1.08)}
+  .cta small{display:block;font-weight:400;font-size:.78rem;opacity:.85;margin-top:.15rem}
+  .gate{margin-top:1rem;font-size:.88rem;color:#9AA3AE}
+  .gate b{color:#C9A45C}
+
+  section{padding:2.6rem 0}
+  h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.45rem;margin-bottom:1.1rem;text-wrap:balance}
+  h2::after{content:"";display:block;width:3rem;height:3px;background:var(--accent);margin-top:.5rem;border-radius:2px}
+
+  /* pra quem é */
+  .quem p{max-width:60ch;margin-bottom:.7rem}
+
+  /* como funciona — cards */
+  .grid{display:grid;grid-template-columns:1fr;gap:.8rem;margin-top:1.2rem}
+  @media(min-width:560px){.grid{grid-template-columns:1fr 1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.2rem}
+  .card .k{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
+  .card p{font-size:.95rem;color:var(--ink)}
+  .card p b{color:var(--ink)}
+
+  /* leva */
+  ul.leva{list-style:none;display:flex;flex-direction:column;gap:.75rem;margin-top:1.2rem}
+  ul.leva li{display:grid;grid-template-columns:1.5rem 1fr;gap:.6rem;max-width:60ch}
+  ul.leva li::before{content:"✓";color:var(--ok);font-weight:700}
+
+  /* investimento */
+  .invest{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1.6rem;display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center}
+  .price{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:2.6rem;color:var(--accent);line-height:1;white-space:nowrap}
+  .price small{display:block;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-top:.45rem}
+  .invest .why{flex:1;min-width:230px;font-size:.93rem;color:var(--muted)}
+  .invest .why b{color:var(--ink)}
+
+  /* quem conduz */
+  .conduz p{max-width:60ch;color:var(--muted);font-size:.97rem}
+  .conduz b{color:var(--ink)}
+
+  /* CTA final */
+  .final{background:var(--accent-soft);border-radius:12px;padding:1.8rem;text-align:center}
+  .final h2::after{margin-left:auto;margin-right:auto}
+  .final p{max-width:46ch;margin:0 auto .4rem}
+  .final .cta{box-shadow:none}
+
+  footer{border-top:1px solid var(--line);padding:1.6rem 0 2.4rem;font-size:.8rem;color:var(--muted)}
+
+  /* modo de edição (padrão do projeto) */
+  .edit-fab{position:fixed;right:14px;bottom:14px;z-index:50;display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+  .edit-fab button{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:20px;padding:.35rem .7rem;font-size:.72rem;cursor:pointer;opacity:.55}
+  .edit-fab button:hover{opacity:1}
+  .edit-fab .extra{display:none}
+  .edit-fab.open .extra{display:block}
+  #doc[contenteditable="true"]{outline:2px dashed var(--accent);outline-offset:6px}
+  @media print{.edit-fab{display:none}}
+</style>
+</head>
+<body>
+<div id="doc">
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">Mentoria Regente · Base + Fluxos</div>
+    <h1>Troque o uso improvisado de IA por um método — com o ganho medido</h1>
+    <p class="lede"><b>20 horas ao vivo e online</b> para transformar 2 a 3 tarefas reais do seu trabalho com IA — e sair com o tempo ganho medido, tarefa por tarefa. Não impressão: <b>número</b>.</p>
+    <a class="cta" href="https://forms.gle/QaEGoDdgx1CPKJuL9">Quero minha vaga na turma fundadora<small>ficha de inscrição · 2 minutos</small></a>
+    <p class="gate">A turma abre quando fecharmos <b>15 inscritos confirmados</b>.</p>
+  </div>
+</header>
+
+<section class="quem">
+  <div class="wrap">
+    <h2>Isso é pra você?</h2>
+    <p>Você já usa IA no dia a dia, mas sem método: pede de qualquer jeito, desconfia pela metade, não tem um jeito repetível de aplicar isso ao seu trabalho.</p>
+    <p>Esta turma fecha essa lacuna e vai além — você monta fluxos que rodam sozinhos, com verificação embutida. Vale para qualquer área: advocacia, serviço público, empresa, trabalho por conta própria. O diagnóstico inicial adapta os exercícios à sua realidade.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <div class="grid">
+      <div class="card"><div class="k">Carga horária</div><p><b class="mono">20h</b> ao vivo: <b class="mono">10</b> encontros de <b class="mono">2h</b> + <b>1 encontro presencial</b> de tira-dúvidas (bônus)</p></div>
+      <div class="card"><div class="k">Formato</div><p>100% online, ao vivo — e <b>todo encontro fica gravado</b> pra rever ou repor falta</p></div>
+      <div class="card"><div class="k">Agenda</div><p>A frequência dos encontros é combinada <b>com a turma na primeira aula</b> — o programa se adapta à agenda do grupo</p></div>
+      <div class="card"><div class="k">O arco</div><p>Encontros 1–3: o método. Encontros 4–9: fluxos na sua rotina. Encontro 10: <b>demoday</b> — cada um apresenta seu antes/depois</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>O que você leva</h2>
+    <ul class="leva">
+      <li>O método de prompt em 6 etapas + o checklist que pega erro e omissão antes de a resposta virar trabalho entregue</li>
+      <li>Clareza sobre onde pode — e onde nunca pode — entrar dado sensível</li>
+      <li>Pelo menos 1 fluxo documentado rodando na sua rotina, não só um prompt avulso</li>
+      <li>Um dossiê antes → depois de 2 a 3 tarefas reais, com o tempo ganho medido</li>
+      <li>As gravações de todos os encontros</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Investimento</h2>
+    <div class="invest">
+      <div class="price">R$ 997<small>por pessoa · turma fundadora</small></div>
+      <div class="why"><b>Por que tão abaixo do padrão desse formato?</b> É a primeira turma: em troca, pedimos seu depoimento com números no fechamento — o mesmo dossiê antes/depois que você já vai ter pronto. Nas próximas turmas, esse valor sobe.</div>
+    </div>
+  </div>
+</section>
+
+<section class="conduz">
+  <div class="wrap">
+    <h2>Quem conduz</h2>
+    <p>Dois mentores, entrega dividida: <b>Victor Falcão</b> e <b>Vinícius Sousa e Silva</b> — instrutores de IA aplicada ao trabalho, com turmas de capacitação já conduzidas para centenas de profissionais. Na clínica de cada encontro, seu caso real vai ao palco: você aplica, a turma aprende junto.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="final">
+      <h2>Garanta sua vaga</h2>
+      <p>Preencha a ficha (2 minutos) — ela já alimenta a preparação da turma com o seu perfil e as tarefas que você quer transformar.</p>
+      <a class="cta" href="https://forms.gle/QaEGoDdgx1CPKJuL9">Preencher a ficha de inscrição</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Realização: Usina do Tempo Marketing Ltda · CNPJ 59.267.749/0001-42 · Programa Regente<br>
+    Seus dados de inscrição são tratados conforme o aviso de privacidade da própria ficha (LGPD, art. 7º, V).
+  </div>
+</footer>
+</div>
+
+<div class="edit-fab" id="fab">
+  <button id="btnEdit" title="Modo de edição">✏️</button>
+  <button class="extra" id="btnExport">⬇️ Baixar HTML</button>
+  <button class="extra" id="btnReset">↩️ Restaurar</button>
+</div>
+<script>
+(function(){
+var doc=document.getElementById("doc"),KEY="landing-fundadora-edit",fab=document.getElementById("fab");
+try{var s=localStorage.getItem(KEY);if(s){doc.innerHTML=s;}}catch(e){}
+var editing=false,be=document.getElementById("btnEdit");
+be.onclick=function(){editing=!editing;doc.contentEditable=editing;fab.classList.toggle("open",editing);be.textContent=editing?"✅":"✏️";if(!editing){try{localStorage.setItem(KEY,doc.innerHTML);}catch(e){}}};
+document.getElementById("btnExport").onclick=function(){var h="<!DOCTYPE html>"+document.documentElement.outerHTML;var b=new Blob([h],{type:"text/html"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="mentoria-landing-fundadora.html";a.click();};
+document.getElementById("btnReset").onclick=function(){if(confirm("Descartar edições locais e voltar ao original?")){try{localStorage.removeItem(KEY);}catch(e){}location.reload();}};
+})();
+</script>
+</body>
+</html>
