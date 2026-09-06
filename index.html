@@ -83,8 +83,8 @@
   .card p b{color:var(--ink)}
 
   ul.leva{list-style:none;display:flex;flex-direction:column;gap:.75rem;margin-top:1.2rem}
-  ul.leva li{display:grid;grid-template-columns:1.5rem 1fr;gap:.6rem;max-width:60ch;color:var(--muted)}
-  ul.leva li::before{content:"✓";color:var(--accent);font-weight:800}
+  ul.leva li{position:relative;padding-left:2.1rem;max-width:60ch;color:var(--muted)}
+  ul.leva li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:800}
 
   /* investimento */
   .invest{background:var(--mira-card-bg);border:1px solid var(--mira-card-border);border-radius:16px;padding:1.7rem;display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center}
