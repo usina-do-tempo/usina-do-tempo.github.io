@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Política de Privacidade — Plausible Uploader</title>
+<meta name="description" content="Política de privacidade do Plausible Uploader, ferramenta interna da Usina do Tempo Marketing Ltda para publicar vídeos nos canais próprios do YouTube.">
+<style>
+  :root{
+    --papel:#F2EEE3; --papel-fundo:#E7E1D2; --tinta:#15202A; --tinta-clara:#46565F;
+    --vermelho:#B84A2E; --linha:#D9E0E6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --papel:#141A1F; --papel-fundo:#0F1418; --tinta:#E7ECF0; --tinta-clara:#9AA7B3;
+      --vermelho:#D9754F; --linha:#2B3743;
+    }
+  }
+  :root[data-theme="dark"]{
+    --papel:#141A1F; --papel-fundo:#0F1418; --tinta:#E7ECF0; --tinta-clara:#9AA7B3;
+    --vermelho:#D9754F; --linha:#2B3743;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--papel-fundo); color:var(--tinta);
+    font:16px/1.65 "IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif;
+    padding-block:48px; padding-inline:16px;
+  }
+  main{max-width:68ch; margin:0 auto; background:var(--papel); border:1px solid var(--linha);
+       border-radius:6px; padding:clamp(24px,5vw,56px)}
+  h1{font-size:1.9rem; line-height:1.15; margin:0 0 6px; text-wrap:balance}
+  .sub{color:var(--tinta-clara); margin:0 0 32px}
+  h2{font-size:1.15rem; margin:34px 0 10px; text-wrap:balance}
+  p,li{margin:10px 0}
+  ul{padding-left:1.2em}
+  a{color:var(--vermelho)}
+  strong{font-weight:600}
+  .destaque{border-left:3px solid var(--vermelho); padding:2px 0 2px 16px; margin:22px 0}
+  footer{margin-top:40px; padding-top:18px; border-top:1px solid var(--linha);
+         color:var(--tinta-clara); font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+  <h1>Política de Privacidade — Plausible Uploader</h1>
+  <p class="sub">Vigente desde 20 de setembro de 2026.</p>
+
+  <p><strong>Plausible Uploader</strong> é uma ferramenta interna da <strong>Usina do Tempo Marketing Ltda</strong> (CNPJ 59.267.749/0001-42). Ela existe para uma única finalidade: publicar, nos canais próprios da empresa no YouTube, vídeos produzidos pela própria empresa, com seus títulos, descrições, legendas e agendamentos.</p>
+
+  <div class="destaque">
+    <p>A ferramenta não é oferecida ao público, não tem cadastro, não tem usuários além dos administradores dos canais e não coleta dados de terceiros.</p>
+  </div>
+
+  <h2>Que dados a ferramenta acessa</h2>
+  <p>Ao ser autorizada por um administrador do canal, a ferramenta recebe do Google um token de acesso com duas permissões:</p>
+  <ul>
+    <li><strong>Enviar vídeos ao YouTube</strong>, para publicar os arquivos produzidos pela empresa.</li>
+    <li><strong>Gerenciar o canal</strong>, para definir título, descrição, marcadores, miniatura, legendas, visibilidade e data de publicação dos próprios vídeos.</li>
+  </ul>
+  <p>Esse token identifica o canal autorizado e nada mais. A ferramenta não lê dados de espectadores, não acessa comentários de terceiros para outra finalidade, não coleta e-mails, não faz perfil de audiência.</p>
+
+  <h2>Onde os dados ficam</h2>
+  <p>O token fica gravado <strong>apenas no computador do administrador</strong> que fez a autorização, em arquivo local. Não há servidor, banco de dados, nuvem própria nem serviço de terceiros envolvido: a ferramenta roda na máquina e fala direto com a API do YouTube.</p>
+
+  <h2>Compartilhamento</h2>
+  <p>Nenhum dado é compartilhado, vendido, cedido ou transferido a terceiros. Não há publicidade, rastreamento ou análise de comportamento.</p>
+
+  <h2>Retenção e revogação</h2>
+  <p>O token vale enquanto a autorização existir. Ele pode ser revogado a qualquer momento pelo próprio titular da conta Google, em <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>, o que encerra imediatamente todo o acesso. Apagar o arquivo local também basta para interromper o uso.</p>
+
+  <h2>Uso conforme as regras do YouTube</h2>
+  <p>A ferramenta usa os Serviços de API do YouTube. Ao autorizá-la, aplicam-se os <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">Termos de Serviço do YouTube</a> e a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>.</p>
+
+  <h2>Conteúdo dos canais</h2>
+  <p>Os vídeos publicados por esta ferramenta declaram, na própria descrição, que narração e imagens são geradas por inteligência artificial, e trazem a fonte de cada afirmação factual.</p>
+
+  <h2>Contato</h2>
+  <p>Dúvidas sobre esta política: <a href="mailto:victorfviana@gmail.com">victorfviana@gmail.com</a>.</p>
+
+  <footer>
+    Usina do Tempo Marketing Ltda · <a href="https://usina-do-tempo.github.io/">usina-do-tempo.github.io</a>
+  </footer>
+</main>
+</body>
+</html>
