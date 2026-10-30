@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Este roteiro serve para esta sala? · Ficha Regente</title>
+<meta name="description" content="Ficha Regente nº 5: Preparar uma reunião difícil. Onde a IA erra, quatro perguntas antes de usar e o prompt pronto para colar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#0B0A0A;--surface:#161311;--line:#2A2522;--line2:#3A322D;--ink:#F3EDE6;--ink2:#D8CFC4;--muted:#A89E93;--accent:#FF904D;--accent2:#FFC766;--accent-ink:#1A0F06;--display:"Fraunces",Georgia,serif;--body:"Source Sans 3",system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+main{max-width:720px;margin:0 auto;padding:40px 16px 80px}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);margin:0 0 10px}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(30px,6vw,46px);line-height:1.08;margin:0 0 16px;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:23px;margin:40px 0 12px;line-height:1.2}
+p{margin:0 0 14px;color:var(--ink2)}
+.lead{font-size:19px;color:var(--ink)}
+.quando{font-size:15px;color:var(--muted)}
+.erros{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.erros li{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.erros b{display:block;color:var(--ink);margin-bottom:4px}
+.erros span{color:var(--ink2);font-size:16px}
+.perguntas{counter-reset:q;list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.perguntas li{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;color:var(--ink)}
+.perguntas li::before{counter-increment:q;content:counter(q);width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--accent-ink);display:grid;place-items:center;font-weight:700}
+.caso{padding:16px 18px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 12px 12px 0}
+.caso p{margin:0}
+.promptbox{position:relative;border:1px solid var(--line2);border-radius:14px;background:#0F0D0C;overflow:hidden}
+.promptbox pre{margin:0;padding:56px 18px 18px;white-space:pre-wrap;word-wrap:break-word;font:15px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink2)}
+.copiar{position:absolute;top:10px;right:10px;border:0;border-radius:10px;padding:8px 12px;font:600 14px var(--body);background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--accent-ink);cursor:pointer}
+.pronto{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.pronto li{padding-left:28px;position:relative;color:var(--ink)}
+.pronto li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent2);font-weight:700}
+.fund{padding:18px 20px;border:1px solid var(--line2);border-radius:14px;background:var(--surface)}
+.fund b{color:var(--ink)}.fund .fonte{font-size:14px;color:var(--muted);margin:10px 0 0}
+.nao{padding:14px 16px;border:1px dashed var(--line2);border-radius:12px;color:var(--ink2);font-size:16px}
+.cta{margin-top:44px;padding:22px;border-radius:16px;background:linear-gradient(135deg,#1C1612,#161311);border:1px solid var(--line2)}
+.cta h2{margin-top:0}
+.btn{display:inline-block;padding:14px 20px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--accent-ink);text-decoration:none;font-weight:700;margin:6px 8px 6px 0}
+.btn.sec{background:transparent;color:var(--accent2);border:1px solid var(--line2)}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:36px;font-size:15px;flex-wrap:wrap}
+a{color:var(--accent2)}
+.lista{list-style:none;padding:0;margin:24px 0;display:grid;gap:12px}
+.lista a{display:block;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--surface);text-decoration:none;color:var(--ink)}
+.lista a:hover{border-color:var(--accent)}
+.lista small{display:block;color:var(--muted);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.lista b{font-family:var(--display);font-weight:600;font-size:21px;line-height:1.2}
+.lista span{display:block;color:var(--ink2);margin-top:6px;font-size:15px}
+footer{margin-top:48px;font-size:13px;color:var(--muted);display:grid;gap:4px}
+.edit{position:fixed;right:14px;bottom:14px;display:flex;gap:6px;z-index:9}
+.edit button{border:1px solid var(--line2);background:var(--surface);color:var(--ink);border-radius:10px;padding:8px 10px;cursor:pointer;font:600 13px var(--body)}
+#doc[contenteditable="true"]{outline:2px dashed var(--accent);outline-offset:8px}
+#status{position:fixed;left:14px;bottom:14px;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<div id="doc">
+  <p class="eyebrow"><a href="../" style="text-decoration:none;color:inherit">Fichas Regente</a> · nº 5 · Preparar uma reunião difícil</p>
+  <h1>Este roteiro serve para esta sala?</h1>
+  <p class="lead">A IA não conhece as pessoas, o histórico nem o que já foi prometido. O roteiro que ela monta é apoio para o seu preparo, e vale na medida do que você contou a ela.</p>
+  <p class="quando"><b>Quando usar:</b> Prestação de contas, negociação, reunião com chefia ou cliente, conversa que você precisa conduzir e não pode improvisar.</p>
+
+  <h2>Onde a IA erra nesta tarefa</h2>
+  <ul class="erros">
+    <li><b>Confundir conselho genérico com preparo</b><span>"Comece pelos pontos positivos", "alinhe expectativas". Pauta de manual, que serviria para qualquer reunião.</span></li>
+    <li><b>Confundir o cenário descrito com a sala real</b><span>Ela responde ao que você escreveu. O que você não escreveu (a pessoa que sempre se opõe, a promessa antiga) não existe para ela.</span></li>
+    <li><b>Confundir objeção provável com objeção desta pessoa</b><span>As cinco perguntas difíceis previstas são as que qualquer um faria, não as que aquele diretor vai fazer.</span></li>
+    <li><b>Confundir confiança do texto com conhecimento da situação</b><span>O roteiro vem com a mesma segurança quando a IA sabe e quando está supondo.</span></li>
+  </ul>
+
+  <h2>Quatro perguntas antes de usar a resposta</h2>
+  <ol class="perguntas">
+    <li>Cada pergunta difícil prevista tem nome de quem a faria? Se não tem, é genérica.</li>
+    <li>O roteiro usa os dados que eu dei, ou serviria para qualquer reunião do mesmo tipo?</li>
+    <li>O que a IA não sabia desta reunião e não perguntou?</li>
+    <li>O que eu preciso confirmar antes de entrar: um número, a posição de alguém, uma decisão anterior?</li>
+  </ol>
+
+  <h2>Um caso</h2>
+  <div class="caso"><p>Reunião de prestação de contas de um projeto com a diretoria de uma empresa. A IA prevê cinco perguntas difíceis; três são genéricas. A única pergunta útil surgiu depois que a pessoa respondeu às perguntas prévias do prompt: "o que já foi prometido a esse grupo antes?". A resposta a isso mudou a ordem da pauta. Sem o passo de perguntar antes, o roteiro teria saído pronto e inútil.</p></div>
+
+  <h2>O prompt</h2>
+  <p class="quando">Método das 6 etapas (contexto, tom, tarefa, exemplos, qualidade, formato), mais dois passos fixos: a IA pergunta antes de começar e, no fim, diz o que não conseguiu verificar. Troque os colchetes pela sua situação.</p>
+  <div class="promptbox"><button class="copiar" type="button">Copiar prompt</button><pre>CONTEXTO: Terei [reunião/conversa] sobre [assunto], com [quem: papéis, sem nomes reais se forem terceiros], em [data]. Situação em 4 a 6 linhas: [histórico, o que já foi tentado, o que já foi prometido, o que está em jogo]. Meu objetivo: [o que preciso obter ao sair da sala].
+TOM: Prático e direto, sem conselho genérico.
+TAREFA: Proponha: (1) pauta enxuta com tempos; (2) as cinco perguntas mais difíceis que podem me fazer, cada uma ligada a uma pessoa ou papel descrito e com esboço de resposta; (3) lista do que eu preciso confirmar antes de entrar.
+QUALIDADE: Tudo amarrado à situação descrita. Se uma pergunta difícil serviria para qualquer reunião, descarte-a. Onde você estiver supondo, marque com "[suposição]".
+FORMATO: Três blocos numerados.
+
+Antes de começar, me faça perguntas, uma de cada vez, até ter certeza de que conhece a situação o bastante para não dar conselho genérico. Só então execute. Ao final, liste o que você não tinha como saber desta reunião.
+
+[Minha situação: cole aqui o que já tiver por escrito, anonimizado.]</pre></div>
+
+  <h2>Critério de pronto</h2>
+  <ul class="pronto">
+    <li>Cada pergunta difícil tem dono (um papel ou pessoa da sua descrição).</li>
+    <li>Você confirmou, na fonte, cada item do bloco “confirmar antes de entrar”.</li>
+    <li>O roteiro é apoio: você sabe o que vai dizer sem ler.</li>
+  </ul>
+
+  <h2>Por que isso acontece</h2>
+  <div class="fund"><b>A resposta como oráculo.</b> Kissinger, Schmidt e Huttenlocher alertam que a IA produz conclusões sem mostrar um raciocínio que possamos acompanhar, e que a tentação é aceitá-las como um oráculo. Um roteiro de reunião vem com essa autoridade, de quem não estava na sala. A pergunta que calibra a confiança é simples: como a IA saberia isso? Se a resposta é "não tinha como", o item é suposição.<p class="fonte">Fonte: Henry Kissinger, Eric Schmidt e Daniel Huttenlocher, The Age of AI: And Our Human Future (2021).</p></div>
+
+  <h2>O que não entra</h2>
+  <div class="nao">Nome de terceiro, dado de cliente e informação estratégica confidencial não vão para IA externa. Descreva papéis ("o diretor financeiro", "a representante do fornecedor"), não pessoas.</div>
+
+<section class="cta">
+    <h2>A ficha resolve uma tarefa. O assistente resolve a semana.</h2>
+    <p>Na Mentoria Regente você monta, na sua própria conta, assistentes que fazem tarefas como esta do jeito que você ensinou, com a conferência embutida. Cinco encontros ao vivo, de 23 a 27 de novembro; inscrições até 22/11.</p>
+    <a class="btn" href="https://usina-do-tempo.github.io/">Conhecer a Mentoria Regente</a>
+    <a class="btn sec" href="https://docs.google.com/forms/d/e/1FAIpQLSfSTuZoTC49YdY-30TxgvUYAnuheMVxqxQbx0Xs76pmNuateQ/viewform" target="_blank" rel="noopener">Entrar na lista de espera</a>
+    <p class="quando" style="margin:10px 0 0">Prefere só receber as próximas fichas? A lista de espera serve para isso também.</p>
+  </section>
+
+  <nav class="nav">
+    <span>← <a href="../planilha-a-partir-de-texto/">A planilha reflete o texto, ou a IA corrigiu no caminho?</a></span>
+    <span><a href="../">Todas as fichas</a> →</span>
+  </nav>
+</div>
+<footer>
+    <span>Realização: Usina do Tempo Marketing Ltda · CNPJ 59.267.749/0001-42 · Programa Regente</span>
+    <span>Fichas Regente v1.0 · 30/10/2026. Exemplos fictícios. Uso pessoal livre; reprodução comercial não autorizada.</span>
+  </footer>
+</main>
+<script id="pagejs">
+(function(){
+  var KEY='ficha-preparar-reuniao-v1-edit', doc=document.getElementById('doc'), NL='\n';
+  var bE=document.getElementById('btnEdit'), bX=document.getElementById('btnExport'), bR=document.getElementById('btnReset');
+  function status(t){var s=document.getElementById('status'); if(!s) return; s.textContent=t; setTimeout(function(){s.textContent='';},2500);}
+  try{var s=localStorage.getItem(KEY); if(s && bE) doc.innerHTML=s;}catch(e){}
+  if(bE){bE.onclick=function(){
+    var on=doc.getAttribute('contenteditable')==='true';
+    if(!on){doc.setAttribute('contenteditable','true'); bE.textContent='💾 Salvar'; doc.focus(); return;}
+    doc.setAttribute('contenteditable','false'); bE.textContent='✏️';
+    try{localStorage.setItem(KEY,doc.innerHTML); status('salvo neste navegador');}catch(e){}
+  };}
+  if(bX){bX.onclick=function(){
+    var html=document.documentElement.outerHTML.replace(/ contenteditable="(true|false)"/g,'');
+    var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([html],{type:'text/html'})); a.download=location.pathname.replace(/\/$/,'').split('/').pop()||'ficha'; a.download+='.html'; a.click();
+  };}
+  if(bR){bR.onclick=function(){try{localStorage.removeItem(KEY);}catch(e){} location.reload();};}
+  document.querySelectorAll('.copiar').forEach(function(b){
+    b.onclick=function(){
+      var pre=b.parentNode.querySelector('pre'), t=pre.textContent;
+      function ok(){b.textContent='Copiado'; setTimeout(function(){b.textContent='Copiar prompt';},1800);}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){sel();});} else {sel();}
+      function sel(){var r=document.createRange(); r.selectNodeContents(pre); var s=getSelection(); s.removeAllRanges(); s.addRange(r); try{document.execCommand('copy'); ok();}catch(e){b.textContent='Selecione e copie';}}
+    };
+  });
+})();
+</script>
+</body>
+</html>
