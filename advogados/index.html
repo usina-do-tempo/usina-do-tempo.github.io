@@ -143,6 +143,16 @@ p{margin:0}
 .gar .ic{width:38px;height:38px;border-radius:10px;background:var(--surface2);border:1px solid var(--line2);display:grid;place-items:center;font:600 13px/1 var(--mono);color:var(--accent2)}
 .gar h3{font-family:var(--body);font-size:17px;font-weight:700;margin-bottom:4px}
 .gar p{font-size:15.5px}
+.nao{margin-top:18px;display:grid;gap:10px}
+@media(min-width:640px){.nao{grid-template-columns:1fr 1fr 1fr}}
+.nao div{padding:14px 16px;border:1px dashed var(--line2);border-radius:12px;font-size:15px;color:var(--ink2)}
+.nao div b{color:var(--ink)}
+.faq{margin-top:10px;display:grid;gap:10px}
+.faq details{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:0 18px}
+.faq summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:700;font-size:16.5px;display:flex;justify-content:space-between;gap:12px}
+.faq summary::after{content:"+";color:var(--accent);font-weight:600}
+.faq details[open] summary::after{content:"–"}
+.faq p{padding:0 0 16px;font-size:15.5px;color:var(--ink2)}
 
 /* ---------- mentores ---------- */
 .mentor .card{display:grid;gap:6px}
@@ -244,6 +254,12 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
       <div class="card perfil"><h3>Quem está começando</h3><p>Entender, na prática e com acompanhamento, o que a IA faz de verdade pela sua rotina — sem jargão e sem promessa.</p></div>
     </div>
     <div class="regra">Uma regra vale para todos: <b>a IA redige; quem assina e responde perante o cliente é você</b> — e conferir rápido e bem, inclusive citação e precedente, é habilidade que o programa ensina.</div>
+    <h3 style="margin-top:28px;font-size:18px">Para quem <u>não</u> é</h3>
+    <div class="nao">
+      <div><b>Quem quer aprender a programar ou montar automações.</b> Aqui não há código nem ferramenta técnica: o trabalho é método, pedido e conferência.</div>
+      <div><b>Quem quer a IA respondendo sem ninguém conferir.</b> O programa ensina a delegar e conferir; não ensina a assinar no escuro.</div>
+      <div><b>Quem não tem uma tarefa repetida para trazer.</b> A semana gira em torno de 2 a 3 tarefas reais suas; sem elas, não há o que medir.</div>
+    </div>
   </section>
 
   <section id="formato">
@@ -277,13 +293,13 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
     <h2>O que você leva</h2>
     <div class="leva" style="margin-top:10px">
       <div class="first">Uma delegação real funcionando <b>já no primeiro encontro</b> — com o método de prompt em 6 etapas</div>
-      <div><b>Assistentes especializados por tarefa</b>, montados por você (instruções permanentes + projeto + referências)</div>
-      <div>A rubrica de conferência de 60 segundos — o "você só confere" como habilidade, inclusive em lote</div>
+      <div><b>2 a 3 assistentes rodando na sua conta</b>, um por tarefa, montados por você (instruções permanentes + projeto + referências)</div>
+      <div>O <b>Caderno de Conferência</b>: para cada tarefa sua, o critério de pronto e a lista de 60 segundos que substitui reler tudo — o "você só confere" como habilidade, inclusive em lote</div>
       <div>Clareza sobre onde pode — e onde <b>nunca</b> pode — entrar dado de cliente, segredo de justiça ou documento sigiloso</div>
-      <div>Um dossiê antes → depois de 2 a 3 tarefas reais, com o tempo ganho medido</div>
-      <div>O <b>Caderno do Participante</b> — um capítulo por encontro — mais os templates de cada aula: o pedido em 6 partes, a ficha de medição, as instruções do assistente, a lista de conferência</div>
-      <div>O <b>Banco de Prompts</b> do programa: os pedidos-modelo prontos para adaptar ao seu trabalho</div>
-      <div>O <b>plano dos próximos 30 dias</b> — um assistente novo por semana, sempre pelo mesmo caminho</div>
+      <div>A <b>Medição antes → depois</b> de 2 a 3 tarefas reais: quanto tomava, quanto toma, em horas por semana</div>
+      <div>O <b>Caderno do Participante</b> — um capítulo por encontro — mais os templates de cada aula: o pedido em 6 partes, a ficha de medição, as instruções do assistente</div>
+      <div>O <b>Banco de Pedidos</b>: os pedidos em 6 partes que você escreveu na semana, mais os pedidos-modelo do programa prontos para adaptar</div>
+      <div>O <b>Plano de 30 dias</b> — um assistente novo por semana, sempre pelo mesmo caminho</div>
       <div>Encontro presencial de encerramento com <b>certificado</b> — e a comunidade da turma aberta por mais 30 dias depois do fim</div>
       <div>As gravações de todos os encontros</div>
     </div>
@@ -296,7 +312,7 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
       <div class="preco">
         <div class="val"><sup>R$</sup>997</div>
         <div class="por">por pessoa · turma fundadora</div>
-        <p><b>Por que tão abaixo do padrão desse formato?</b> É a primeira turma: em troca, pedimos seu depoimento com números no fechamento — o mesmo dossiê antes/depois que você já vai ter pronto. Nas próximas turmas, esse valor sobe.</p>
+        <p><b>Por que tão abaixo do padrão desse formato?</b> É a primeira turma: em troca, pedimos seu depoimento com números no fechamento — a mesma Medição antes → depois que você já vai ter pronta. Nas próximas turmas, esse valor sobe.</p>
         <a class="btn" id="ctaInvest" href="https://forms.gle/QaEGoDdgx1CPKJuL9" target="_blank" rel="noopener">Quero minha vaga<small>ficha de inscrição · 2 minutos</small></a>
         <details class="pgto" id="pagamento">
           <summary><b>Passo 2 · Garantir a vaga</b> <span class="zz">pagamento seguro ▾</span></summary>
@@ -319,10 +335,25 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
   <section id="mentores" class="mentor">
     <p class="eyebrow">Mentores</p>
     <h2>Quem conduz</h2>
-    <p class="lead">Dois mentores, entrega dividida. Juntos, criaram e conduziram um programa de capacitação em IA para o serviço público que formou <b>mais de 200 servidores em 2026</b> — com material hoje replicado na formação de outros órgãos.</p>
+    <p class="lead">Dois mentores, entrega dividida. Juntos, criaram e conduziram um programa de capacitação em IA para o serviço público que formou <b>mais de 200 servidores públicos em 2026</b> — com material hoje replicado na formação de outros órgãos.</p>
     <div class="grid c2" style="margin-top:28px">
-      <div class="card"><div class="ini">V</div><div class="nome">Victor Falcão</div><div class="papel">Mentor · método e conferência</div><p>Autor de <a href="https://www.amazon.com.br/dp/B0HHJVCJHT"><i>A IA Que Parece Certa</i></a> (Amazon, 2026), sobre o hábito de usar IA sem conferir — o problema que este programa transforma em habilidade.</p><p>Graduado e Pós-Graduado em Direito e Gestão, com mais de 30 anos de experiência em Gestão no Judiciário.</p></div>
-      <div class="card"><div class="ini">V</div><div class="nome">Vinícius Sousa e Silva</div><div class="papel">Mentor · clínica e prática</div><p>Pós-Graduado em Tecnologia da Informação.</p><p>Graduado e Pós-Graduado em Direito, com mais de 20 anos de experiência em Gestão no Judiciário.</p></div>
+      <div class="card"><div class="ini">V</div><div class="nome">Victor Falcão</div><div class="papel">Mentor · método e conferência</div><p>Autor de <a href="https://www.amazon.com.br/dp/B0HHJVCJHT"><i>A IA Que Parece Certa</i></a> (Amazon, 2026), sobre o hábito de usar IA sem conferir — o problema que este programa transforma em habilidade.</p><p>Graduado e pós-graduado em Direito e Gestão, com mais de 30 anos de experiência em gestão pública.</p></div>
+      <div class="card"><div class="ini">V</div><div class="nome">Vinícius Sousa e Silva</div><div class="papel">Mentor · clínica e prática</div><p>Graduado e pós-graduado em Direito. Pós-graduado em Tecnologia da Informação.</p><p>Mais de 20 anos de experiência em gestão pública.</p></div>
+    </div>
+  </section>
+
+  <section id="perguntas">
+    <p class="eyebrow">Antes de decidir</p>
+    <h2>O que perguntam antes de entrar</h2>
+    <div class="faq">
+      <details><summary>Preciso saber programar?</summary><p>Não. Nada para instalar, nada de código. Tudo acontece em contas gratuitas de IA, pelo navegador.</p></details>
+      <details><summary>Funciona no celular?</summary><p>Sim. Celular ou notebook simples, com navegador e internet, bastam para acompanhar e fazer as tarefas.</p></details>
+      <details><summary>E se eu perder um encontro?</summary><p>Todos os encontros ficam gravados, para rever ou repor. A tarefa da semana continua valendo.</p></details>
+      <details><summary>Minha área é muito específica.</summary><p>É por isso que a turma é pequena: na clínica de cada encontro, o seu caso real vai ao palco e o método é aplicado nele.</p></details>
+      <details><summary>Posso usar dado sigiloso do meu trabalho?</summary><p>Não, e o programa ensina exatamente onde está essa linha. Os exercícios usam dados fictícios ou públicos; o segundo encontro traz o guia do que pode e nunca pode entrar na IA.</p></details>
+      <details><summary>E se a turma não abrir?</summary><p>A turma abre com 15 confirmados. Se não abrir, todo valor pago volta, integral e sem burocracia.</p></details>
+      <details><summary>E se não funcionar para mim?</summary><p>Participe dos 5 encontros e faça as tarefas. Se não sair com o seu assistente rodando e a sua medição na mão, devolvemos tudo.</p></details>
+      <details><summary>Quando é, e como pago?</summary><p>De 23 a 27 de novembro, das 19h30 às 21h30, com inscrições até 22 de novembro. R$ 997 por pessoa, no Pix ou no cartão em até 18×, em ambiente seguro do C6 Pay.</p></details>
     </div>
   </section>
 
