@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>O Teste da IA Que Parece Certa</title>
+<meta name="description" content="Um texto escrito por IA, bem redigido, com pelo menos um erro. Ache antes de ver o gabarito.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>:root{--bg:#0B0A0A;--surface:#161311;--line:#2A2522;--line2:#3A322D;--ink:#F3EDE6;--ink2:#D8CFC4;--muted:#A89E93;--accent:#FF904D;--accent2:#FFC766;--accent-ink:#1A0F06;--mark:#6B4A12;--display:"Fraunces",Georgia,serif;--body:"Source Sans 3",system-ui,sans-serif}
+@media (prefers-color-scheme:light){:root{--bg:#FBF7F2;--surface:#FFFFFF;--line:#E6DCCF;--line2:#CFC2B2;--ink:#1D1814;--ink2:#3A322B;--muted:#6B6055;--accent:#C2570F;--accent2:#8A3B05;--accent-ink:#FFFFFF;--mark:#FFE08A}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+main{max-width:920px;margin:0 auto;padding:40px 16px 90px}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);margin:0 0 10px}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(30px,6vw,46px);line-height:1.08;margin:0 0 16px;text-wrap:balance}
+h2{font-family:var(--display);font-weight:600;font-size:24px;margin:28px 0 8px;line-height:1.2}
+h3{font-family:var(--display);font-weight:600;font-size:18px;margin:0 0 8px}
+p{margin:0 0 12px;color:var(--ink2)}.lead{font-size:19px;color:var(--ink)}.quando{font-size:15px;color:var(--muted)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 4px}
+.tab{border:1px solid var(--line2);background:var(--surface);color:var(--ink);border-radius:10px;padding:10px 14px;font:600 15px var(--body);cursor:pointer}
+.tab[aria-selected=true]{background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--accent-ink);border-color:transparent}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--accent2);outline-offset:2px}
+.par{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:760px){.par{grid-template-columns:1fr 1fr}}
+.card{padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.card.ia{border-left:3px solid var(--accent)}
+.card p{color:var(--ink)}
+mark.err{background:transparent;color:inherit}
+.teste.mostra mark.err{background:var(--mark);color:var(--ink);padding:0 2px;border-radius:3px}
+.acoes{margin:14px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{display:inline-block;padding:13px 18px;border-radius:12px;border:0;background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--accent-ink);text-decoration:none;font:700 16px var(--body);cursor:pointer}
+.btn.sec{background:transparent;color:var(--accent2);border:1px solid var(--line2)}
+.btn:disabled{opacity:.5;cursor:default}
+.crono{font-size:15px;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0}
+.crono input{width:20px;height:20px}
+.perguntas{counter-reset:q;list-style:none;padding:0;margin:0 0 8px;display:grid;gap:10px}
+.perguntas li{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;color:var(--ink)}
+.perguntas li::before{counter-increment:q;content:counter(q);width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--accent-ink);display:grid;place-items:center;font-weight:700}
+.reveal{margin-top:16px;padding:16px 18px;border:1px solid var(--line2);border-radius:14px;background:var(--surface)}
+.reveal[hidden],.teste[hidden]{display:none}
+.gabl{margin:0;padding-left:20px;display:grid;gap:8px;color:var(--ink2)}
+.calc{margin-top:44px;padding:22px;border-radius:16px;background:var(--surface);border:1px solid var(--line2)}
+.calc h2{margin-top:0}
+.calc label{display:block;font-weight:600;margin:14px 0 4px;color:var(--ink)}
+.calc input[type=text]{width:100%;max-width:260px;padding:10px 12px;border-radius:10px;border:1px solid var(--line2);background:var(--bg);color:var(--ink);font:16px var(--body)}
+.calc .ajuda{font-size:14px;color:var(--muted);margin-top:6px}
+.calc .radios label{display:inline-flex;gap:6px;align-items:center;margin:4px 16px 0 0;font-weight:400}
+#cOut{margin-top:18px;font-size:19px;color:var(--ink)}
+.fixo{font-size:15px;color:var(--muted);font-style:italic}
+.cta{margin-top:44px;padding:22px;border-radius:16px;background:var(--surface);border:1px solid var(--line2)}
+.cta h2{margin-top:0}.cta .caminho{padding:14px 0;border-top:1px solid var(--line)}.cta .caminho:first-of-type{border-top:0}
+footer{margin-top:48px;font-size:13px;color:var(--muted);display:grid;gap:4px}
+.edit{position:fixed;right:14px;bottom:14px;display:flex;gap:6px;z-index:9}
+.edit button{border:1px solid var(--line2);background:var(--surface);color:var(--ink);border-radius:10px;padding:10px 12px;cursor:pointer;font:600 14px var(--body)}
+#doc[contenteditable="true"]{outline:2px dashed var(--accent);outline-offset:8px}
+#status{position:fixed;left:14px;bottom:14px;background:var(--surface);color:var(--ink);border:1px solid var(--line2);padding:8px 12px;border-radius:10px;font-size:14px;z-index:9}</style>
+</head>
+<body>
+<main><div id="doc">
+<p class="eyebrow">Programa Regente</p>
+<h1>O Teste da IA Que Parece Certa</h1>
+<p class="lead">Um texto escrito por IA, bem redigido, com pelo menos um erro. Ache antes de ver o gabarito.</p>
+<div class="tabs" role="group" aria-label="Escolha o seu contexto"><button class="tab" data-k="servidores" aria-selected="false">Serviço público</button><button class="tab" data-k="liberais" aria-selected="false">Profissionais liberais</button><button class="tab" data-k="advogados" aria-selected="false">Advocacia</button><button class="tab" data-k="negocios" aria-selected="false">Empresários</button></div>
+<div class="crono"><label><input type="checkbox" id="crono"> cronometrar minha conferência</label> <span id="cronoOut" aria-live="polite"></span></div>
+<section class="teste" id="t-servidores" data-k="servidores" hidden>
+<h2>Teste A · Serviço público</h2><p class="quando">Resposta a pedido de informação</p>
+<div class="par"><div class="card"><h3>Fonte</h3><p class="quando">despacho da chefia</p><p>Responder ao Sr. João Alfa. Os dados dos contratos de limpeza de 2025 serão fornecidos. Informar o prazo legal: 20 dias, prorrogáveis por mais 10 com justificativa. A planilha de 2024 não é do nosso setor: indicar a Secretaria de Administração.</p></div>
+<div class="card ia"><h3>Texto da IA</h3><p>Prezado Senhor João Alfa,</p><p>Em atenção à sua solicitação, informamos que os dados referentes aos contratos de limpeza de 2025 serão disponibilizados no prazo de <mark class="err">30 dias</mark>, conforme a Lei de Acesso à Informação.</p><p>Permanecemos à disposição para quaisquer esclarecimentos.</p><p>Atenciosamente,</p></div></div>
+<div class="acoes"><button class="btn" data-a="perg">Achei (ou desisti): mostrar as 4 perguntas</button></div>
+<div class="reveal perg" hidden><h3>As 4 perguntas, sempre nesta ordem</h3><ol class="perguntas"><li>Cada nome, data, número e valor está na fonte, e igual?</li><li>Cada regra ou cláusula citada existe e diz isso?</li><li>Tudo o que foi pedido está respondido?</li><li>Eu assinaria assim, lido por alguém que discorda de mim?</li></ol>
+<div class="acoes"><button class="btn sec" data-a="gab">Ver o gabarito</button></div></div>
+<div class="reveal gab" hidden><h3>Gabarito</h3><ul class="gabl"><li><b>Pergunta 1 e 2:</b> "30 dias" está errado. A fonte e a lei dizem 20, e a prorrogação de 10 exige justificativa. O ofício promete ao cidadão um prazo que a lei não dá.</li><li><b>Pergunta 3:</b> sumiu a planilha de 2024. O cidadão pediu e não recebeu resposta nem encaminhamento. Nada no texto está errado, por isso a falta é a mais difícil de ver.</li></ul></div>
+</section>
+<section class="teste" id="t-liberais" data-k="liberais" hidden>
+<h2>Teste B · Profissionais liberais</h2><p class="quando">Proposta a cliente</p>
+<div class="par"><div class="card"><h3>Fonte</h3><p class="quando">anotações da reunião</p><p>Cliente: Clínica Beta. Projeto de reforma da recepção. Valor: R$ 8.400, em 3 parcelas. Prazo: 45 dias a partir da aprovação do anteprojeto pelo cliente. Não inclui acompanhamento de obra (orçar à parte).</p></div>
+<div class="card ia"><h3>Texto da IA</h3><p>Prezada Dra. Beta,</p><p>Conforme conversamos, segue a proposta para o projeto de reforma da recepção da clínica. Investimento: R$ 8.400, em 3 parcelas. Prazo de entrega: 45 dias <mark class="err">a contar da assinatura desta proposta</mark>. <mark class="err">Será um prazer acompanhar cada etapa até a conclusão da obra.</mark></p></div></div>
+<div class="acoes"><button class="btn" data-a="perg">Achei (ou desisti): mostrar as 4 perguntas</button></div>
+<div class="reveal perg" hidden><h3>As 4 perguntas, sempre nesta ordem</h3><ol class="perguntas"><li>Cada nome, data, número e valor está na fonte, e igual?</li><li>Cada regra ou cláusula citada existe e diz isso?</li><li>Tudo o que foi pedido está respondido?</li><li>Eu assinaria assim, lido por alguém que discorda de mim?</li></ol>
+<div class="acoes"><button class="btn sec" data-a="gab">Ver o gabarito</button></div></div>
+<div class="reveal gab" hidden><h3>Gabarito</h3><ul class="gabl"><li><b>Pergunta 1:</b> o prazo começa na aprovação do anteprojeto, não na assinatura. Se o cliente demorar a aprovar, o atraso passa a ser seu.</li><li><b>Pergunta 3:</b> sumiu a exclusão do acompanhamento de obra.</li><li><b>Pergunta 4:</b> "acompanhar cada etapa até a conclusão da obra" é um serviço que não estava no preço. A frase gentil virou compromisso.</li></ul></div>
+</section>
+<section class="teste" id="t-advogados" data-k="advogados" hidden>
+<h2>Teste C · Advocacia</h2><p class="quando">Resposta a notificação</p>
+<div class="par"><div class="card"><h3>Fonte</h3><p class="quando">trecho do contrato e pedido do cliente</p><p>Cláusula 7: reajuste anual pelo IPCA. Cláusula 9: rescisão por qualquer das partes, com aviso prévio de 60 dias.</p><p>Cliente: "Queremos encerrar o contrato com a Alfa Serviços. Prepare a notificação."</p></div>
+<div class="card ia"><h3>Texto da IA</h3><p>Com fundamento na <mark class="err">cláusula 7</mark> do contrato, que assegura a rescisão mediante aviso prévio de <mark class="err">30 dias</mark>, vimos notificar V. Sas. da rescisão do contrato, cujos efeitos se darão ao término do referido prazo.</p></div></div>
+<div class="acoes"><button class="btn" data-a="perg">Achei (ou desisti): mostrar as 4 perguntas</button></div>
+<div class="reveal perg" hidden><h3>As 4 perguntas, sempre nesta ordem</h3><ol class="perguntas"><li>Cada nome, data, número e valor está na fonte, e igual?</li><li>Cada regra ou cláusula citada existe e diz isso?</li><li>Tudo o que foi pedido está respondido?</li><li>Eu assinaria assim, lido por alguém que discorda de mim?</li></ol>
+<div class="acoes"><button class="btn sec" data-a="gab">Ver o gabarito</button></div></div>
+<div class="reveal gab" hidden><h3>Gabarito</h3><ul class="gabl"><li><b>Pergunta 2:</b> a rescisão está na cláusula 9. A 7 trata de reajuste.</li><li><b>Pergunta 1:</b> o aviso é de 60 dias, não de 30. Com a notificação errada, o cliente pode sair um mês antes do que o contrato permite.</li></ul></div>
+</section>
+<section class="teste" id="t-negocios" data-k="negocios" hidden>
+<h2>Teste D · Empresários</h2><p class="quando">Resposta a cliente</p>
+<div class="par"><div class="card"><h3>Fonte</h3><p class="quando">política da loja e mensagem da cliente</p><p>Política: troca em até 7 dias após a entrega. Frete da troca por conta da loja somente com defeito comprovado por foto.</p><p>Cliente (Marina): "Recebi a cadeira ontem, mas a cor não combinou com a sala. Quero trocar pela cinza."</p></div>
+<div class="card ia"><h3>Texto da IA</h3><p>Olá, Marina! Que pena que a cor não combinou. Pode ficar tranquila: a troca é simples e <mark class="err">o frete é por nossa conta</mark>. É só responder com o melhor horário para a coleta. Você tem até <mark class="err">30 dias</mark> para solicitar.</p></div></div>
+<div class="acoes"><button class="btn" data-a="perg">Achei (ou desisti): mostrar as 4 perguntas</button></div>
+<div class="reveal perg" hidden><h3>As 4 perguntas, sempre nesta ordem</h3><ol class="perguntas"><li>Cada nome, data, número e valor está na fonte, e igual?</li><li>Cada regra ou cláusula citada existe e diz isso?</li><li>Tudo o que foi pedido está respondido?</li><li>Eu assinaria assim, lido por alguém que discorda de mim?</li></ol>
+<div class="acoes"><button class="btn sec" data-a="gab">Ver o gabarito</button></div></div>
+<div class="reveal gab" hidden><h3>Gabarito</h3><ul class="gabl"><li><b>Pergunta 4 e 2:</b> "o frete é por nossa conta" não cabe aqui: sem defeito, a política não paga o frete. A IA prometeu, em nome da empresa, o que a empresa não oferece.</li><li><b>Pergunta 1:</b> são 7 dias, não 30. A próxima cliente vai citar esta mensagem.</li></ul></div>
+</section>
+<section class="calc" aria-labelledby="hc"><h2 id="hc">Faça a conta com o seu número</h2>
+<label for="cHora">Quanto vale a sua hora? (R$)</label>
+<input type="text" inputmode="decimal" id="cHora" placeholder="ex.: 50">
+<div class="ajuda">Ajuda: renda mensal ÷ 160. <label for="cRenda" style="display:inline;font-weight:400">Renda mensal (R$):</label> <input type="text" inputmode="decimal" id="cRenda" style="max-width:130px"></div>
+<label for="cHs">Quantas horas por semana as suas tarefas repetidas tomam? (h)</label>
+<input type="text" inputmode="decimal" id="cHs" placeholder="ex.: 5">
+<label id="lfr">Quanto desse tempo você acha que dá para devolver?</label>
+<div class="radios" role="radiogroup" aria-labelledby="lfr"><label><input type="radio" name="cFr" value="0.25" checked> 25%</label><label><input type="radio" name="cFr" value="0.5"> 50%</label></div>
+<p id="cOut" aria-live="polite"></p>
+<p class="fixo">Estimativa sua, com os seus números. Não é promessa. Na turma, você mede o tempo real: antes e depois.</p>
+</section>
+<section class="cta"><h2>Dois caminhos</h2>
+<div class="caminho"><p><b>Receber o kit em PDF (os 4 testes, as 4 perguntas e o prompt conferidor)</b></p><a class="btn" id="lnkForms" href="https://docs.google.com/forms/d/e/1FAIpQLSd6vfHKAWiLfpa0hOI99vgPEV_-hFvFTJbnpvpCjMMe1ih6fw/viewform" rel="noopener">Receber o kit em PDF</a></div>
+<div class="caminho"><p><b>Conhecer a Mentoria Regente (turma de 23 a 27/11, inscrições até 22/11)</b></p><a class="btn sec" id="lnkTurma" href="https://usina-do-tempo.github.io/" rel="noopener">Conhecer a Mentoria Regente</a></div>
+</section>
+<footer><span>Usina do Tempo Marketing Ltda · CNPJ 59.267.749/0001-42 · Programa Regente</span><span>Nomes e situações fictícios.</span></footer>
+</div></main>
+<div id="status" role="status" hidden></div>
+<script>(function(){try{var sv=localStorage.getItem('regente-teste-v1');if(sv){document.getElementById('doc').innerHTML=sv;}}catch(e){}})();(function(){
+var FORMS="https://docs.google.com/forms/d/e/1FAIpQLSd6vfHKAWiLfpa0hOI99vgPEV_-hFvFTJbnpvpCjMMe1ih6fw/viewform";
+var KEY='regente-teste-v1';
+var DEST={servidores:'servidores/',liberais:'liberais/',negocios:'negocios/',advogados:'advogados/'};
+var params=new URLSearchParams(location.search);
+var cur=params.get('p');if(!DEST[cur])cur='servidores';
+function calc(hora,hs,frac){var r=hora*hs*frac*4.3;return {mes:r,meses:r>0?997/r:null};}
+var brl=function(v){return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});};
+function $(s,r){return (r||document).querySelector(s);}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
+function links(){
+  var f=FORMS,o=params.get('o');if(o)f+=(f.indexOf('?')<0?'?':'&')+'o='+encodeURIComponent(o);
+  $('#lnkForms').href=f;
+  $('#lnkTurma').href='https://usina-do-tempo.github.io/'+DEST[cur];
+}
+var tStart=null,tInt=null;
+function fmt(ms){var s=Math.round(ms/1000);return Math.floor(s/60)+' min '+(s%60<10?'0':'')+(s%60)+' s';}
+function stopTimer(reset){if(tInt){clearInterval(tInt);tInt=null;}tStart=null;if(reset){$('#cronoOut').textContent='';$('#crono').checked=false;}}
+function show(k){
+  cur=k;
+  $$('.teste').forEach(function(t){t.hidden=t.getAttribute('data-k')!==k;});
+  $$('.tab').forEach(function(b){var on=b.getAttribute('data-k')===k;b.setAttribute('aria-selected',on?'true':'false');});
+  links();stopTimer(true);
+}
+$$('.tab').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-k'));});});
+$('#crono').addEventListener('change',function(){
+  if(this.checked){tStart=Date.now();$('#cronoOut').textContent='Cronômetro ligado: 0 min 00 s';
+    tInt=setInterval(function(){$('#cronoOut').textContent='Cronômetro ligado: '+fmt(Date.now()-tStart);},1000);}
+  else stopTimer(true);});
+document.addEventListener('click',function(e){
+  var b=e.target.closest&&e.target.closest('button[data-a]');if(!b)return;
+  var sec=b.closest('.teste');
+  if(b.getAttribute('data-a')==='perg'){
+    if(tStart){var d=Date.now()-tStart;clearInterval(tInt);tInt=null;tStart=null;$('#cronoOut').textContent='Sua conferência levou '+fmt(d)+'.';}
+    $('.perg',sec).hidden=false;b.disabled=true;
+  }else{$('.gab',sec).hidden=false;sec.classList.add('mostra');b.disabled=true;}
+});
+function renderCalc(){
+  var h=parseFloat(String($('#cHora').value).replace(',','.')),s=parseFloat(String($('#cHs').value).replace(',','.'));
+  var fr=parseFloat($('input[name=cFr]:checked').value);
+  var out=$('#cOut');
+  if(!(h>0)||!(s>0)){out.textContent='Preencha a hora e as horas por semana para ver a estimativa.';return;}
+  var r=calc(h,s,fr);
+  out.innerHTML='Estimativa: <b>'+brl(r.mes)+' por mês</b>. O investimento de R$ 997 volta em <b>'+r.meses.toFixed(1).replace('.',',')+' meses</b>.';
+}
+['cHora','cHs'].forEach(function(i){$('#'+i).addEventListener('input',renderCalc);});
+$$('input[name=cFr]').forEach(function(i){i.addEventListener('change',renderCalc);});
+$('#cRenda').addEventListener('input',function(){var v=parseFloat(String(this.value).replace(',','.'));if(v>0){$('#cHora').value=(v/160).toFixed(2).replace('.',',');renderCalc();}});
+var doc=$('#doc'),editing=false;
+function toast(m){var s=$('#status');s.textContent=m;s.hidden=false;setTimeout(function(){s.hidden=true;},2500);}
+($('#bEdit')||{addEventListener:function(){}}).addEventListener('click',function(){editing=!editing;doc.setAttribute('contenteditable',editing?'true':'false');this.setAttribute('aria-pressed',editing);toast(editing?'Edição ligada':'Edição desligada');});
+($('#bSave')||{addEventListener:function(){}}).addEventListener('click',function(){try{localStorage.setItem(KEY,doc.innerHTML);toast('Salvo neste navegador');}catch(e){toast('Não foi possível salvar');}});
+($('#bReset')||{addEventListener:function(){}}).addEventListener('click',function(){try{localStorage.removeItem(KEY);}catch(e){}location.reload();});
+show(cur);renderCalc();
+})();</script>
+</body>
+</html>
