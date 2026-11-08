@@ -127,7 +127,10 @@ var brl=function(v){return v.toLocaleString('pt-BR',{style:'currency',currency:'
 function $(s,r){return (r||document).querySelector(s);}
 function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
 function links(){
-  var f=FORMS,o=params.get('o');if(o)f+=(f.indexOf('?')<0?'?':'&')+'o='+encodeURIComponent(o);
+  // Código de origem: pergunta "Código de Origem" do Forms (entry.895838242, criada por Victor em 08/11/2026).
+  // Sem ?o= no link, grava de onde veio pela página: teste-<público> ou teste-direto.
+  var o=params.get('o')||('teste-'+(params.get('p')||'direto'));
+  var f=FORMS+(FORMS.indexOf('?')<0?'?':'&')+'usp=pp_url&entry.895838242='+encodeURIComponent(o);
   $('#lnkForms').href=f;
   $('#lnkTurma').href='https://usina-do-tempo.github.io/'+DEST[cur];
 }
