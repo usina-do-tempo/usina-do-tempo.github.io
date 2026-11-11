@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia de Condução — Segundo Encontro</title>
+<style>
+:root{--bg:#f7f6f3;--paper:#ffffff;--ink:#1f2430;--muted:#5c6470;--accent:#0f4c81;--accent2:#b8860b;--line:#e3e0d8;--code:#f0eee8}
+@media (prefers-color-scheme: dark){:root{--bg:#14161c;--paper:#1c1f27;--ink:#e8e6e1;--muted:#9aa1ad;--accent:#6ea8d8;--accent2:#d4a942;--line:#2c303a;--code:#242832}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif;padding-top:3.2rem}
+.wrap{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+header.top{border-bottom:3px double var(--accent);padding-bottom:1rem;margin-bottom:2rem}
+header.top .kicker{font-family:system-ui,sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:600}
+h1{font-size:1.9rem;line-height:1.25;margin:.3rem 0 0;color:var(--accent)}
+h2{font-size:1.35rem;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:.3rem;margin-top:2.4rem}
+h3{font-size:1.08rem;margin-top:1.6rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-family:system-ui,sans-serif;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--code)}
+.tablewrap{overflow-x:auto}
+blockquote{border-left:3px solid var(--accent2);margin:1rem 0;padding:.2rem 1rem;color:var(--muted)}
+pre{background:var(--code);padding:.8rem 1rem;border-radius:8px;overflow-x:auto;font-size:.82em;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.cpy{display:block;margin:-.4rem 0 1rem auto;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.35rem .9rem;cursor:pointer;font:.8rem system-ui,sans-serif}
+@media print{.cpy{display:none}}
+code{background:var(--code);padding:.1em .35em;border-radius:4px;font-size:.85em}
+pre code{padding:0;background:none}
+hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+.toolbar{position:fixed;top:0;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.5rem 1rem;display:flex;gap:.6rem;align-items:center;font-family:system-ui,sans-serif;font-size:.85rem;z-index:10}
+.toolbar button{background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.4rem .9rem;cursor:pointer;font-size:.82rem}
+.toolbar button.sec{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.toolbar .status{color:var(--muted);margin-left:auto}
+#doc[contenteditable="true"]{outline:2px dashed var(--accent2);outline-offset:8px}
+@media print{.toolbar{display:none}body{padding-top:0;background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <button id="btnPrint" class="sec">🖨️ Imprimir/PDF</button>
+  <span class="status" id="status"></span>
+</div>
+<div class="wrap">
+<header class="top">
+  <div class="kicker">Uso interno dos instrutores · 10/11/2026</div>
+  <h1>Guia de Condução — Segundo Encontro</h1>
+</header>
+<main id="doc">
+<h1 id="guia-de-condução-segundo-encontro-confie-mas-confira">Guia de
+condução — Segundo encontro: “Confie, mas confira”</h1>
+<p><strong>Uso interno da dupla de instrutores.</strong> Duração: 2
+horas (120 min). Formato: online, ao vivo, gravado. Este guia é o que
+fica aberto na sua segunda tela: cada bloco traz o objetivo, a fala de
+abertura sugerida, o que mostrar na tela, a armadilha da vez e a frase
+de transição. Fala sugerida é apoio, não script para ler.</p>
+<p><strong>O aluno sai daqui com:</strong> pelo menos um erro ou omissão
+real encontrado nas próprias respostas da IA, as duas tarefas dele
+classificadas no guia do sigilo, e a fronteira clara do que nunca se
+delega.</p>
+<hr />
+<h2 id="antes-de-começar-15-min-antes-de-abrir-a-sala">Antes de começar
+(15 min antes de abrir a sala)</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conferir</th>
+<th>Por quê</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Deck de condução</strong> (<code>deck-e2-mira.html</code>)
+aberto, tela cheia com <code>F</code></td>
+<td>Conduz os nove blocos; <code>S</code> abre estas notas na sua
+tela</td>
+</tr>
+<tr class="even">
+<td><strong>Três links de fonte abertos em abas e testados na véspera,
+com reserva</strong> (sugestão testada em 10/11: índice de inflação do
+Banco Central
+<code>https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados/ultimos/3?formato=json</code>;
+feriados <code>https://brasilapi.com.br/api/feriados/v1/2026</code>;
+existência de lei no Senado
+<code>https://legis.senado.leg.br/dadosabertos/legislacao/lista?tipo=LEI&amp;numero=14133&amp;ano=2021</code>)</td>
+<td>A fonte oficial também sai do ar; sem reserva, o bloco 5 trava ao
+vivo. Teste de novo na hora de abrir a sala</td>
+</tr>
+<tr class="odd">
+<td><strong>Posts de ontem</strong> abertos numa aba à parte, com 2-3
+achados grifados</td>
+<td>Abre o encontro e alimenta a clínica</td>
+</tr>
+<tr class="even">
+<td><strong>Documento da Empresa Alfa</strong> aberto (fonte e resposta
+com erros, lado a lado)</td>
+<td>A demonstração é sem digitar do zero</td>
+</tr>
+<tr class="odd">
+<td>Ferramenta de IA aberta em aba limpa, sem histórico visível</td>
+<td>Histórico pessoal aparece em gravação</td>
+</tr>
+<tr class="even">
+<td>Checklist de 4 perguntas e guia do sigilo no chat, prontos para
+colar</td>
+<td>Distribuição no minuto exato</td>
+</tr>
+<tr class="odd">
+<td>Lista de quem postou achado e quem não postou</td>
+<td>Quem não postou é chamado com gentileza</td>
+</tr>
+<tr class="even">
+<td>Casos-limite de sigilo antecipados pela turma</td>
+<td>Reserva 2 ou 3 para o Tempo 2 da clínica</td>
+</tr>
+<tr class="odd">
+<td>Quem sobe ao palco (2 casos de erro + 2 de sigilo, mais
+reservas)</td>
+<td>Escolha combinada evita silêncio constrangedor</td>
+</tr>
+</tbody>
+</table>
+<p>Combinado entre a dupla: <strong>um conduz, o outro observa o
+chat</strong> e separa os achados que merecem palco dos já resolvidos
+por escrito. Trocam a cada bloco grande.</p>
+<hr />
+<h2 id="bloco-1-abertura-o-que-a-turma-postou-ontem-5-min">Bloco 1 ·
+Abertura: o que a turma postou ontem (5 min)</h2>
+<p><strong>Objetivo:</strong> ancorar o encontro no material real da
+turma — os achados postados são o insumo da clínica, e isso sinaliza que
+o dia é sobre olhar de perto, não teoria nova.</p>
+<p><strong>Fala de abertura sugerida:</strong></p>
+<blockquote>
+<p>“Ontem vocês postaram o pedido, o que veio útil e o que veio errado
+ou faltou. Eu vi coisas boas aí — algumas vão para o palco daqui a
+pouco. Hoje o assunto é esse: por que a IA erra, mesmo escrevendo
+bonito, e o que fazer antes de usar qualquer resposta dela para
+valer.”</p>
+</blockquote>
+<p><strong>O que mostrar na tela:</strong> a lista dos posts, com 2 ou 3
+achados grifados — sem revelar se estão certos ou errados. O suspense é
+proposital: a turma descobre na clínica.</p>
+<p><strong>Armadilha:</strong> validar ou corrigir um achado já na
+abertura. Isso rouba o momento da clínica.</p>
+<p><strong>Transição:</strong> “Antes de olhar os casos de vocês, vamos
+nomear os jeitos como a IA costuma errar — porque tem um quarto jeito
+que quase ninguém percebe.”</p>
+<hr />
+<h2 id="bloco-2-os-três-jeitos-de-errar-e-o-quarto-10-min">Bloco 2 · Os
+três jeitos de errar — e o quarto (10 min)</h2>
+<p><strong>Objetivo:</strong> dar à turma vocabulário para reconhecer
+erro sozinha, sem depender do instrutor.</p>
+<p><strong>Fala de abertura sugerida:</strong></p>
+<blockquote>
+<p>“A IA erra de três jeitos. Ela inventa um fato — número, data, nome
+que não existe em lugar nenhum. Ela inventa a fonte — cita um estudo ou
+uma norma que não existe. E ela faz a mistura plausível, a mais
+perigosa: pega pedaços reais e monta uma conclusão que nenhum deles
+sustenta sozinho. E tem um quarto problema, que nem chamamos de erro: a
+resposta está certa, só que incompleta — o que você esperava ver e não
+veio.”</p>
+</blockquote>
+<p><strong>O que mostrar na tela:</strong> os quatro itens em lista, com
+o terceiro e o quarto destacados visualmente (são os que a turma mais
+erra em reconhecer).</p>
+<p><strong>A armadilha da vez:</strong> tratar a lacuna como “não é bem
+um erro, relaxa”. É o mais traiçoeiro exatamente porque parece
+inofensivo — o que sumiu pode ser justamente o dado que mudaria a
+decisão de quem lê. Diga isso com todas as letras.</p>
+<p><strong>Transição:</strong> “Para pegar os quatro, existe uma
+pergunta certa para cada um. Juntas, elas formam um checklist de 4
+perguntas.”</p>
+<hr />
+<h2
+id="bloco-3-o-checklist-de-4-perguntas-e-as-duas-camadas-de-defesa-8-min">Bloco
+3 · O checklist de 4 perguntas e as duas camadas de defesa (8 min)</h2>
+<p><strong>Objetivo:</strong> entregar a ferramenta que a turma carrega
+no bolso a partir de hoje.</p>
+<p><strong>Fala de abertura sugerida:</strong></p>
+<blockquote>
+<p>“Antes de usar qualquer resposta que importa: confere com a fonte?
+Faz sentido no seu caso real, ou parece plano genérico de internet? Tem
+número, nome, data ou citação que pode ter sido inventado? E ela trata
+casos parecidos do mesmo jeito, ou tem um peso e duas medidas escondidos
+aí? Essa é a segunda camada de defesa. A primeira vocês já montaram
+ontem, sem saber: o critério de qualidade dentro do próprio pedido. Uma
+não substitui a outra — o critério é automático, mas quem confere de
+verdade é você.”</p>
+</blockquote>
+<p><strong>O que mostrar na tela:</strong> o checklist de 4 perguntas
+(documento do participante), com as duas camadas nomeadas visualmente —
+dentro do pedido / por fora do pedido.</p>
+<p><strong>A armadilha da vez:</strong> deixar a turma achar que decorar
+as quatro perguntas basta. A pergunta 1 só funciona se alguém
+<strong>abrir a fonte de verdade</strong> — dizer a frase e não conferir
+é teatro de checklist, não checklist.</p>
+<p><strong>Transição:</strong> “Vamos ver as quatro perguntas em ação,
+numa resposta com erro plantado de propósito.”</p>
+<hr />
+<h2 id="bloco-4-demonstração-auditoria-ao-vivo-12-min">Bloco 4 ·
+Demonstração: auditoria ao vivo (12 min)</h2>
+<p><strong>Objetivo:</strong> mostrar o checklist funcionando em tempo
+real — a turma caça antes de o instrutor revelar.</p>
+<p><strong>Fala de abertura sugerida:</strong></p>
+<blockquote>
+<p>“Aqui está a fonte: uma pesquisa de clima da Empresa Alfa. Aqui, o
+que a IA escreveu sobre ela — bem escrito, com números, com tom seguro.
+Antes de eu falar, apontem no chat: o que está errado ou faltando?”</p>
+</blockquote>
+<p><strong>O que mostrar e como conduzir:</strong> projete fonte e
+resposta lado a lado (roteiro no Anexo A). Deixe 2-3 minutos de silêncio
+para a turma caçar no chat antes de confirmar qualquer coisa. Depois
+confira cada apontamento <strong>na fonte, em tela</strong>, um a um —
+inclusive os errados. Feche revelando o que ninguém pegou (normalmente a
+lacuna).</p>
+<p><strong>A armadilha da vez:</strong> revelar os erros antes de dar
+tempo de a turma caçar sozinha — o efeito só funciona se a turma sentir
+na pele que uma resposta bem escrita enganou quase todo mundo.</p>
+<p><strong>Frase de fecho do bloco, dita devagar:</strong> “essa
+resposta está bem escrita. É exatamente assim que o erro passa.”
+<strong>Transição:</strong> “Vocês viram a conferência numa fonte que eu
+entreguei pronta. E quando a fonte é a internet oficial e a IA nem
+abriu? Vamos ver a mesma pergunta respondida de dois jeitos.”</p>
+<hr />
+<h2 id="bloco-5-conferir-na-fonte-o-link-que-não-inventa-10-min">Bloco 5
+· Conferir na fonte: o link que não inventa (10 min)</h2>
+<p><strong>Objetivo:</strong> mostrar, lado a lado, a diferença entre a
+IA responder de memória e responder com a fonte oficial na mão, e dar à
+turma a palavra <strong>API</strong>: o balcão de dados de um órgão,
+aberto por um link. Sem código: é abrir um link e ler o que veio.</p>
+<p><strong>Fala de abertura sugerida:</strong></p>
+<blockquote>
+<p>“Vou fazer a mesma pergunta duas vezes. Na primeira, a IA responde de
+memória: o índice de inflação do último mês, ou se um feriado cai em tal
+dia, ou se uma lei existe. Responde segura, bem escrita. Na segunda, eu
+abro no navegador o link da fonte oficial, vocês veem o dado cru na
+tela, e eu colo esse conteúdo no pedido. Comparem. Esse tipo de link tem
+nome: API. É o balcão de dados de um órgão, aberto por um endereço. Não
+é programação. É abrir um link e ler.”</p>
+</blockquote>
+<p><strong>O que mostrar na tela:</strong></p>
+<ol type="1">
+<li>A ferramenta de IA: a pergunta feita <strong>de memória</strong>,
+sem link. Deixe a resposta na tela.</li>
+<li>O navegador com o link da fonte oficial aberto (um dos três
+preparados): mostre o dado cru, como o órgão entrega.</li>
+<li>De volta à ferramenta: cole o <strong>conteúdo</strong> do link no
+mesmo pedido e compare as duas respostas.</li>
+<li>Cada aluno abre, no próprio aparelho, <strong>um</strong> link do
+Mapa de Fontes Abertas da sua profissão (documento do participante) e
+anota o que viu no caderno.</li>
+</ol>
+<p><strong>Não afirme que a ferramenta gratuita abre links
+sozinha.</strong> A instrução segura é: abra o link no navegador e cole
+o conteúdo no pedido. Se alguém colar só o endereço e a IA “responder”,
+desconfie: ela pode estar respondendo de memória.</p>
+<p><strong>Os três avisos, ditos com todas as letras:</strong></p>
+<ol type="1">
+<li><strong>A fonte oficial também sai do ar.</strong> Tenha a reserva
+anotada (outra fonte, ou o dado salvo antes).</li>
+<li><strong>O que o link devolve com nome de pessoa é amarelo no guia do
+sigilo</strong>, mesmo sendo público. É dado pessoal: use só o trecho de
+que a tarefa precisa e anonimize antes de colar.</li>
+<li><strong>A IA pode ler errado um dado certo.</strong> A fonte diminui
+o que ela inventa; não dispensa a conferência. O checklist continua
+valendo.</li>
+</ol>
+<p><strong>Não cite o valor do índice como fato</strong> na fala nem no
+slide: ele muda; quem lê é a tela, na hora.</p>
+<p><strong>A armadilha da vez:</strong> virar aula de tecnologia (o que
+é API por dentro). A turma só precisa de uma ideia: o dado vem do órgão,
+não da memória da IA. Outra: o link testado na véspera que caiu na hora;
+por isso a reserva.</p>
+<p><strong>Transição:</strong> “Conferir na fonte vale para o que a IA
+diz. E o que eu colo nela? Se o link trouxe nome de gente, entramos no
+guia do sigilo.”</p>
+<hr />
+<h2 id="bloco-6-o-guia-do-sigilo-completo-10-min">Bloco 6 · O guia do
+sigilo, completo (10 min)</h2>
+<p><strong>Objetivo:</strong> substituir a regra provisória do primeiro
+encontro pelo critério completo — e deixar claro que ele não é
+burocracia, é o que separa uso profissional de vazamento.</p>
+<p><strong>Fala de abertura sugerida:</strong></p>
+<blockquote>
+<p>“Ontem a regra era provisória: só material público, seu ou inventado.
+Hoje o critério completo, em semáforo. Verde: público, seu ou inventado
+— uso livre. Amarelo: tem dado de outra pessoa, mas dá para anonimizar
+antes — eu mostro como. Vermelho: identifica alguém, é sensível, é
+segredo do trabalho — não entra em ferramenta de fora. E a regra de
+bolso que resolve toda dúvida: <strong>na dúvida, é
+vermelho.</strong>”</p>
+</blockquote>
+<p><strong>O que mostrar na tela:</strong> o guia do sigilo, rolando
+pelas três faixas; pare no modelo de anonimização e mostre um nome
+virando <code>[PESSOA A]</code> em tela.</p>
+<p><strong>A armadilha da vez:</strong> transformar isso numa aula longa
+sobre proteção de dados, ou o oposto — tratar como burocracia e passar
+rápido demais. É critério de decisão profissional; dedique o tempo do
+bloco, sem esticar.</p>
+<p><strong>Transição:</strong> “O guia do sigilo protege o dado dos
+outros. Falta uma última fronteira, e essa não é sobre dado — é sobre
+decisão.”</p>
+<hr />
+<h2 id="bloco-7-o-que-não-se-delega-nunca-5-min">Bloco 7 · O que não se
+delega nunca (5 min)</h2>
+<p><strong>Objetivo:</strong> fechar o encontro com o limite que nenhuma
+técnica de prompt resolve.</p>
+<p><strong>Fala de abertura sugerida:</strong></p>
+<blockquote>
+<p>“Três coisas não se delegam — não por limite da ferramenta, por
+decisão profissional. A decisão final: a IA informa, quem decide assina.
+A palavra que compromete: cobrança, notícia ruim, feedback difícil — a
+IA rascunha a estrutura, quem reescreve com a própria voz é você, ou nem
+isso. E a relação: ninguém quer saber que a mensagem sensível que
+recebeu foi terceirizada. Guardem a frase que resume o programa:
+<strong>a IA redige; quem assina, decide e responde é
+você.</strong>”</p>
+</blockquote>
+<p><strong>O que mostrar na tela:</strong> os três itens em lista
+simples, com a frase do programa em destaque no slide final do
+bloco.</p>
+<p><strong>A armadilha da vez:</strong> o pêndulo — deslumbramento (usar
+para tudo) ou pânico (não usar para nada). A posição certa é critério; a
+lista de não-delegáveis pode variar de pessoa para pessoa, e isso é
+riqueza, não erro.</p>
+<p><strong>Transição:</strong> “Agora é a hora de vocês. Vamos caçar
+erro nas respostas que a turma postou, e resolver no palco os casos de
+sigilo que travaram vocês.”</p>
+<hr />
+<h2
+id="bloco-8-clínica-caçada-de-erros-e-casos-limite-do-sigilo-48-min">Bloco
+8 · Clínica: caçada de erros e casos-limite do sigilo (48 min)</h2>
+<p>O coração do encontro. Divida em dois tempos e anuncie os dois no
+começo.</p>
+<p><strong>Tempo 1 — caçada de erros (25 min).</strong> Casos: os
+achados postados ontem. Priorize três perfis, nesta ordem: <strong>um
+fato inventado</strong>, <strong>uma lacuna</strong>, e <strong>um “não
+achei nada”</strong> — este último se audita ao vivo com a turma, porque
+quase sempre existe algo ali. Formato por caso (cerca de 8 min
+cada):</p>
+<ol type="1">
+<li>O aluno mostra a resposta e o que já suspeitava (1 min).</li>
+<li>A turma aplica as 4 perguntas no chat, sem o instrutor adiantar nada
+(3 min).</li>
+<li>O instrutor confere na fonte em tela, junto com a turma (3 min), e
+fecha nomeando qual pergunta pegou o problema.</li>
+</ol>
+<p><strong>Regra de ouro do Tempo 1:</strong> trate o achado como prova
+de que o checklist funciona, não como falha do aluno. Quem postou “não
+achei nada” e a turma acha lacuna não errou; aprendeu ao vivo a
+diferença entre “não olhei” e “está certo”.</p>
+<p><strong>Tempo 2 — casos-limite do sigilo (23 min).</strong> Casos: os
+trazidos pelos alunos, mais os antecipados na comunidade. Formato: o
+aluno descreve a situação em voz alta (nunca cola o dado real), a turma
+vota verde, amarelo ou vermelho no chat, o instrutor resolve.</p>
+<p><strong>Regra de ouro do Tempo 2, dita sem rodeio:</strong>
+<strong>nunca resolver um caso vermelho dando “um jeitinho” no
+palco.</strong> Modele a decisão adulta em voz alta: a tarefa fica de
+fora por enquanto, vira versão fictícia equivalente, ou espera
+ferramenta aprovada pelo trabalho do aluno. Erros típicos a nomear:
+recorte que cortou informação necessária demais (o oposto do despejo);
+anonimização que deixou identificador indireto (cargo único numa equipe
+pequena, cidade pequena, fato notório); classificar de amarelo o que é
+vermelho por conveniência.</p>
+<p><strong>Se a turma travar</strong> (ninguém se voluntaria com
+caso-limite real): use um caso de reserva preparado antes, e volte a
+convidar depois de resolvê-lo.</p>
+<hr />
+<h2 id="bloco-9-fechamento-12-min">Bloco 9 · Fechamento (12 min)</h2>
+<ol type="1">
+<li><strong>O placar de erros pegos pela turma</strong>, somado ao vivo:
+“cada um seria um constrangimento no trabalho de verdade; o checklist
+custou minutos.” Ler os números em voz alta faz o achado individual
+parecer conquista, não exposição.</li>
+<li><strong>O combinado de casa (35–45 min):</strong> aplicar o
+checklist nas últimas duas respostas e registrar um achado — “não olhei”
+é diferente de “está certo”. Classificar as tarefas nº 1 e nº 2 no guia
+do sigilo; amarelo anonimiza com o modelo; vermelho vem para a clínica
+de amanhã.</li>
+<li><strong>Frase de fecho, sem euforia:</strong> “hoje vocês aprenderam
+a desconfiar direito. Amanhã a gente para de escrever o pedido do zero —
+vocês vão montar o primeiro assistente.”</li>
+</ol>
+<hr />
+<h2 id="anexo-a-roteiro-da-demonstração-empresa-alfa">Anexo A · Roteiro
+da demonstração (Empresa Alfa)</h2>
+<p><strong>FONTE (fictícia) — Pesquisa interna de clima da Empresa Alfa,
+2026:</strong> participaram 84 dos 120 funcionários (70%); satisfação
+geral 6,8 (era 7,4 em 2025); principal reclamação: sobrecarga no fim do
+mês (61% das menções); elogio mais citado: flexibilidade de horário
+(45%); o setor financeiro teve a menor adesão (40%).</p>
+<p><strong>RESPOSTA DA IA (com erros plantados):</strong> “A pesquisa de
+clima de 2026, que contou com a participação de <strong>84%</strong> dos
+funcionários, mostra satisfação geral de 6,8. A principal causa da queda
+é a <strong>insatisfação com os salários</strong>. O estudo
+<strong>recomenda a criação de um programa de bem-estar</strong>.
+Destaque positivo para a flexibilidade de horário, citada por 45%.”</p>
+<p><strong>O que está plantado, para conferir junto com a
+turma:</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>O que a resposta diz</th>
+<th>O problema</th>
+<th>Pergunta que pega</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“84% dos funcionários”</td>
+<td>A fonte diz 70% — fato inventado</td>
+<td>1 e 3</td>
+</tr>
+<tr class="even">
+<td>“a causa é a insatisfação com salários”</td>
+<td>A fonte não fala em salário — mistura plausível: a queda é real, a
+causa foi fabricada</td>
+<td>1 e 3</td>
+</tr>
+<tr class="odd">
+<td>“o estudo recomenda um programa de bem-estar”</td>
+<td>A fonte só descreve resultados, não recomenda nada</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><em>(não aparece)</em></td>
+<td>Sumiu a reclamação nº 1 (sobrecarga) e a baixa adesão do financeiro
+— lacuna</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ordem de revelação:</strong> a turma aponta tudo primeiro;
+confirme os fatos inventados (mais fáceis), depois a mistura plausível,
+e feche com a lacuna — a que menos gente aponta, e o efeito que fecha o
+bloco.</p>
+<h2 id="anexo-b-planos-b">Anexo B · Planos B</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Se acontecer</th>
+<th>O que fazer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ninguém postou achado ontem</td>
+<td>Use o caso da Empresa Alfa (Anexo A) como achado do dia; peça posts
+retroativos até a noite</td>
+</tr>
+<tr class="even">
+<td>Aluno cola um caso vermelho <strong>real</strong> no chat</td>
+<td>Interrompa na hora: “para — isso já é vermelho, descreve em voz
+alta, sem colar aqui”</td>
+</tr>
+<tr class="odd">
+<td>A turma acerta os erros plantados rápido demais</td>
+<td>Puxe a lacuna com mais força: “o que vocês esperavam ver e não
+veio?”</td>
+</tr>
+<tr class="even">
+<td>A turma trava nos casos-limite (espera o instrutor decidir)</td>
+<td>Vote por cor antes de argumentar — o desacordo vira o material da
+discussão</td>
+</tr>
+<tr class="odd">
+<td>Sobrou tempo</td>
+<td>Rode um segundo caso-limite guardado de reserva</td>
+</tr>
+<tr class="even">
+<td>Faltou tempo</td>
+<td>Corte o segundo caso do Tempo 1; resolva o restante por escrito na
+comunidade</td>
+</tr>
+</tbody>
+</table>
+</main>
+</div>
+<script>
+(function(){
+var doc=document.getElementById("doc"),KEY='guia-conducao-e2-edit';
+var st=document.getElementById("status");
+function note(m){st.textContent=m;setTimeout(function(){st.textContent="";},3000);}
+var editing=false,be=document.getElementById("btnEdit"),bs=document.getElementById("btnSave");
+if(be){try{var saved=localStorage.getItem(KEY);if(saved){doc.innerHTML=saved;note("Versão editada carregada do navegador");}}catch(e){}}
+if(be)be.onclick=function(){editing=!editing;doc.contentEditable=editing;be.textContent=editing?"✅ Concluir edição":"✏️ Editar";bs.style.display=editing?"":"none";if(!editing){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}}};
+if(bs)bs.onclick=function(){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}};
+var bx=document.getElementById("btnExport");if(bx)bx.onclick=function(){var html="<!DOCTYPE html>"+document.documentElement.outerHTML;var b=new Blob([html],{type:"text/html"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download='guia-conducao-e2.html';a.click();};
+document.getElementById("btnPrint").onclick=function(){window.print();};
+var br=document.getElementById("btnReset");if(br)br.onclick=function(){if(confirm("Descartar as edições feitas no navegador e voltar ao original?")){try{localStorage.removeItem(KEY);}catch(e){}location.reload();}};
+document.querySelectorAll("table").forEach(function(t){var w=document.createElement("div");w.className="tablewrap";t.parentNode.insertBefore(w,t);w.appendChild(t);});
+doc.querySelectorAll(".cpy").forEach(function(b){b.remove();});
+doc.querySelectorAll("pre").forEach(function(p){var b=document.createElement("button");b.className="cpy";b.contentEditable=false;b.textContent="📋 Copiar";b.onclick=function(){var t=p.innerText;function ok(){b.textContent="✅ Copiado";setTimeout(function(){b.textContent="📋 Copiar";},2000);}if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,function(){note("Selecione o texto e copie com Ctrl+C");});}else{note("Selecione o texto e copie com Ctrl+C");}};p.parentNode.insertBefore(b,p.nextSibling);});
+})();
+</script>
+</body>
+</html>

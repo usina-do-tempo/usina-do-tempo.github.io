@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa das Rotas Gratuitas</title>
+<style>
+:root{--bg:#f7f6f3;--paper:#ffffff;--ink:#1f2430;--muted:#5c6470;--accent:#0f4c81;--accent2:#b8860b;--line:#e3e0d8;--code:#f0eee8}
+@media (prefers-color-scheme: dark){:root{--bg:#14161c;--paper:#1c1f27;--ink:#e8e6e1;--muted:#9aa1ad;--accent:#6ea8d8;--accent2:#d4a942;--line:#2c303a;--code:#242832}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif;padding-top:3.2rem}
+.wrap{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+header.top{border-bottom:3px double var(--accent);padding-bottom:1rem;margin-bottom:2rem}
+header.top .kicker{font-family:system-ui,sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:600}
+h1{font-size:1.9rem;line-height:1.25;margin:.3rem 0 0;color:var(--accent)}
+h2{font-size:1.35rem;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:.3rem;margin-top:2.4rem}
+h3{font-size:1.08rem;margin-top:1.6rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-family:system-ui,sans-serif;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--code)}
+.tablewrap{overflow-x:auto}
+blockquote{border-left:3px solid var(--accent2);margin:1rem 0;padding:.2rem 1rem;color:var(--muted)}
+pre{background:var(--code);padding:.8rem 1rem;border-radius:8px;overflow-x:auto;font-size:.82em;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.cpy{display:block;margin:-.4rem 0 1rem auto;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.35rem .9rem;cursor:pointer;font:.8rem system-ui,sans-serif}
+@media print{.cpy{display:none}}
+code{background:var(--code);padding:.1em .35em;border-radius:4px;font-size:.85em}
+pre code{padding:0;background:none}
+hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+.toolbar{position:fixed;top:0;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.5rem 1rem;display:flex;gap:.6rem;align-items:center;font-family:system-ui,sans-serif;font-size:.85rem;z-index:10}
+.toolbar button{background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.4rem .9rem;cursor:pointer;font-size:.82rem}
+.toolbar button.sec{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.toolbar .status{color:var(--muted);margin-left:auto}
+#doc[contenteditable="true"]{outline:2px dashed var(--accent2);outline-offset:8px}
+@media print{.toolbar{display:none}body{padding-top:0;background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <button id="btnPrint" class="sec">🖨️ Imprimir/PDF</button>
+  <span class="status" id="status"></span>
+</div>
+<div class="wrap">
+<header class="top">
+  <div class="kicker">Material do instrutor · v1.1 — reconferido em 10/11/2026</div>
+  <h1>Mapa das Rotas Gratuitas</h1>
+</header>
+<main id="doc">
+<h1
+id="mapa-das-rotas-gratuitas-turma-fundadora-v1.1-reconferido-em-10112026">Mapa
+das Rotas Gratuitas — Turma Fundadora (v1.1 · reconferido em
+10/11/2026)</h1>
+<p><strong>Material do INSTRUTOR (não vai para o aluno).</strong>
+Sustenta a decisão 11 (regra de ouro da acessibilidade): toda afirmação
+“é grátis” dita em aula sai DAQUI, e este mapa <strong>expira a cada
+turma</strong> — reverificar todas as linhas na fonte primária antes do
+primeiro encontro de cada turma nova. Verificação desta versão:
+relatório de recheck de 10/11/2026
+(<code>docs/pesquisa-apis/08-recheck-rotas-e-novidades.md</code>), feito
+por agentes de pesquisa com resumo automático das páginas, não leitura
+integral. As páginas de ajuda da OpenAI deram erro 403: tudo do ChatGPT
+gratuito que depende delas ficou SEM confirmação. Base anterior: v1.0 de
+05/09/2026.</p>
+<p>Marcadores: ✅ confirmado na fonte primária · ⚠️ parcial/com ressalva
+· 🔴 não confirmado.</p>
+<h2
+id="o-que-cada-necessidade-do-curso-usa-rota-garantida-por-desenho">1. O
+que cada necessidade do curso usa (rota garantida por desenho)</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Necessidade do curso</th>
+<th>Rota gratuita GARANTIDA</th>
+<th>Reserva (rodízio)</th>
+<th>Atenção</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Chat com pedido em 6 etapas (E1–E2)</td>
+<td>Gemini ✅ (<a
+href="https://support.google.com/gemini/answer/16275805?hl=pt-BR">ajuda</a>:
+gratuito com limites por computação, renovam a cada 5 h, teto semanal) ·
+Claude ✅ (<a href="https://claude.com/pricing">preços</a>: limite a
+cada 5 h e semanal) · Copilot ✅ (<a
+href="https://support.microsoft.com/en-us/microsoft-365-copilot/learning/changes-microsoft-copilot-app">Microsoft</a>:
+“sujeito a capacidade e limites”) · ChatGPT ⚠️ (<a
+href="https://chatgpt.com/pricing">preços</a>: Free existe, sem
+números)</td>
+<td>—</td>
+<td>Limites numéricos de Copilot e ChatGPT não publicados 🔴
+(reconfirmado em 10/11: <a
+href="https://www.microsoft.com/en-us/microsoft-365/copilot/for-individuals">Copilot</a>
+segue sem números; copilot.com não abriu)</td>
+</tr>
+<tr class="even">
+<td>Anexar arquivo nos exercícios (E2+)</td>
+<td><strong>Claude</strong> ✅ (20 arquivos/chat, 500 MB por arquivo; em
+Projetos, 30 MB por arquivo — <a
+href="https://support.claude.com/en/articles/8241126-uploading-files-to-claude">ajuda</a>)</td>
+<td><strong>Gemini</strong> ⚠️ (10 arquivos/prompt, 100 MB; a página não
+separa gratuito de pago; contexto de 32K tokens sem plano — <a
+href="https://support.google.com/gemini/answer/14903178?hl=pt-BR">ajuda</a>)</td>
+<td><strong>ChatGPT Free</strong> 🔴: a v1.0 dizia “3 uploads/dia”; em
+10/11 a <a href="https://chatgpt.com/pricing">página de preços</a> traz
+só “limited messages with uploads”, sem número — não reconfirmado em
+10/11 (página bloqueou a leitura); valor de 05/09 mantido só como
+referência. Exercício com anexo não pode depender dele</td>
+</tr>
+<tr class="odd">
+<td><strong>Assistente especializado</strong> (E3–E5) — espaço com
+instruções permanentes</td>
+<td><strong>Rota A: Projetos do ChatGPT</strong> ⚠️ (existência no
+gratuito vista na <a href="https://chatgpt.com/pricing">página de
+preços</a>, sem limite declarado; “5 arquivos/projeto” da v1.0 não
+reconfirmado em 10/11 — página de ajuda deu 403; valor de 05/09 mantido
+só como referência)</td>
+<td><strong>Rota B: Projetos do Claude</strong> ✅ (até 5 projetos no
+gratuito; duas páginas oficiais concordam: <a
+href="https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects">ajuda</a>
+e <a href="https://claude.com/pricing">preços</a>). <strong>Reserva:
+Gemini “habilidades”</strong> ⚠️ em transição</td>
+<td><strong>Claude:</strong> o teste de campo de 06/09 achou limite
+baixo de USO; o relatório não traz esse número, os 5 projetos são o
+limite publicado — <strong>precisa de novo teste na véspera</strong>.
+<strong>Gemini:</strong> a ajuda (<a
+href="https://support.google.com/gemini/answer/18560919?hl=pt-BR">link</a>)
+diz que, em contas pessoais, os Gems viram habilidades somente leitura
+em 17/11/2026 (não usa, não edita, não cria) e são removidos em
+17/12/2026; o <a
+href="https://workspaceupdates.googleblog.com/2026/09/skills-gemini-app-workspace.html">Workspace
+Updates</a> diz que em 17/11 os Gems só mudam de lugar e seguem
+editáveis (trata contas Workspace, prazos 01/03/2027 e 01/06/2027).
+<strong>Contradição entre páginas oficiais, não resolvida</strong>; a <a
+href="https://gemini.google/br/subscriptions/?hl=pt-BR">página de
+assinaturas do Brasil</a> ainda lista Gems no gratuito. Habilidades no
+gratuito: não confirmado (a ajuda sugere que sim, via busca). Opal e
+Gems do Google Labs desativados, sem migração. <strong>GPT
+personalizado</strong> 🔴: a página de preços o lista em Plus e Pro, não
+no Free; a v1.0 dizia “nenhum plano pessoal” — possível erro do mapa,
+conferir à mão; nunca usar como rota no Free</td>
+</tr>
+<tr class="even">
+<td>Demo agêntica do presencial (pesquisa profunda)</td>
+<td><strong>Gemini Deep Research</strong> ✅ (existe para todos; limite
+diário de pedidos; pode faltar em pico — <a
+href="https://support.google.com/gemini/answer/15719111?hl=en">ajuda</a>)</td>
+<td><strong>ChatGPT deep research</strong> ✅ (“limited deep research”
+no Free — <a href="https://chatgpt.com/pricing">preços</a>) ·
+<strong>NotebookLM</strong> 🔴 (a v1.0 dizia 10/mês; número não está nas
+páginas oficiais lidas; desde 02/09 há limites por computação; não
+reconfirmado em 10/11 — <a
+href="https://support.google.com/gemininotebook/answer/17670842">ajuda</a>
+não abriu; valor de 05/09 mantido só como referência)</td>
+<td>Ensaiar com a reserva pronta. <strong>Agent mode do ChatGPT</strong>
+🔴: o termo não apareceu; agentes “Dots” só no Pro, tarefas agendadas na
+coluna Plus (<a href="https://chatgpt.com/pricing">preços</a>, <a
+href="https://learn.chatgpt.com/docs/whats-new">novidades</a>); tratar
+como pago. <strong>Copilot</strong> não serve de reserva: Deep Research
+e Podcasts aposentados em 18/08 (<a
+href="https://support.microsoft.com/en-us/microsoft-365/copilot/learning/changes-microsoft-copilot-app">Microsoft</a>).
+Nunca citar número de cota</td>
+</tr>
+<tr class="odd">
+<td>Material de apoio / estudo do aluno</td>
+<td>NotebookLM ⚠️ (100 notebooks e 50 fontes por notebook ✅ no plano
+Standard gratuito — <a
+href="https://support.google.com/notebooklm/answer/16213268?hl=en">ajuda</a>;
+nas páginas de ajuda o produto aparece como “Gemini Notebook”: conferir
+o nome na interface)</td>
+<td>—</td>
+<td>“50 chats/dia” 🔴: não reconfirmado em 10/11 (só busca); valor de
+05/09 mantido só como referência. <strong>Google AI Studio</strong> 🔴:
+nenhuma página oficial lida afirma que segue gratuito (<a
+href="https://aistudio.google.com/docs/changelog">changelog</a>); não
+afirmar nem negar</td>
+</tr>
+</tbody>
+</table>
+<h2
+id="preços-de-entrada-no-brasil-para-o-bloco-a-conta-do-próximo-passo">2.
+Preços de ENTRADA no Brasil (para o bloco “a conta do próximo
+passo”)</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Plano</th>
+<th>Status em 10/11/2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Google AI Pro</td>
+<td>✅ <strong>R$ 96,99/mês</strong> (<a
+href="https://gemini.google/br/subscriptions/?hl=pt-BR">assinaturas</a>;
+não indica se é promocional)</td>
+</tr>
+<tr class="even">
+<td>Google AI Plus</td>
+<td>✅ <strong>R$ 24,99/mês</strong> (agora com 400 GB — mesma
+página)</td>
+</tr>
+<tr class="odd">
+<td>ChatGPT Plus</td>
+<td>🔴 R$ 99,90 não reconfirmado em 10/11 (a <a
+href="https://learn.chatgpt.com/docs/pricing">página oficial</a> mostra
+só dólar: US$ 20); valor de 05/09 mantido só como referência; só a tela
+de assinatura logada no Brasil prova</td>
+</tr>
+<tr class="even">
+<td>ChatGPT Go</td>
+<td>🔴 R$ 39,99 não reconfirmado em 10/11 (só dólar: US$ 8 — <a
+href="https://chatgpt.com/pricing">preços</a>); novo: o Go “may include
+ads” (<a
+href="https://openai.com/index/introducing-chatgpt-go/">OpenAI</a>);
+valor de 05/09 mantido só como referência</td>
+</tr>
+<tr class="odd">
+<td>Claude Pro</td>
+<td>✅ <strong>US$ 20/mês</strong> (US$ 17/mês no anual — <a
+href="https://claude.com/pricing">preços</a>) · 🔴 preço em R$ não
+aparece (nem com ?currency=BRL)</td>
+</tr>
+</tbody>
+</table>
+<p>→ A frase da régua (“o plano de entrada custa ~R$ 100/mês, menos que
+1 hora do seu trabalho”) está ⚠️ sustentada <strong>só pelo Google AI
+Pro (R$ 96,99)</strong>; o R$ 99,90 do ChatGPT Plus não foi
+reconfirmado. Na aula usar só o que está ✅ (Google AI Pro R$ 96,99;
+Claude US$ 20). Preço em BRL é o dado de menor validade — reconferir
+sempre.</p>
+<h2 id="o-que-muda-mais-rápido-ordem-de-volatilidade">3. O que muda mais
+rápido (ordem de volatilidade)</h2>
+<ol type="1">
+<li><strong>Cotas numéricas</strong> (deep research, uploads/dia): mudam
+sem aviso; nunca citar número de cota em slide — dizer “cota limitada, o
+contador aparece no produto”.</li>
+<li><strong>Gating de recurso por plano</strong>
+(Projetos/Gems/habilidades/GPTs): muda por decisão de marketing; a troca
+de Gems por habilidades (17/11 e 17/12/2026), o Claude Projects que
+voltou a ser documentado no gratuito e a reversão dos GPTs são o exemplo
+— e a troca de nome do Google é o exemplo vivo da lição “os nomes mudam,
+o conceito é um só”.</li>
+<li><strong>Preços em BRL</strong>: câmbio e reprecificação local.</li>
+</ol>
+<h2 id="fontes-e-conectores-relatório-07-pesquisa-de-10112026">4. Fontes
+e conectores (relatório 07, pesquisa de 10/11/2026)</h2>
+<p>Nada foi testado em conta real; o ChatGPT vem de resumo de busca, sem
+leitura de página oficial.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ferramenta</th>
+<th>Status</th>
+<th>O que a fonte diz</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Claude gratuito</td>
+<td>✅ aceita <strong>1 conector personalizado</strong></td>
+<td>“Free users are limited to one custom connector” (<a
+href="https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp">ajuda</a>).
+Conectores do diretório disponíveis a todos (<a
+href="https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities">ajuda</a>).
+Caminho: Configurações → Conectores → Adicionar conector personalizado.
+O servidor de terceiro recebe o que o aluno pergunta: só dado
+público</td>
+</tr>
+<tr class="even">
+<td>Gemini</td>
+<td>🔴 <strong>não oferece conector personalizado no
+Brasil</strong></td>
+<td>Apps personalizados exigem 18+, EUA, conta pessoal e inglês (<a
+href="https://support.google.com/gemini/answer/17209137">ajuda</a>). Os
+conectores de 13/10 (40+ apps) são em sua maioria só inglês/EUA: testar
+no Brasil</td>
+</tr>
+<tr class="odd">
+<td>ChatGPT</td>
+<td>🔴 não confirmado</td>
+<td>Apps no Free e MCP personalizado sem fonte primária (OpenAI deu 403;
+fóruns em conflito). Não prometer</td>
+</tr>
+<tr class="even">
+<td>Qualquer ferramenta</td>
+<td>✅ colar o conteúdo da fonte no pedido</td>
+<td>Copiar o texto/dados da fonte e colar no pedido funciona em qualquer
+ferramenta, sem conector. Dado público apenas; dado sigiloso nunca vai
+para LLM externa</td>
+</tr>
+</tbody>
+</table>
+<h2
+id="teste-de-véspera-em-conta-gratuita-real-obrigatório-antes-de-2311">5.
+Teste de véspera em conta gratuita real (obrigatório antes de
+23/11)</h2>
+<p>Fazer em conta gratuita recém-criada (ou limpa), de preferência no
+dia 22/11, uma ferramenta de cada vez. Anotar em cada passo: funcionou /
+não funcionou / mensagem exibida.</p>
+<p><strong>ChatGPT (rota A)</strong> 1. Entrar na conta gratuita e
+procurar “Projetos” na barra lateral. Clicar em “Novo projeto”. 2. Dar
+um nome, colar instruções curtas (3 linhas) no campo de instruções e
+anexar 1 arquivo pequeno (PDF ou texto). Anotar se aceitou e quantos
+arquivos o projeto permite. 3. Abrir uma conversa dentro do projeto e
+perguntar algo sobre o arquivo. Ver se respondeu com base nele. 4. Abrir
+um chat comum, anexar 1 arquivo e anotar se há aviso de limite de
+anexos. 5. Procurar a opção de pesquisa profunda (“deep research”) e
+anotar se existe e se mostra contador de uso. 6. Abrir a tela de
+assinatura (Plus e Go) e anotar o preço em R$.</p>
+<p><strong>Claude (rota B)</strong> 1. Entrar na conta gratuita e abrir
+“Projetos”. Clicar em “Criar projeto”. 2. Dar um nome, preencher as
+instruções do projeto e adicionar 1 arquivo. Anotar se aceitou. 3. Abrir
+uma conversa dentro do projeto e perguntar sobre o arquivo. Fazer 5 a 6
+perguntas seguidas e anotar se aparece aviso de limite de uso (o teste
+de 06/09 achou limite baixo). 4. Abrir um chat comum e anexar 1 arquivo.
+5. Abrir Configurações → Conectores e ver se aceita “Adicionar conector
+personalizado”. Não precisa concluir; anotar só se a opção aparece para
+a conta gratuita. 6. Abrir a tela de assinatura do Claude Pro e anotar o
+preço em R$ (ou se só aparece em dólar).</p>
+<p><strong>Gemini (reserva)</strong> 1. Entrar na conta Google pessoal
+gratuita e abrir o Gemini. Procurar “Habilidades” (ou “Gems”) no menu
+lateral e anotar qual nome aparece. 2. Tentar criar uma habilidade (ou
+Gem) com instruções curtas e 1 arquivo. Anotar se aceitou, se só deixa
+visualizar, ou se não deixa criar. 3. Anexar 1 arquivo num chat comum e
+anotar o resultado. 4. Procurar a pesquisa profunda (“Deep Research”) e
+anotar se existe e se mostra contador de cota restante. 5. Anotar se o
+produto de estudo aparece como “NotebookLM” ou “Gemini Notebook”. 6.
+Abrir a tela de assinatura (AI Pro e AI Plus) e anotar o preço em
+R$.</p>
+<p><strong>Depois do teste:</strong> atualizar este mapa (ou o roteiro)
+com o resultado; quem falhou na véspera sai da demo. Também conferir à
+mão: copilot.com logado e se “Opal” ainda abre.</p>
+</main>
+</div>
+<script>
+(function(){
+var doc=document.getElementById("doc"),KEY='mentoria-rotas-gratuitas-edit';
+var st=document.getElementById("status");
+function note(m){st.textContent=m;setTimeout(function(){st.textContent="";},3000);}
+var editing=false,be=document.getElementById("btnEdit"),bs=document.getElementById("btnSave");
+if(be){try{var saved=localStorage.getItem(KEY);if(saved){doc.innerHTML=saved;note("Versão editada carregada do navegador");}}catch(e){}}
+if(be)be.onclick=function(){editing=!editing;doc.contentEditable=editing;be.textContent=editing?"✅ Concluir edição":"✏️ Editar";bs.style.display=editing?"":"none";if(!editing){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}}};
+if(bs)bs.onclick=function(){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}};
+var bx=document.getElementById("btnExport");if(bx)bx.onclick=function(){var html="<!DOCTYPE html>"+document.documentElement.outerHTML;var b=new Blob([html],{type:"text/html"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download='mentoria-rotas-gratuitas.html';a.click();};
+document.getElementById("btnPrint").onclick=function(){window.print();};
+var br=document.getElementById("btnReset");if(br)br.onclick=function(){if(confirm("Descartar as edições feitas no navegador e voltar ao original?")){try{localStorage.removeItem(KEY);}catch(e){}location.reload();}};
+document.querySelectorAll("table").forEach(function(t){var w=document.createElement("div");w.className="tablewrap";t.parentNode.insertBefore(w,t);w.appendChild(t);});
+doc.querySelectorAll(".cpy").forEach(function(b){b.remove();});
+doc.querySelectorAll("pre").forEach(function(p){var b=document.createElement("button");b.className="cpy";b.contentEditable=false;b.textContent="📋 Copiar";b.onclick=function(){var t=p.innerText;function ok(){b.textContent="✅ Copiado";setTimeout(function(){b.textContent="📋 Copiar";},2000);}if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,function(){note("Selecione o texto e copie com Ctrl+C");});}else{note("Selecione o texto e copie com Ctrl+C");}};p.parentNode.insertBefore(b,p.nextSibling);});
+})();
+</script>
+</body>
+</html>

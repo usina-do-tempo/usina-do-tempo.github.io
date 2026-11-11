@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Os 4 Tipos de Tarefa</title>
+<style>
+:root{--bg:#f7f6f3;--paper:#ffffff;--ink:#1f2430;--muted:#5c6470;--accent:#0f4c81;--accent2:#b8860b;--line:#e3e0d8;--code:#f0eee8}
+@media (prefers-color-scheme: dark){:root{--bg:#14161c;--paper:#1c1f27;--ink:#e8e6e1;--muted:#9aa1ad;--accent:#6ea8d8;--accent2:#d4a942;--line:#2c303a;--code:#242832}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif;padding-top:3.2rem}
+.wrap{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+header.top{border-bottom:3px double var(--accent);padding-bottom:1rem;margin-bottom:2rem}
+header.top .kicker{font-family:system-ui,sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:600}
+h1{font-size:1.9rem;line-height:1.25;margin:.3rem 0 0;color:var(--accent)}
+h2{font-size:1.35rem;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:.3rem;margin-top:2.4rem}
+h3{font-size:1.08rem;margin-top:1.6rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-family:system-ui,sans-serif;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--code)}
+.tablewrap{overflow-x:auto}
+blockquote{border-left:3px solid var(--accent2);margin:1rem 0;padding:.2rem 1rem;color:var(--muted)}
+pre{background:var(--code);padding:.8rem 1rem;border-radius:8px;overflow-x:auto;font-size:.82em;line-height:1.5}
+code{background:var(--code);padding:.1em .35em;border-radius:4px;font-size:.85em}
+pre code{padding:0;background:none}
+hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+.toolbar{position:fixed;top:0;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.5rem 1rem;display:flex;gap:.6rem;align-items:center;font-family:system-ui,sans-serif;font-size:.85rem;z-index:10}
+.toolbar button{background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.4rem .9rem;cursor:pointer;font-size:.82rem}
+.toolbar button.sec{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.toolbar .status{color:var(--muted);margin-left:auto}
+#doc[contenteditable="true"]{outline:2px dashed var(--accent2);outline-offset:8px}
+@media print{.toolbar{display:none}body{padding-top:0;background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <button id="btnPrint" class="sec">🖨️ Imprimir/PDF</button>
+  <span class="status" id="status"></span>
+</div>
+<div class="wrap">
+<header class="top">
+  <div class="kicker">Mentoria Regente · Turma Fundadora · 06/09/2026</div>
+  <h1>Os 4 Tipos de Tarefa</h1>
+</header>
+<main id="doc">
+<p><strong>Mentoria Regente — material do participante</strong> ·
+Realização: Usina do Tempo Marketing Ltda.</p>
+<h1 id="quatro-cartões-um-por-tipo-de-tarefa">Quatro cartões — um por
+tipo de tarefa</h1>
+<p>O pedido em seis partes (contexto, tom, tarefa, exemplos, qualidade,
+formato) não muda de um tipo de tarefa para outro. O que muda é qual
+parte precisa de mais cuidado. Identifique primeiro o tipo da sua
+tarefa, depois use o cartão correspondente para saber onde concentrar
+atenção.</p>
+<hr />
+<h2 id="cartão-1-texto">Cartão 1 — Texto</h2>
+<p><strong>Para que serve:</strong> escrever, resumir ou revisar um
+texto — uma resposta, um resumo, uma comunicação.</p>
+<p><strong>Como o pedido veste este tipo:</strong> tom e exemplos
+carregam o peso. Diga como o resultado deve soar e, sempre que puder,
+cole um trecho de algo que você já escreveu ou aprovou antes — é a forma
+mais rápida de a resposta sair parecida com você.</p>
+<p><strong>O que costuma dar errado:</strong> pedir “profissional” ou
+“objetivo” sem exemplo e esperar que a IA adivinhe o seu padrão pessoal.
+O resultado sai genérico e você acaba reescrevendo do zero.</p>
+<p><strong>Critérios de conferência típicos:</strong> reconhece o ponto
+principal logo no início; nenhum dado (nome, prazo, valor) aparece sem
+estar confirmado na fonte; cabe no tamanho combinado; soa como algo que
+você assinaria.</p>
+<p><em>Exemplo, Empresa Alfa: responder por e-mail a uma reclamação de
+atraso na entrega.</em></p>
+<hr />
+<h2 id="cartão-2-extração-e-tabela">Cartão 2 — Extração e tabela</h2>
+<p><strong>Para que serve:</strong> tirar informações de um material
+bagunçado (um relatório, uma lista de mensagens, um conjunto de
+documentos) e organizá-las de forma estruturada.</p>
+<p><strong>Como o pedido veste este tipo:</strong> qualidade e formato
+carregam o peso. Na qualidade, diga explicitamente “copie os valores
+exatamente como estão; não corrija, não some; campo ausente é ‘não
+consta’” — é a instrução que evita a IA “ajudar demais” e inventar um
+número que não estava no material. No formato, fixe a estrutura (tabela,
+uma linha por item, colunas nomeadas).</p>
+<p><strong>O que costuma dar errado:</strong> a IA arredondar, somar ou
+completar um dado que faltava no material original — porque parece
+prestativo, mas é invenção. Sem a instrução de qualidade específica,
+isso passa despercebido.</p>
+<p><strong>Critérios de conferência típicos:</strong> todo valor da
+tabela existe, literalmente, no material original; campos ausentes
+aparecem como “não consta”, nunca em branco ou inventados; o número de
+linhas bate com o número de itens do material de origem.</p>
+<p><em>Exemplo, Empresa Alfa: transformar uma lista de mensagens de
+clientes numa tabela com as colunas assunto, urgência e ação
+recomendada.</em></p>
+<hr />
+<h2 id="cartão-3-plano-e-decisão">Cartão 3 — Plano e decisão</h2>
+<p><strong>Para que serve:</strong> organizar um conjunto de informações
+em um plano de ação, ou decidir entre caminhos possíveis.</p>
+<p><strong>Como o pedido veste este tipo:</strong> contexto carrega o
+peso. Sem as restrições reais — quanto tempo há, quantas pessoas estão
+disponíveis, qual é o orçamento — a resposta sai como um plano de
+consultor genérico, bonito e inaplicável. Na qualidade, peça que cada
+etapa venha com responsável e um critério observável de “pronto”.</p>
+<p><strong>O que costuma dar errado:</strong> pedir um plano sem contar
+as restrições reais e receber um plano perfeito para uma realidade que
+não é a sua — que depois não cabe no tempo ou na equipe que você de fato
+tem.</p>
+<p><strong>Critérios de conferência típicos:</strong> cada etapa tem um
+responsável nomeado; cada etapa cabe nas restrições declaradas (se não
+coubesse, o plano diria o que cortar); os riscos mais prováveis aparecem
+com uma ação de mitigação, não só listados.</p>
+<p><em>Exemplo, Empresa Alfa: a partir dos achados de um relatório,
+propor três ações prioritárias para a próxima reunião, sabendo que só há
+uma semana e duas pessoas livres.</em></p>
+<hr />
+<h2 id="cartão-4-explicação-para-quem-não-é-da-área">Cartão 4 —
+Explicação para quem não é da área</h2>
+<p><strong>Para que serve:</strong> traduzir algo técnico para um leitor
+que nunca viu o assunto — um colega novo, um cliente, alguém de outra
+área.</p>
+<p><strong>Como o pedido veste este tipo:</strong> tom carrega o peso.
+Diga explicitamente “para quem nunca ouviu falar disso; sem jargão; se
+um termo técnico for inevitável, explique entre parênteses na mesma
+frase”. Na qualidade, peça que a explicação não afirme nem prometa mais
+do que o material original sustenta.</p>
+<p><strong>O que costuma dar errado:</strong> dois extremos — a
+explicação sai carregada de termos que só quem já entende o assunto
+compreende, ou sai tão simplificada que infantiliza o leitor e some com
+detalhes que importavam.</p>
+<p><strong>Critérios de conferência típicos:</strong> nenhum termo
+técnico aparece sem explicação na mesma frase; a explicação não afirma
+nada que o material original não sustente; alguém de fora da área, lendo
+uma vez, entenderia o que muda na prática e o que fazer a seguir.</p>
+<p><em>Exemplo, Empresa Alfa: explicar um relatório financeiro cheio de
+siglas para um colega recém-chegado, em cinco linhas.</em></p>
+</main>
+</div>
+<script>
+(function(){
+var doc=document.getElementById("doc"),KEY='cartoes-4-tipos-tarefa-edit';
+var st=document.getElementById("status");
+function note(m){st.textContent=m;setTimeout(function(){st.textContent="";},3000);}
+try{var saved=localStorage.getItem(KEY);if(saved){doc.innerHTML=saved;note("Versão editada carregada do navegador");}}catch(e){}
+var editing=false,be=document.getElementById("btnEdit"),bs=document.getElementById("btnSave");
+be.onclick=function(){editing=!editing;doc.contentEditable=editing;be.textContent=editing?"✅ Concluir edição":"✏️ Editar";bs.style.display=editing?"":"none";if(!editing){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}}};
+bs.onclick=function(){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}};
+document.getElementById("btnExport").onclick=function(){var html="<!DOCTYPE html>"+document.documentElement.outerHTML;var b=new Blob([html],{type:"text/html"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download='cartoes-4-tipos-tarefa.html';a.click();};
+document.getElementById("btnPrint").onclick=function(){window.print();};
+document.getElementById("btnReset").onclick=function(){if(confirm("Descartar as edições feitas no navegador e voltar ao original?")){try{localStorage.removeItem(KEY);}catch(e){}location.reload();}};
+document.querySelectorAll("table").forEach(function(t){var w=document.createElement("div");w.className="tablewrap";t.parentNode.insertBefore(w,t);w.appendChild(t);});
+})();
+</script>
+</body>
+</html>

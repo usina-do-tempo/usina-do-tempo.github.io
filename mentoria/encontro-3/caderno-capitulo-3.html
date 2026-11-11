@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caderno do Participante — Capítulo 3</title>
+<style>
+:root{--bg:#f7f6f3;--paper:#ffffff;--ink:#1f2430;--muted:#5c6470;--accent:#0f4c81;--accent2:#b8860b;--line:#e3e0d8;--code:#f0eee8}
+@media (prefers-color-scheme: dark){:root{--bg:#14161c;--paper:#1c1f27;--ink:#e8e6e1;--muted:#9aa1ad;--accent:#6ea8d8;--accent2:#d4a942;--line:#2c303a;--code:#242832}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif;padding-top:3.2rem}
+.wrap{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+header.top{border-bottom:3px double var(--accent);padding-bottom:1rem;margin-bottom:2rem}
+header.top .kicker{font-family:system-ui,sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:600}
+h1{font-size:1.9rem;line-height:1.25;margin:.3rem 0 0;color:var(--accent)}
+h2{font-size:1.35rem;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:.3rem;margin-top:2.4rem}
+h3{font-size:1.08rem;margin-top:1.6rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-family:system-ui,sans-serif;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--code)}
+.tablewrap{overflow-x:auto}
+blockquote{border-left:3px solid var(--accent2);margin:1rem 0;padding:.2rem 1rem;color:var(--muted)}
+pre{background:var(--code);padding:.8rem 1rem;border-radius:8px;overflow-x:auto;font-size:.82em;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.cpy{display:block;margin:-.4rem 0 1rem auto;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.35rem .9rem;cursor:pointer;font:.8rem system-ui,sans-serif}
+@media print{.cpy{display:none}}
+code{background:var(--code);padding:.1em .35em;border-radius:4px;font-size:.85em}
+pre code{padding:0;background:none}
+hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+.toolbar{position:fixed;top:0;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.5rem 1rem;display:flex;gap:.6rem;align-items:center;font-family:system-ui,sans-serif;font-size:.85rem;z-index:10}
+.toolbar button{background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.4rem .9rem;cursor:pointer;font-size:.82rem}
+.toolbar button.sec{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.toolbar .status{color:var(--muted);margin-left:auto}
+#doc[contenteditable="true"]{outline:2px dashed var(--accent2);outline-offset:8px}
+@media print{.toolbar{display:none}body{padding-top:0;background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <button id="btnPrint" class="sec">🖨️ Imprimir/PDF</button>
+  <span class="status" id="status"></span>
+</div>
+<div class="wrap">
+<header class="top">
+  <div class="kicker">Mentoria Regente · Turma Fundadora · 10/11/2026</div>
+  <h1>Caderno do Participante — Capítulo 3</h1>
+</header>
+<main id="doc">
+<h1 id="capítulo-3-seu-primeiro-assistente-especializado">Capítulo 3 —
+Seu primeiro assistente especializado</h1>
+<p>Ao fim deste capítulo você tem um assistente montado na sua própria
+conta gratuita: um lugar fixo que guarda o que você repete toda vez,
+para que o seu pedido do dia vire só preencher lacunas. E você já rodou
+a primeira execução real dentro dele.</p>
+<h2 id="contexto-que-mora-contexto-que-visita">Contexto que mora,
+contexto que visita</h2>
+<p>Nos dois primeiros encontros, todo pedido seu carregava o contexto
+inteiro: quem você é, o tom que a sua resposta precisa ter, o critério
+que separa uma resposta boa de uma ruim. Isso funciona — mas repare numa
+coisa: boa parte do que você escreveu não muda de um dia para o outro.
+Você é a mesma pessoa, com o mesmo tom, com o mesmo critério de pronto,
+toda vez que roda essa tarefa.</p>
+<p>O que não muda merece <strong>morar</strong> num lugar fixo: as
+instruções permanentes da sua tarefa e os documentos de referência que
+ela sempre usa. O que muda a cada execução — o nome do cliente de hoje,
+o documento desta vez, o prazo desta semana — esse fica
+<strong>visitando</strong> o pedido do dia, e só ele.</p>
+<p>A regra prática para decidir onde algo vai: <strong>você já escreveu
+isto três vezes, idêntico ou quase?</strong> Se sim, ele merece morar.
+Se muda toda execução, ele visita.</p>
+<p>Pense numa gaveta e numa mesa. A gaveta guarda o que você usa toda
+semana e não quer procurar de novo — as instruções permanentes, os
+documentos de referência. A mesa é onde fica só o que está em uso agora
+— o caso de hoje. Quem deixa tudo em cima da mesa perde tempo
+procurando; quem tranca tudo na gaveta esquece o que precisa mudar. O
+assistente é a gaveta arrumada; o pedido do dia é a mesa limpa.</p>
+<p>E antes de colar qualquer coisa nesse lugar fixo, vale a mesma
+pergunta em duas partes que você já usa para decidir o que entra numa
+conversa com a IA:</p>
+<ul>
+<li><strong>Precisa?</strong> — só o que a tarefa de fato usa, nunca o
+documento inteiro “para garantir”.</li>
+<li><strong>Pode?</strong> — o mesmo semáforo de sigilo que você já
+aprendeu vale aqui, e vale em dobro: um documento de referência mora no
+assistente por semanas, então o cuidado na entrada precisa ser maior,
+não menor.</li>
+</ul>
+<h2 id="o-pedido-mestre-pare-de-escrever-do-zero-passe-a-preencher">O
+pedido-mestre: pare de escrever do zero, passe a preencher</h2>
+<p>Pegue o pedido que você já escreveu duas vezes nos encontros
+anteriores. Agora separe, parte por parte, o que é sempre igual do que
+muda a cada execução.</p>
+<p>O que é sempre igual — o contexto de quem você é, o tom, o critério
+de qualidade, o formato — você escreve <strong>uma vez</strong>, para
+sempre, e ele passa a morar no seu assistente. O que muda a cada vez
+vira uma lacuna entre colchetes, e é só isso que você preenche no dia a
+dia. Esta é a versão definitiva do seu pedido: o
+<strong>pedido-mestre</strong>.</p>
+<p>Um exemplo, com a tarefa de atendimento da Empresa Alfa. O que morava
+no pedido de todo dia — “você é do atendimento, responda com tom cordial
+e resolutivo, reconheça o atraso, ofereça compensação, no máximo 8
+linhas” — agora mora no assistente, escrito uma única vez. O que sobra
+no pedido do dia é isto:</p>
+<pre><code>[nome do cliente]
+[motivo do atraso]
+[dias de atraso]
+[compensação, se houver]</code></pre>
+<p>Quatro linhas, no lugar de um parágrafo inteiro redigido de novo a
+cada execução. É essa a frase que resume o ganho: <strong>pare de
+escrever do zero; passe a preencher.</strong></p>
+<p>Duas armadilhas, e são opostas. A primeira: colocar tudo entre
+colchetes “por segurança” — nada muda de tamanho, e o pedido continua do
+jeito de sempre. A segunda: fixar algo que muda todo santo dia, como o
+nome do cliente — na execução seguinte, o assistente vai repetir um nome
+errado sem avisar. O teste que resolve as duas: “isto seria igual
+amanhã, com outro caso?” Se a resposta é não, é lacuna.</p>
+<h2 id="qual-ferramenta-usar">Qual ferramenta usar</h2>
+<p>O critério é técnico, não de marca: <strong>a sua ferramenta precisa
+ter um espaço de trabalho com instruções permanentes.</strong> Se tem,
+ela serve para montar o seu assistente.</p>
+<p>E aqui vai a regra que liberta você de decorar telas diferentes a
+cada ferramenta nova: <strong>os nomes mudam de empresa para empresa —
+Projetos, Habilidades, Espaços, GPTs — o conceito é um só.</strong>
+Instruções fixas, documentos de referência, e cada conversa nova começa
+do zero, sem herdar o que não devia. Quem aprende o conceito troca de
+ferramenta sem recomeçar do zero — só muda o nome do botão que você
+clica.</p>
+<p>E tem um bônus prático nisso: a cota gratuita é de
+<strong>cada</strong> ferramenta, separadamente. Quem entende o
+conceito, e não decorou uma tela específica, carrega três ou quatro
+reservas de graça no bolso — se uma ferramenta esgota a cota da semana,
+você monta o mesmo assistente em outra em poucos minutos, porque a peça
+que importa (as instruções) você já tem escrita e pronta para colar.</p>
+<h2 id="montando-o-seu">Montando o seu</h2>
+<p>Na aula, você viu o assistente da Empresa Alfa nascer do zero: um
+nome que identifica a tarefa, as instruções permanentes coladas, dois
+documentos de referência anexados (um modelo de resposta e um pequeno
+glossário de termos), e a primeira execução rodada só com os colchetes
+preenchidos. O pedido do dia encolheu na tela, ao vivo — de um parágrafo
+inteiro para quatro linhas.</p>
+<p>Sua tarefa agora é fazer o mesmo com a sua tarefa nº 1. Três peças,
+nesta ordem:</p>
+<ol type="1">
+<li><strong>As instruções permanentes</strong> — função, tom, os
+critérios de qualidade que valem para toda execução e o que este
+assistente nunca deve fazer.</li>
+<li><strong>Pelo menos um documento de referência</strong> — o modelo
+que você quer que a resposta siga, ou um pequeno glossário dos termos do
+seu trabalho.</li>
+<li><strong>Uma primeira execução real</strong>, preenchendo só as
+lacunas do pedido-mestre — e medida, com o relógio contando também a
+revisão.</li>
+</ol>
+<h2 id="a-manutenção-do-assistente">A manutenção do assistente</h2>
+<p>Um assistente montado não fica bom para sempre sozinho. Instrução
+esquecida não fica neutra — ela <strong>envelhece e contamina</strong>
+toda resposta nova, e você para de perceber porque parou de olhar para
+ela depois do primeiro dia. Por isso, duas regras simples:</p>
+<ul>
+<li><strong>Anote uma data de revisão</strong> dentro das próprias
+instruções, no dia em que você monta o assistente.</li>
+<li><strong>Mudou o padrão do seu trabalho, atualize no mesmo
+dia</strong> — não “quando sobrar tempo”. Um padrão novo com uma
+instrução antiga é a receita mais comum de resposta estranha sem
+explicação aparente.</li>
+</ul>
+<h2 id="sua-tarefa-até-o-próximo-encontro-40-min">Sua tarefa até o
+próximo encontro (40 min)</h2>
+<p>Termine o assistente da tarefa nº 1, se algo ficou faltando, e rode
+<strong>uma execução real medida</strong> dentro dele: preencha a ficha,
+contando também o tempo de revisão. Poste na comunidade o que saiu do
+seu pedido do dia e mudou de endereço para o assistente — essa mudança
+de endereço é o que a clínica vai olhar primeiro.</p>
+<h2 id="o-que-você-já-consegue-fazer">O que você já consegue fazer</h2>
+<ul>
+<li>Separar, num pedido qualquer, o que mora de um lugar fixo do que
+visita o pedido do dia.</li>
+<li>Escrever o seu pedido-mestre, com as partes fixas escritas uma vez e
+as variáveis entre colchetes.</li>
+<li>Escolher uma ferramenta pelo critério certo — espaço de trabalho com
+instruções permanentes — sem depender de marca.</li>
+<li>Montar um assistente completo: instruções, documentos de referência
+e a primeira execução real.</li>
+<li>Manter o assistente vivo: data de revisão anotada, atualização no
+mesmo dia em que o seu padrão de trabalho muda.</li>
+</ul>
+</main>
+</div>
+<script>
+(function(){
+var doc=document.getElementById("doc"),KEY='caderno-participante-cap3-edit';
+var st=document.getElementById("status");
+function note(m){st.textContent=m;setTimeout(function(){st.textContent="";},3000);}
+var editing=false,be=document.getElementById("btnEdit"),bs=document.getElementById("btnSave");
+if(be){try{var saved=localStorage.getItem(KEY);if(saved){doc.innerHTML=saved;note("Versão editada carregada do navegador");}}catch(e){}}
+if(be)be.onclick=function(){editing=!editing;doc.contentEditable=editing;be.textContent=editing?"✅ Concluir edição":"✏️ Editar";bs.style.display=editing?"":"none";if(!editing){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}}};
+if(bs)bs.onclick=function(){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}};
+var bx=document.getElementById("btnExport");if(bx)bx.onclick=function(){var html="<!DOCTYPE html>"+document.documentElement.outerHTML;var b=new Blob([html],{type:"text/html"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download='caderno-participante-cap3.html';a.click();};
+document.getElementById("btnPrint").onclick=function(){window.print();};
+var br=document.getElementById("btnReset");if(br)br.onclick=function(){if(confirm("Descartar as edições feitas no navegador e voltar ao original?")){try{localStorage.removeItem(KEY);}catch(e){}location.reload();}};
+document.querySelectorAll("table").forEach(function(t){var w=document.createElement("div");w.className="tablewrap";t.parentNode.insertBefore(w,t);w.appendChild(t);});
+doc.querySelectorAll(".cpy").forEach(function(b){b.remove();});
+doc.querySelectorAll("pre").forEach(function(p){var b=document.createElement("button");b.className="cpy";b.contentEditable=false;b.textContent="📋 Copiar";b.onclick=function(){var t=p.innerText;function ok(){b.textContent="✅ Copiado";setTimeout(function(){b.textContent="📋 Copiar";},2000);}if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,function(){note("Selecione o texto e copie com Ctrl+C");});}else{note("Selecione o texto e copie com Ctrl+C");}};p.parentNode.insertBefore(b,p.nextSibling);});
+})();
+</script>
+</body>
+</html>

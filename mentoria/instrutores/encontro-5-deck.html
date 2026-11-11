@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Encontro 5 · A equipe rodando — Mentoria Regente</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+<style>
+/* ============================================================
+   Design system MIRA — tema mira-dark
+   Regra Zero: nada entra estático; tudo tem movimento perpétuo.
+   ============================================================ */
+:root{
+  --bg:#000000;
+  --ink:#FFFFFF;
+  --muted:rgba(255,255,255,.62);
+  --softer:rgba(255,255,255,.38);
+  --primary:#FF904D;
+  --accent2:#FFC766;
+  --card-bg:rgba(255,255,255,.05);
+  --card-border:rgba(255,255,255,.10);
+  --glow:rgba(255,144,77,.28);
+}
+html,body{background:var(--bg);}
+.reveal{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);}
+.reveal .slides{text-align:left;}
+.reveal section{height:100%;}
+
+/* ---------- fundo vivo: malha de pontos em perspectiva + brilho quente ---------- */
+#fundo{position:fixed;inset:0;background:var(--bg);overflow:hidden;z-index:0;pointer-events:none;}
+#malha-wrap{position:absolute;inset:-12%;perspective:900px;transform-style:preserve-3d;}
+#malha{position:absolute;inset:0;transform-style:preserve-3d;
+  animation:malha-gira 120s linear infinite, malha-deriva 6s ease-in-out infinite alternate;}
+#malha i{position:absolute;width:4px;height:4px;margin:-2px 0 0 -2px;border-radius:50%;
+  background:var(--primary);animation:ponto-pulsa 1.5s ease-in-out infinite alternate;}
+@keyframes malha-gira{from{transform:rotateX(58deg) rotateZ(0deg);}to{transform:rotateX(58deg) rotateZ(360deg);}}
+@keyframes malha-deriva{from{margin-top:-14px;}to{margin-top:14px;}}
+@keyframes ponto-pulsa{from{opacity:.10;}to{opacity:.34;}}
+#brilho{position:absolute;left:50%;top:54%;width:1500px;height:1500px;margin:-750px 0 0 -750px;
+  border-radius:50%;background:radial-gradient(circle,var(--glow) 0%,rgba(0,0,0,0) 62%);
+  animation:brilho-pulsa 3.2s ease-in-out infinite alternate;}
+@keyframes brilho-pulsa{from{opacity:.42;}to{opacity:.72;}}
+.reveal-viewport{background:var(--bg);}
+.reveal{z-index:1;}
+
+/* ---------- tipografia ---------- */
+.eyebrow{font-size:22px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--primary);margin-bottom:26px;}
+.title{font-size:86px;line-height:1.04;font-weight:800;letter-spacing:-.02em;margin:0;color:var(--ink);}
+.title em{font-style:normal;color:var(--primary);}
+.title.grande{font-size:120px;}
+.title.media{font-size:78px;}
+.body{font-size:33px;line-height:1.45;color:var(--muted);margin-top:26px;max-width:900px;font-weight:400;}
+.centro{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;}
+.centro .body{margin-left:auto;margin-right:auto;}
+.esquerda{display:flex;flex-direction:column;justify-content:center;height:100%;padding-left:20px;}
+.pill{display:inline-block;margin-top:32px;padding:16px 28px;border-radius:999px;
+  background:var(--card-bg);border:1px solid var(--card-border);font-size:26px;color:var(--muted);}
+.pill b{color:var(--accent2);font-weight:800;}
+
+/* ---------- layout de duas colunas: texto + arte ---------- */
+.duas{display:grid;grid-template-columns:1fr 1fr;align-items:center;height:100%;gap:40px;}
+.duas .col-texto{padding-left:20px;}
+.duas .col-arte{display:grid;place-items:center;height:100%;}
+
+/* ---------- cartões ---------- */
+.cards{display:flex;gap:26px;margin-top:44px;}
+.cards.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.card{flex:1;padding:30px 32px;border-radius:18px;background:var(--card-bg);
+  border:1px solid var(--card-border);animation:card-brilha 2.6s ease-in-out infinite alternate;}
+.card:nth-child(2){animation-delay:.5s;}
+.card:nth-child(3){animation-delay:1s;}
+@keyframes card-brilha{from{box-shadow:0 0 18px rgba(255,144,77,.08);}to{box-shadow:0 0 46px rgba(255,144,77,.24);}}
+.card-t{font-size:44px;font-weight:800;color:var(--primary);}
+.card-d{font-size:25px;color:var(--muted);margin-top:10px;line-height:1.35;}
+
+/* ---------- 3D: os três degraus ---------- */
+.degraus{perspective:1600px;width:1000px;height:560px;display:grid;place-items:center;
+  transform:scale(.76);}
+.degraus-cena{position:relative;width:900px;height:520px;transform-style:preserve-3d;
+  animation:degraus-gira 9s ease-in-out infinite alternate;}
+@keyframes degraus-gira{from{transform:rotateX(14deg) rotateY(-29deg);}to{transform:rotateX(14deg) rotateY(-15deg);}}
+.degrau{position:absolute;width:620px;height:118px;display:flex;align-items:center;gap:30px;
+  padding:0 36px;border-radius:16px;background:var(--card-bg);border:2px solid var(--card-border);
+  box-sizing:border-box;}
+.degrau .n{font-size:46px;font-weight:800;color:var(--softer);width:44px;}
+.degrau .nome{font-size:38px;font-weight:800;color:var(--ink);}
+.degrau .nota{font-size:23px;color:var(--muted);margin-top:4px;}
+.degrau.d1{left:0;top:330px;transform:translateZ(0);}
+.degrau.d2{left:90px;top:185px;transform:translateZ(60px);}
+.degrau.d3{left:180px;top:40px;transform:translateZ(120px);}
+.degrau.ativo{background:rgba(255,144,77,.14);border-color:var(--primary);
+  animation:degrau-pulsa 1.2s ease-in-out infinite alternate;}
+.degrau.ativo .n{color:var(--primary);}
+@keyframes degrau-pulsa{from{box-shadow:0 0 32px var(--glow);}to{box-shadow:0 0 78px var(--glow);}}
+
+/* ---------- 3D: o cubo das 6 partes ---------- */
+.cubo-palco{perspective:1400px;width:600px;height:600px;display:grid;place-items:center;}
+.cubo{width:300px;height:300px;position:relative;transform-style:preserve-3d;
+  animation:cubo-gira 12s linear infinite;}
+@keyframes cubo-gira{from{transform:rotateX(18deg) rotateY(0deg);}to{transform:rotateX(18deg) rotateY(360deg);}}
+.face{position:absolute;inset:0;display:grid;place-items:center;background:var(--card-bg);
+  border:2px solid var(--primary);border-radius:18px;box-shadow:0 0 60px var(--glow);
+  color:var(--ink);font-size:30px;font-weight:800;letter-spacing:.08em;backface-visibility:hidden;}
+.face.f1{transform:rotateY(0deg)   translateZ(150px);}
+.face.f2{transform:rotateY(90deg)  translateZ(150px);}
+.face.f3{transform:rotateY(180deg) translateZ(150px);}
+.face.f4{transform:rotateY(-90deg) translateZ(150px);}
+.face.f5{transform:rotateX(90deg)  translateZ(150px);}
+.face.f6{transform:rotateX(-90deg) translateZ(150px);}
+
+/* ---------- arte: cadeia de palavras (a próxima palavra provável) ---------- */
+.cadeia{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center;max-width:640px;}
+.tok{padding:12px 20px;border-radius:12px;background:var(--card-bg);border:1px solid var(--card-border);
+  font-size:27px;color:var(--muted);}
+.tok.viva{color:var(--ink);border-color:var(--primary);background:rgba(255,144,77,.12);
+  animation:tok-acende 2.4s ease-in-out infinite alternate;}
+.tok.prox{color:var(--primary);border-style:dashed;border-color:var(--primary);font-weight:800;
+  animation:tok-pisca 1.1s ease-in-out infinite alternate;}
+@keyframes tok-acende{from{box-shadow:0 0 10px rgba(255,144,77,.10);}to{box-shadow:0 0 34px var(--glow);}}
+@keyframes tok-pisca{from{opacity:.35;}to{opacity:1;}}
+
+/* ---------- arte: bússola do GPS confiante ---------- */
+.bussola{width:420px;height:420px;border-radius:50%;border:2px solid var(--card-border);
+  display:grid;place-items:center;position:relative;background:var(--card-bg);
+  animation:card-brilha 3s ease-in-out infinite alternate;}
+.bussola::before{content:"";position:absolute;inset:38px;border-radius:50%;border:1px dashed rgba(255,255,255,.14);}
+.agulha{width:8px;height:190px;border-radius:8px;
+  background:linear-gradient(180deg,var(--primary) 0%,var(--primary) 50%,rgba(255,255,255,.18) 50%,rgba(255,255,255,.18) 100%);
+  transform-origin:50% 50%;animation:agulha-erra 5.5s ease-in-out infinite;box-shadow:0 0 30px var(--glow);}
+@keyframes agulha-erra{0%{transform:rotate(-8deg);}35%{transform:rotate(6deg);}55%{transform:rotate(128deg);}100%{transform:rotate(-8deg);}}
+
+/* ---------- arte: critérios de pronto ---------- */
+.criterios{display:flex;flex-direction:column;gap:18px;width:560px;}
+.crit{display:flex;align-items:center;gap:20px;padding:20px 26px;border-radius:14px;
+  background:var(--card-bg);border:1px solid var(--card-border);font-size:26px;color:var(--muted);}
+.crit .marca{width:38px;height:38px;flex:none;border-radius:10px;border:2px solid var(--primary);
+  display:grid;place-items:center;color:var(--primary);font-weight:800;font-size:22px;
+  animation:crit-acende 3.2s ease-in-out infinite alternate;}
+.crit:nth-child(2) .marca{animation-delay:.6s;}
+.crit:nth-child(3) .marca{animation-delay:1.2s;}
+.crit:nth-child(4) .marca{animation-delay:1.8s;}
+@keyframes crit-acende{from{box-shadow:0 0 0 rgba(255,144,77,0);background:transparent;}
+  to{box-shadow:0 0 26px var(--glow);background:rgba(255,144,77,.16);}}
+
+/* ---------- arte: barra do tempo real (com a fatia da revisão) ---------- */
+.barras{width:620px;display:flex;flex-direction:column;gap:34px;}
+.barra-rot{font-size:24px;color:var(--softer);margin-bottom:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:800;}
+.barra{height:64px;border-radius:12px;overflow:hidden;display:flex;border:1px solid var(--card-border);}
+.fatia{display:grid;place-items:center;font-size:20px;font-weight:800;color:#000;}
+.fatia.escrever{background:rgba(255,199,102,.85);}
+.fatia.esperar{background:rgba(255,144,77,.55);color:var(--ink);}
+.fatia.revisar{background:var(--primary);animation:revisar-pulsa 1.6s ease-in-out infinite alternate;}
+.fatia.antes{background:rgba(255,255,255,.16);color:var(--ink);}
+@keyframes revisar-pulsa{from{box-shadow:inset 0 0 0 rgba(0,0,0,0);}to{box-shadow:inset 0 0 40px rgba(0,0,0,.45);}}
+
+/* ---------- arte: a regra da casa (semáforo do material) ---------- */
+.faixas{display:flex;flex-direction:column;gap:20px;width:600px;}
+.faixa{display:flex;align-items:center;gap:22px;padding:24px 28px;border-radius:14px;
+  background:var(--card-bg);border:1px solid var(--card-border);font-size:27px;color:var(--muted);}
+.faixa .selo{width:16px;height:56px;border-radius:8px;flex:none;}
+.faixa.pode .selo{background:var(--primary);animation:card-brilha 2.4s ease-in-out infinite alternate;}
+.faixa.cuidado .selo{background:var(--accent2);}
+.faixa.nunca .selo{background:rgba(255,255,255,.20);}
+.faixa b{color:var(--ink);font-weight:800;}
+
+/* ---------- citação para copiar ---------- */
+.linha-copiar{margin-top:34px;padding:34px 40px;border-radius:20px;background:var(--card-bg);
+  border:2px solid var(--primary);font-size:36px;line-height:1.4;color:var(--ink);max-width:1100px;
+  animation:card-brilha 2.8s ease-in-out infinite alternate;}
+
+/* ---------- controles do Reveal (o CSS base não pinta: sem isto some no preto) ---------- */
+.reveal .controls{color:var(--primary);}
+.reveal .progress{color:var(--primary);height:5px;background:rgba(255,255,255,.08);}
+.reveal .slide-number{background:transparent;color:var(--softer);font-size:18px;font-weight:800;
+  right:26px;bottom:92px;}
+.reveal .slide-number a{color:inherit;text-decoration:none;}
+
+/* ---------- rodapé de condução (bloco e minutagem) ---------- */
+.reveal .rodape{position:absolute;left:20px;bottom:-6px;font-size:19px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--softer);font-weight:800;}
+
+/* ---------- barra de ferramentas do instrutor ---------- */
+#barra{position:fixed;right:14px;top:14px;z-index:60;display:flex;gap:8px;align-items:center;
+  font-family:Inter,sans-serif;}
+#barra button{background:rgba(255,255,255,.06);color:var(--muted);border:1px solid var(--card-border);
+  border-radius:999px;padding:8px 16px;font-size:13px;font-family:inherit;cursor:pointer;}
+#barra button:hover{color:var(--ink);border-color:var(--primary);}
+#barra.editando button.principal{background:var(--primary);color:#000;font-weight:800;border-color:var(--primary);}
+#aviso{position:fixed;left:50%;transform:translateX(-50%);top:14px;z-index:60;padding:10px 22px;
+  border-radius:999px;background:rgba(255,144,77,.16);border:1px solid var(--primary);
+  color:var(--ink);font-size:14px;font-family:Inter,sans-serif;display:none;}
+body.editando [data-ed]{outline:1px dashed rgba(255,144,77,.55);outline-offset:6px;border-radius:4px;}
+body.editando [data-ed]:focus{outline:2px solid var(--primary);background:rgba(255,144,77,.08);}
+body.editando #aviso{display:block;}
+
+/* ---------- impressão em PDF ---------- */
+@media print{#barra,#aviso{display:none !important;}}
+</style>
+</head>
+<body>
+
+<div id="fundo"><div id="malha-wrap"><div id="malha"></div></div><div id="brilho"></div></div>
+
+<div id="barra">
+  <button class="principal" id="btn-editar" title="Tecla E">Editar conteúdo</button>
+  <button id="btn-baixar" title="Salva uma cópia .html com as suas edições">Baixar cópia</button>
+  <button id="btn-restaurar" title="Descarta as edições salvas neste navegador">Restaurar</button>
+</div>
+<div id="aviso">Modo de edição — clique em qualquer texto e escreva. Tecla <b>E</b> para sair.</div>
+
+<div class="reveal"><div class="slides">
+
+<!-- 1 · CAPA -->
+<section>
+  <div class="centro">
+    <div class="eyebrow">Mentoria Regente · Quinto encontro</div>
+    <h2 class="title grande">A equipe <em>rodando</em></h2>
+    <p class="body">Hoje vocês amarram tudo numa rotina que roda sem vocês por perto — e ensaiam contar essa história em quatro minutos.</p>
+  </div>
+  <aside class="notes">Este é o último encontro online antes do presencial. Depois dele restam só 2 ou 3 dias para o aluno terminar as medições e ensaiar. Situe o encontro como fechamento do ciclo, não mais conteúdo novo.</aside>
+</section>
+
+<!-- 2 · FECHANDO O CICLO -->
+<section>
+  <div class="duas">
+    <div class="col-texto">
+      <div class="eyebrow">Último encontro online</div>
+      <h2 class="title media">Fechando o <em>ciclo</em></h2>
+      <p class="body">Hoje o assunto é rotina e ensaio, não técnica nova.</p>
+    </div>
+    <div class="col-arte">
+      <div class="cadeia">
+        <span class="tok viva">pedido</span>
+        <span class="tok viva">conferência</span>
+        <span class="tok viva">assistente</span>
+        <span class="tok viva">segundo assistente</span>
+        <span class="tok prox">rotina</span>
+      </div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 1 · 5 min</div>
+  <aside class="notes">Armadilha: abrir com entusiasmo genérico ("estamos quase lá!") sem nomear o que muda hoje. O aluno precisa saber que falta amarrar tudo numa rotina que sobrevive sem ele por perto, e ensaiar a apresentação do presencial. Transição: "para desenhar a rotina, primeiro precisamos separá-la em partes que dá para apontar uma por uma."</aside>
+</section>
+
+<!-- 3 · A ROTINA EM 5 ELOS -->
+<section>
+  <div class="duas">
+    <div class="col-texto">
+      <div class="eyebrow">A imagem que faltava</div>
+      <h2 class="title media">Uma rotina, <em>cinco elos</em></h2>
+      <p class="body">Gatilho, entrada, pedido-mestre, conferência, saída — sempre nesta ordem.</p>
+    </div>
+    <div class="col-arte">
+      <div class="cadeia">
+        <span class="tok fragment fade-in">gatilho</span>
+        <span class="tok fragment fade-in">entrada</span>
+        <span class="tok fragment fade-in">pedido-mestre</span>
+        <span class="tok viva fragment fade-in">conferência</span>
+        <span class="tok fragment fade-in">saída</span>
+      </div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 2 · 10 min</div>
+  <aside class="notes">Preencha os 5 elos ao vivo com a tarefa nº 1 de um aluno voluntário. É o conjunto que falha quando falha, não uma peça isolada. A armadilha da vez: deixar a conferência como um elo "invisível" — algo que o aluno jura que faz, mas que não está desenhado em lugar nenhum.</aside>
+</section>
+
+<!-- 4 · SE NÃO ESTÁ DESENHADA, NÃO EXISTE -->
+<section>
+  <div class="centro">
+    <div class="eyebrow">O elo que mais gente esquece</div>
+    <h2 class="title">Se não está <em>desenhada</em>, não existe</h2>
+    <div class="linha-copiar">Se a conferência não está desenhada na rotina, ela não existe.</div>
+  </div>
+  <div class="rodape">Bloco 2 · 10 min</div>
+  <aside class="notes">Diga devagar. Não é acusação, é diagnóstico: se não dá para apontar onde a conferência acontece na rotina, ela provavelmente só acontece quando sobra tempo — e sobra menos justo nos dias ruins, que são os que mais precisam. Transição: "uma rotina com 5 elos só é confiável se outra pessoa conseguir rodá-la sem te ligar."</aside>
+</section>
+
+<!-- 5 · O PASSO A PASSO DE UMA PÁGINA -->
+<section>
+  <div class="esquerda">
+    <div class="eyebrow">Um ativo que sobrevive a você</div>
+    <h2 class="title media">O passo a passo em <em>uma página</em></h2>
+    <div class="cards grade">
+      <div class="card fragment fade-in"><div class="card-t">Nome e data</div><div class="card-d">quem cuida, versão datada</div></div>
+      <div class="card fragment fade-in"><div class="card-t">O que dispara</div><div class="card-d">um gatilho com nome, não "quando eu lembro"</div></div>
+      <div class="card fragment fade-in"><div class="card-t">O que entra</div><div class="card-d">de onde vem e o que fazer se vier incompleto</div></div>
+      <div class="card fragment fade-in"><div class="card-t">O pedido-mestre</div><div class="card-d">colado por completo, nunca resumido</div></div>
+      <div class="card fragment fade-in"><div class="card-t">A conferência</div><div class="card-d">critério que se checa, não intenção</div></div>
+      <div class="card fragment fade-in"><div class="card-t">As exceções</div><div class="card-d">sempre revisão manual, nunca automático</div></div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 3 · 12 min</div>
+  <aside class="notes">Mostre o modelo preenchido com a tarefa nº 1 da Empresa Alfa, campo por campo. Documentar não é burocracia — é o que transforma o jeito de trabalhar num ativo que continua de pé mesmo quando o aluno não está. E cabe numa página só.</aside>
+</section>
+
+<!-- 6 · O TESTE DE SOBREVIVÊNCIA -->
+<section>
+  <div class="centro">
+    <div class="eyebrow">O que prova que está pronto</div>
+    <h2 class="title">O teste de <em>sobrevivência</em></h2>
+    <div class="linha-copiar">Alguém que nunca fez esta tarefa consegue rodá-la só com o que está escrito na página, sem te perguntar nada?</div>
+  </div>
+  <div class="rodape">Bloco 3 · 12 min</div>
+  <aside class="notes">Não anuncie como ameaça ("vamos ver se o seu documento é bom o suficiente"). Diga: "o teste não é para reprovar ninguém — é para achar o buraco enquanto ainda dá tempo de tapar." Transição: "documento bom não vale nada se o número que ele carrega for inflado."</aside>
+</section>
+
+<!-- 7 · MEDIÇÃO FINAL HONESTA -->
+<section>
+  <div class="esquerda">
+    <div class="eyebrow">Antes do palco</div>
+    <h2 class="title media">Três regras <em>protegem</em> o número</h2>
+    <div class="cards">
+      <div class="card fragment fade-in"><div class="card-t">Mesma tarefa</div><div class="card-d">antes e depois, nas mesmas condições</div></div>
+      <div class="card fragment fade-in"><div class="card-t">O relógio conta tudo</div><div class="card-d">inclusive o tempo de revisar</div></div>
+      <div class="card fragment fade-in"><div class="card-t">Registre o que não melhorou</div><div class="card-d">vazio ali é suspeito, não motivo de orgulho</div></div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 4 · 8 min</div>
+  <aside class="notes">Revise ao vivo a ficha de cada aluno: "antes" e "depois" preenchidos, "o que não melhorou" sem ficar vazio. Armadilha: deixar passar um "antes" reconstruído de memória agora — se não foi anotado no primeiro encontro, combine um número honesto e assumidamente estimado, e diga isso na apresentação.</aside>
+</section>
+
+<!-- 8 · O PLANO DOS 30 DIAS -->
+<section>
+  <div class="duas">
+    <div class="col-texto">
+      <div class="eyebrow">Depois que o programa acaba</div>
+      <h2 class="title media">Um <em>assistente</em> novo por semana</h2>
+      <p class="body">"Vou continuar praticando" é a frase que menos sobrevive à primeira semana corrida.</p>
+    </div>
+    <div class="col-arte">
+      <div class="cadeia">
+        <span class="tok viva">semana 1</span>
+        <span class="tok">semana 2</span>
+        <span class="tok">semana 3</span>
+        <span class="tok">semana 4</span>
+      </div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 5 · 7 min</div>
+  <aside class="notes">O que sobrevive é um plano pequeno, com data e tarefa marcadas, pelo mesmo caminho já treinado: pedido-mestre, execução, conferência. Leia dois ou três sinais de recaída em voz alta — são os que mais se repetem entre turmas. Armadilha: tratar este bloco como formalidade — ele decide se o construído em 10 horas dura 30 dias ou uma semana.</aside>
+</section>
+
+<!-- 9 · A FONTE OFICIAL NO ELO "O QUE ENTRA" -->
+<section>
+  <div class="duas">
+    <div class="col-texto">
+      <div class="eyebrow">Um elo a mais de confiança</div>
+      <h2 class="title media">A <em>fonte oficial</em> no elo "o que entra"</h2>
+      <p class="body">O assistente lê o dado da fonte, em vez de responder de memória. Você escolhe UMA fonte para a tarefa nº 1.</p>
+    </div>
+    <div class="col-arte">
+      <div class="cadeia">
+        <span class="tok">gatilho</span>
+        <span class="tok viva">entrada + fonte</span>
+        <span class="tok">pedido-mestre</span>
+        <span class="tok">conferência</span>
+        <span class="tok">saída</span>
+      </div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 6 · 10 min</div>
+  <aside class="notes">Exemplo da Empresa Alfa: a resposta ao cliente que precisa do feriado ou do índice do mês. Mostre o link colado no assistente e a resposta citando a fonte; não leia valor nenhum como fato. Cada aluno escolhe UMA fonte do Mapa de Fontes Abertas e escreve no passo a passo a linha "fonte: qual link, consultado em que data". Armadilha: virar aula de tecnologia. Isto não é automação: é uma linha a mais no passo a passo. Tenha uma fonte de reserva, caso a principal esteja fora do ar ao vivo.</aside>
+</section>
+
+<!-- 10 · COLAR O LINK × CONECTOR -->
+<section>
+  <div class="esquerda">
+    <div class="eyebrow">Duas formas de ligar a fonte</div>
+    <h2 class="title media">Colar o link ou o <em>conector</em></h2>
+    <div class="cards">
+      <div class="card fragment fade-in"><div class="card-t">Colar o link ou o conteúdo</div><div class="card-d">funciona hoje, em qualquer conta</div></div>
+      <div class="card fragment fade-in"><div class="card-t">O conector</div><div class="card-d">a ferramenta busca sozinha; o nome técnico é MCP; vocês veem um funcionando no presencial</div></div>
+      <div class="card fragment fade-in"><div class="card-t">Quando não ligar</div><div class="card-d">tarefa sem dado externo; fonte que devolve dado de pessoa</div></div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 6 · 10 min</div>
+  <aside class="notes">Hoje só se nomeia o conector; a demonstração é no encontro presencial, com leitura em voz alta da tela de permissões. Regra que acompanha: fonte oficial diminui o que a IA inventa, não dispensa a conferência. Armadilha: o aluno querer "automatizar". Diga: "é uma linha a mais no passo a passo." Transição: "rotina desenhada, fonte escolhida, número honesto. Falta o roteiro dos 4 minutos."</aside>
+</section>
+
+<!-- 11 · O ROTEIRO DA APRESENTAÇÃO FINAL -->
+<section>
+  <div class="esquerda">
+    <div class="eyebrow">A estrutura fixa dos 4 minutos</div>
+    <h2 class="title media">Cinco partes, <em>sempre</em> na mesma ordem</h2>
+    <div class="criterios">
+      <div class="crit fragment fade-in"><span class="marca">30s</span> a tarefa</div>
+      <div class="crit fragment fade-in"><span class="marca">30s</span> o antes</div>
+      <div class="crit fragment fade-in"><span class="marca">1min</span> o depois, com a revisão contada</div>
+      <div class="crit fragment fade-in"><span class="marca">1min</span> o erro que a conferência pegou</div>
+      <div class="crit fragment fade-in"><span class="marca">1min</span> o que fica na equipe</div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 7 · 5 min</div>
+  <aside class="notes">Decorar a ordem já resolve metade do nervosismo. Distribua o roteiro de 1 página com o cronômetro sugerido ao lado de cada item. Transição: "teoria de apresentação sem ensaio não vale nada. Vamos treinar de verdade, com cronômetro rodando."</aside>
+</section>
+
+<!-- 12 · O ERRO PEGO É O CORAÇÃO -->
+<section>
+  <div class="centro">
+    <div class="eyebrow">Não é constrangimento, é prova</div>
+    <h2 class="title">O <em>erro</em> pego é o coração</h2>
+    <p class="body">Prova que você não confiou cegamente — é o contrário do que parece.</p>
+  </div>
+  <div class="rodape">Bloco 7 · 5 min</div>
+  <aside class="notes">Armadilha: deixar o aluno achar que "o erro que a conferência pegou" é opcional ou constrangedor de admitir. É o contrário: é a parte que prova que ele não está apenas confiando cegamente na IA — e é a pergunta que o instrutor faz no presencial depois de cada apresentação.</aside>
+</section>
+
+<!-- 13 · CLÍNICA DE ENSAIO -->
+<section>
+  <div class="esquerda">
+    <div class="eyebrow">O coração do encontro</div>
+    <h2 class="title media">Ensaiar de <em>verdade</em></h2>
+    <div class="cards">
+      <div class="card"><div class="card-t">35 min</div><div class="card-d">ensaios completos, cronometrados, feedback só de forma</div></div>
+      <div class="card"><div class="card-t">15 min</div><div class="card-d">teste de sobrevivência ao vivo, outra pessoa lendo o papel</div></div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 8 · 50 min</div>
+  <aside class="notes">Tempo 1: 4 ou 5 alunos apresentam os 4 minutos completos, visíveis para todos. Tempo 2: peça o passo a passo do aluno combinado antes; outro aluno, que nunca fez a tarefa, segue só com o papel, em voz alta, sem perguntar nada. Combine com humor: "hoje a boca fica calada, só o papel fala."</aside>
+</section>
+
+<!-- 14 · FEEDBACK É SÓ DE FORMA -->
+<section>
+  <div class="centro">
+    <div class="eyebrow">A regra do palco</div>
+    <h2 class="title">Feedback é só de <em>forma</em></h2>
+    <div class="linha-copiar">"Isso é conteúdo, hoje é só forma."</div>
+  </div>
+  <div class="rodape">Bloco 8 · 50 min</div>
+  <aside class="notes">Nunca discuta se a tarefa foi bem escolhida, nem reescreva o conteúdo da apresentação — isso é mérito, e mérito é do aluno. As perguntas certas: coube nos 4 minutos? Os números ficaram claros de ouvido? O erro pego apareceu ou ficou escondido? A ordem das cinco partes foi respeitada?</aside>
+</section>
+
+<!-- 15 · ANTES DE IR -->
+<section>
+  <div class="esquerda">
+    <div class="eyebrow">Antes de ir</div>
+    <h2 class="title media">Sorteio, <em>checklist</em>, tarefa de casa</h2>
+    <div class="cards">
+      <div class="card"><div class="card-t">Sorteio</div><div class="card-d">ordem das apresentações, publicada ao vivo</div></div>
+      <div class="card"><div class="card-t">Checklist</div><div class="card-d">ficha completa, passo a passo testado, 4 minutos cronometrados</div></div>
+      <div class="card"><div class="card-t">Até o presencial</div><div class="card-d">segunda execução medida, ensaio sozinho em voz alta</div></div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 9 · 13 min</div>
+  <aside class="notes">Sorteio feito e publicado ao vivo na tela — ninguém sai sem saber quando vai subir. Compartilhe o checklist de véspera no chat. A tarefa de casa: segunda execução medida de cada tarefa, passo a passo testado se ainda não foi, os 4 minutos cronometrados sozinho antes do dia da apresentação.</aside>
+</section>
+
+<!-- 16 · FECHO -->
+<section>
+  <div class="centro">
+    <div class="eyebrow">A regra de ouro, sem euforia</div>
+    <h2 class="title">Número medido, <em>nada de milagre</em></h2>
+    <div class="linha-copiar">O erro que a sua conferência pegou vale tanto quanto o tempo ganho — é ele que prova que vocês dominam a ferramenta, e não o contrário.</div>
+  </div>
+  <div class="rodape">Bloco 9 · 13 min</div>
+  <aside class="notes">Fecho: "hoje vocês desenharam a rotina inteira e ensaiaram contar essa história. O que falta não é aprender mais nada — é terminar de medir e aparecer no dia certo."</aside>
+</section>
+
+</div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/notes/notes.min.js"></script>
+<script id="logica">
+(function(){
+  'use strict';
+
+  /* ---------- fundo: 16x9 pontos, como no deck em vídeo ---------- */
+  var malha = document.getElementById('malha'), cols = 16, rows = 9, html = '';
+  for (var r = 0; r < rows; r++) {
+    for (var c = 0; c < cols; c++) {
+      var depth = ((r * cols + c) % 5) * 40;
+      var atraso = ((r + c) % 7) * 0.21;
+      html += '<i style="left:' + (c / (cols - 1)) * 100 + '%;top:' + (r / (rows - 1)) * 100 +
+              '%;transform:translateZ(' + depth + 'px);animation-delay:' + atraso + 's"></i>';
+    }
+  }
+  malha.innerHTML = html;
+
+  /* ---------- modo de edição de conteúdo ----------
+     Marca os elementos editáveis ANTES de o Reveal tocar no DOM, guarda o HTML
+     original limpo e guarda as edições no navegador (localStorage). */
+  var SELETOR = '.eyebrow,.title,.body,.pill,.card-t,.card-d,.nome,.nota,.tok,.crit,.faixa,.face,.linha-copiar,.barra-rot,.fatia,.rodape';
+  var CHAVE = 'deck-e5-mira-edicoes';
+  var editaveis = document.querySelectorAll(SELETOR);
+  for (var i = 0; i < editaveis.length; i++) editaveis[i].setAttribute('data-ed', i);
+
+  var ORIGINAL_SLIDES = document.querySelector('.reveal').outerHTML;
+  var ORIGINAL_HEAD = document.head.innerHTML;
+
+  function carregarEdicoes(){
+    var bruto;
+    try { bruto = localStorage.getItem(CHAVE); } catch (e) { return; }
+    if (!bruto) return;
+    var dados;
+    try { dados = JSON.parse(bruto); } catch (e) { return; }
+    Object.keys(dados).forEach(function(k){
+      var el = document.querySelector('[data-ed="' + k + '"]');
+      if (el) el.innerHTML = dados[k];
+    });
+  }
+
+  function salvarEdicoes(){
+    var dados = {};
+    document.querySelectorAll('[data-ed]').forEach(function(el){
+      dados[el.getAttribute('data-ed')] = el.innerHTML;
+    });
+    try { localStorage.setItem(CHAVE, JSON.stringify(dados)); } catch (e) {}
+  }
+
+  carregarEdicoes();
+
+  var editando = false;
+  function alternarEdicao(forcar){
+    editando = (typeof forcar === 'boolean') ? forcar : !editando;
+    document.body.classList.toggle('editando', editando);
+    document.getElementById('barra').classList.toggle('editando', editando);
+    document.getElementById('btn-editar').textContent = editando ? 'Sair da edição' : 'Editar conteúdo';
+    document.querySelectorAll('[data-ed]').forEach(function(el){
+      el.contentEditable = editando ? 'true' : 'false';
+    });
+    if (window.Reveal && Reveal.configure) {
+      Reveal.configure({keyboard: !editando, touch: !editando});
+    }
+    if (!editando) salvarEdicoes();
+  }
+
+  document.addEventListener('input', function(e){
+    if (editando && e.target.closest('[data-ed]')) salvarEdicoes();
+  });
+
+  document.getElementById('btn-editar').addEventListener('click', function(){ alternarEdicao(); });
+
+  document.getElementById('btn-restaurar').addEventListener('click', function(){
+    if (!confirm('Descartar as suas edições e voltar ao texto original?')) return;
+    try { localStorage.removeItem(CHAVE); } catch (e) {}
+    location.reload();
+  });
+
+  /* Baixa uma cópia .html já com as edições — a partir do HTML original limpo,
+     sem as marcas que o Reveal injeta ao navegar. */
+  document.getElementById('btn-baixar').addEventListener('click', function(){
+    if (editando) alternarEdicao(false);
+    var molde = document.createElement('div');
+    molde.innerHTML = ORIGINAL_SLIDES;
+    document.querySelectorAll('[data-ed]').forEach(function(el){
+      var alvo = molde.querySelector('[data-ed="' + el.getAttribute('data-ed') + '"]');
+      if (alvo) alvo.innerHTML = el.innerHTML;
+    });
+    molde.querySelectorAll('[data-ed]').forEach(function(el){
+      el.removeAttribute('data-ed');
+      el.removeAttribute('contenteditable');
+    });
+    var barra = document.getElementById('barra').outerHTML +
+                document.getElementById('aviso').outerHTML;
+    var fundo = document.getElementById('fundo').outerHTML.replace(/<i[^>]*><\/i>/g, '');
+    var scripts = Array.prototype.slice.call(document.querySelectorAll('body > script[src]'))
+      .map(function(s){ return '<scr' + 'ipt src="' + s.src + '"></scr' + 'ipt>'; })
+      .join('\n');
+    var saida = '<!doctype html>\n<html lang="pt-BR">\n<head>\n' + ORIGINAL_HEAD +
+      '\n</head>\n<body>\n' + fundo + '\n' + barra + '\n' + molde.innerHTML + '\n' +
+      scripts + '\n<scr' + 'ipt id="logica">' + document.getElementById('logica').textContent + '</scr' + 'ipt>\n</body>\n</html>';
+    var blob = new Blob([saida], {type: 'text/html;charset=utf-8'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'deck-e5-mira.html';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 2000);
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'e' && e.key !== 'E') return;
+    if (e.target.isContentEditable && editando) return;   // "e" digitado no texto
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    e.preventDefault();
+    alternarEdicao();
+  }, true);
+
+  /* ---------- Reveal ---------- */
+  Reveal.initialize({
+    width: 1920, height: 1080, margin: 0.04,
+    controls: true, progress: true, hash: true, slideNumber: 'c/t',
+    transition: 'fade', backgroundTransition: 'fade',
+    plugins: [RevealNotes]
+  });
+
+  /* abrir já em modo de edição:  deck-e1-mira.html?editar=1  */
+  if (/(^|[?&])editar=1/.test(location.search)) alternarEdicao(true);
+})();
+</script>
+</body>
+</html>

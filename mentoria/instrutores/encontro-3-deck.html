@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Encontro 3 · Seu primeiro assistente — Mentoria Regente</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+<style>
+/* ============================================================
+   Design system MIRA — tema mira-dark
+   Regra Zero: nada entra estático; tudo tem movimento perpétuo.
+   ============================================================ */
+:root{
+  --bg:#000000;
+  --ink:#FFFFFF;
+  --muted:rgba(255,255,255,.62);
+  --softer:rgba(255,255,255,.38);
+  --primary:#FF904D;
+  --accent2:#FFC766;
+  --card-bg:rgba(255,255,255,.05);
+  --card-border:rgba(255,255,255,.10);
+  --glow:rgba(255,144,77,.28);
+}
+html,body{background:var(--bg);}
+.reveal{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);}
+.reveal .slides{text-align:left;}
+.reveal section{height:100%;}
+
+/* ---------- fundo vivo: malha de pontos em perspectiva + brilho quente ---------- */
+#fundo{position:fixed;inset:0;background:var(--bg);overflow:hidden;z-index:0;pointer-events:none;}
+#malha-wrap{position:absolute;inset:-12%;perspective:900px;transform-style:preserve-3d;}
+#malha{position:absolute;inset:0;transform-style:preserve-3d;
+  animation:malha-gira 120s linear infinite, malha-deriva 6s ease-in-out infinite alternate;}
+#malha i{position:absolute;width:4px;height:4px;margin:-2px 0 0 -2px;border-radius:50%;
+  background:var(--primary);animation:ponto-pulsa 1.5s ease-in-out infinite alternate;}
+@keyframes malha-gira{from{transform:rotateX(58deg) rotateZ(0deg);}to{transform:rotateX(58deg) rotateZ(360deg);}}
+@keyframes malha-deriva{from{margin-top:-14px;}to{margin-top:14px;}}
+@keyframes ponto-pulsa{from{opacity:.10;}to{opacity:.34;}}
+#brilho{position:absolute;left:50%;top:54%;width:1500px;height:1500px;margin:-750px 0 0 -750px;
+  border-radius:50%;background:radial-gradient(circle,var(--glow) 0%,rgba(0,0,0,0) 62%);
+  animation:brilho-pulsa 3.2s ease-in-out infinite alternate;}
+@keyframes brilho-pulsa{from{opacity:.42;}to{opacity:.72;}}
+.reveal-viewport{background:var(--bg);}
+.reveal{z-index:1;}
+
+/* ---------- tipografia ---------- */
+.eyebrow{font-size:22px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--primary);margin-bottom:26px;}
+.title{font-size:86px;line-height:1.04;font-weight:800;letter-spacing:-.02em;margin:0;color:var(--ink);}
+.title em{font-style:normal;color:var(--primary);}
+.title.grande{font-size:120px;}
+.title.media{font-size:78px;}
+.body{font-size:33px;line-height:1.45;color:var(--muted);margin-top:26px;max-width:900px;font-weight:400;}
+.centro{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;}
+.centro .body{margin-left:auto;margin-right:auto;}
+.esquerda{display:flex;flex-direction:column;justify-content:center;height:100%;padding-left:20px;}
+.pill{display:inline-block;margin-top:32px;padding:16px 28px;border-radius:999px;
+  background:var(--card-bg);border:1px solid var(--card-border);font-size:26px;color:var(--muted);}
+.pill b{color:var(--accent2);font-weight:800;}
+
+/* ---------- layout de duas colunas: texto + arte ---------- */
+.duas{display:grid;grid-template-columns:1fr 1fr;align-items:center;height:100%;gap:40px;}
+.duas .col-texto{padding-left:20px;}
+.duas .col-arte{display:grid;place-items:center;height:100%;}
+
+/* ---------- cartões ---------- */
+.cards{display:flex;gap:26px;margin-top:44px;}
+.cards.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.card{flex:1;padding:30px 32px;border-radius:18px;background:var(--card-bg);
+  border:1px solid var(--card-border);animation:card-brilha 2.6s ease-in-out infinite alternate;}
+.card:nth-child(2){animation-delay:.5s;}
+.card:nth-child(3){animation-delay:1s;}
+@keyframes card-brilha{from{box-shadow:0 0 18px rgba(255,144,77,.08);}to{box-shadow:0 0 46px rgba(255,144,77,.24);}}
+.card-t{font-size:44px;font-weight:800;color:var(--primary);}
+.card-d{font-size:25px;color:var(--muted);margin-top:10px;line-height:1.35;}
+
+/* ---------- 3D: os três degraus ---------- */
+.degraus{perspective:1600px;width:1000px;height:560px;display:grid;place-items:center;
+  transform:scale(.76);}
+.degraus-cena{position:relative;width:900px;height:520px;transform-style:preserve-3d;
+  animation:degraus-gira 9s ease-in-out infinite alternate;}
+@keyframes degraus-gira{from{transform:rotateX(14deg) rotateY(-29deg);}to{transform:rotateX(14deg) rotateY(-15deg);}}
+.degrau{position:absolute;width:620px;height:118px;display:flex;align-items:center;gap:30px;
+  padding:0 36px;border-radius:16px;background:var(--card-bg);border:2px solid var(--card-border);
+  box-sizing:border-box;}
+.degrau .n{font-size:46px;font-weight:800;color:var(--softer);width:44px;}
+.degrau .nome{font-size:38px;font-weight:800;color:var(--ink);}
+.degrau .nota{font-size:23px;color:var(--muted);margin-top:4px;}
+.degrau.d1{left:0;top:330px;transform:translateZ(0);}
+.degrau.d2{left:90px;top:185px;transform:translateZ(60px);}
+.degrau.d3{left:180px;top:40px;transform:translateZ(120px);}
+.degrau.ativo{background:rgba(255,144,77,.14);border-color:var(--primary);
+  animation:degrau-pulsa 1.2s ease-in-out infinite alternate;}
+.degrau.ativo .n{color:var(--primary);}
+@keyframes degrau-pulsa{from{box-shadow:0 0 32px var(--glow);}to{box-shadow:0 0 78px var(--glow);}}
+
+/* ---------- 3D: o cubo das 6 partes ---------- */
+.cubo-palco{perspective:1400px;width:600px;height:600px;display:grid;place-items:center;}
+.cubo{width:300px;height:300px;position:relative;transform-style:preserve-3d;
+  animation:cubo-gira 12s linear infinite;}
+@keyframes cubo-gira{from{transform:rotateX(18deg) rotateY(0deg);}to{transform:rotateX(18deg) rotateY(360deg);}}
+.face{position:absolute;inset:0;display:grid;place-items:center;background:var(--card-bg);
+  border:2px solid var(--primary);border-radius:18px;box-shadow:0 0 60px var(--glow);
+  color:var(--ink);font-size:30px;font-weight:800;letter-spacing:.08em;backface-visibility:hidden;}
+.face.f1{transform:rotateY(0deg)   translateZ(150px);}
+.face.f2{transform:rotateY(90deg)  translateZ(150px);}
+.face.f3{transform:rotateY(180deg) translateZ(150px);}
+.face.f4{transform:rotateY(-90deg) translateZ(150px);}
+.face.f5{transform:rotateX(90deg)  translateZ(150px);}
+.face.f6{transform:rotateX(-90deg) translateZ(150px);}
+
+/* ---------- arte: cadeia de palavras (a próxima palavra provável) ---------- */
+.cadeia{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center;max-width:640px;}
+.tok{padding:12px 20px;border-radius:12px;background:var(--card-bg);border:1px solid var(--card-border);
+  font-size:27px;color:var(--muted);}
+.tok.viva{color:var(--ink);border-color:var(--primary);background:rgba(255,144,77,.12);
+  animation:tok-acende 2.4s ease-in-out infinite alternate;}
+.tok.prox{color:var(--primary);border-style:dashed;border-color:var(--primary);font-weight:800;
+  animation:tok-pisca 1.1s ease-in-out infinite alternate;}
+@keyframes tok-acende{from{box-shadow:0 0 10px rgba(255,144,77,.10);}to{box-shadow:0 0 34px var(--glow);}}
+@keyframes tok-pisca{from{opacity:.35;}to{opacity:1;}}
+
+/* ---------- arte: bússola do GPS confiante ---------- */
+.bussola{width:420px;height:420px;border-radius:50%;border:2px solid var(--card-border);
+  display:grid;place-items:center;position:relative;background:var(--card-bg);
+  animation:card-brilha 3s ease-in-out infinite alternate;}
+.bussola::before{content:"";position:absolute;inset:38px;border-radius:50%;border:1px dashed rgba(255,255,255,.14);}
+.agulha{width:8px;height:190px;border-radius:8px;
+  background:linear-gradient(180deg,var(--primary) 0%,var(--primary) 50%,rgba(255,255,255,.18) 50%,rgba(255,255,255,.18) 100%);
+  transform-origin:50% 50%;animation:agulha-erra 5.5s ease-in-out infinite;box-shadow:0 0 30px var(--glow);}
+@keyframes agulha-erra{0%{transform:rotate(-8deg);}35%{transform:rotate(6deg);}55%{transform:rotate(128deg);}100%{transform:rotate(-8deg);}}
+
+/* ---------- arte: critérios de pronto ---------- */
+.criterios{display:flex;flex-direction:column;gap:18px;width:560px;}
+.crit{display:flex;align-items:center;gap:20px;padding:20px 26px;border-radius:14px;
+  background:var(--card-bg);border:1px solid var(--card-border);font-size:26px;color:var(--muted);}
+.crit .marca{width:38px;height:38px;flex:none;border-radius:10px;border:2px solid var(--primary);
+  display:grid;place-items:center;color:var(--primary);font-weight:800;font-size:22px;
+  animation:crit-acende 3.2s ease-in-out infinite alternate;}
+.crit:nth-child(2) .marca{animation-delay:.6s;}
+.crit:nth-child(3) .marca{animation-delay:1.2s;}
+.crit:nth-child(4) .marca{animation-delay:1.8s;}
+@keyframes crit-acende{from{box-shadow:0 0 0 rgba(255,144,77,0);background:transparent;}
+  to{box-shadow:0 0 26px var(--glow);background:rgba(255,144,77,.16);}}
+
+/* ---------- arte: barra do tempo real (com a fatia da revisão) ---------- */
+.barras{width:620px;display:flex;flex-direction:column;gap:34px;}
+.barra-rot{font-size:24px;color:var(--softer);margin-bottom:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:800;}
+.barra{height:64px;border-radius:12px;overflow:hidden;display:flex;border:1px solid var(--card-border);}
+.fatia{display:grid;place-items:center;font-size:20px;font-weight:800;color:#000;}
+.fatia.escrever{background:rgba(255,199,102,.85);}
+.fatia.esperar{background:rgba(255,144,77,.55);color:var(--ink);}
+.fatia.revisar{background:var(--primary);animation:revisar-pulsa 1.6s ease-in-out infinite alternate;}
+.fatia.antes{background:rgba(255,255,255,.16);color:var(--ink);}
+@keyframes revisar-pulsa{from{box-shadow:inset 0 0 0 rgba(0,0,0,0);}to{box-shadow:inset 0 0 40px rgba(0,0,0,.45);}}
+
+/* ---------- arte: a regra da casa (semáforo do material) ---------- */
+.faixas{display:flex;flex-direction:column;gap:20px;width:600px;}
+.faixa{display:flex;align-items:center;gap:22px;padding:24px 28px;border-radius:14px;
+  background:var(--card-bg);border:1px solid var(--card-border);font-size:27px;color:var(--muted);}
+.faixa .selo{width:16px;height:56px;border-radius:8px;flex:none;}
+.faixa.pode .selo{background:var(--primary);animation:card-brilha 2.4s ease-in-out infinite alternate;}
+.faixa.cuidado .selo{background:var(--accent2);}
+.faixa.nunca .selo{background:rgba(255,255,255,.20);}
+.faixa b{color:var(--ink);font-weight:800;}
+
+/* ---------- citação para copiar ---------- */
+.linha-copiar{margin-top:34px;padding:34px 40px;border-radius:20px;background:var(--card-bg);
+  border:2px solid var(--primary);font-size:36px;line-height:1.4;color:var(--ink);max-width:1100px;
+  animation:card-brilha 2.8s ease-in-out infinite alternate;}
+
+/* ---------- controles do Reveal (o CSS base não pinta: sem isto some no preto) ---------- */
+.reveal .controls{color:var(--primary);}
+.reveal .progress{color:var(--primary);height:5px;background:rgba(255,255,255,.08);}
+.reveal .slide-number{background:transparent;color:var(--softer);font-size:18px;font-weight:800;
+  right:26px;bottom:92px;}
+.reveal .slide-number a{color:inherit;text-decoration:none;}
+
+/* ---------- rodapé de condução (bloco e minutagem) ---------- */
+.reveal .rodape{position:absolute;left:20px;bottom:-6px;font-size:19px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--softer);font-weight:800;}
+
+/* ---------- barra de ferramentas do instrutor ---------- */
+#barra{position:fixed;right:14px;top:14px;z-index:60;display:flex;gap:8px;align-items:center;
+  font-family:Inter,sans-serif;}
+#barra button{background:rgba(255,255,255,.06);color:var(--muted);border:1px solid var(--card-border);
+  border-radius:999px;padding:8px 16px;font-size:13px;font-family:inherit;cursor:pointer;}
+#barra button:hover{color:var(--ink);border-color:var(--primary);}
+#barra.editando button.principal{background:var(--primary);color:#000;font-weight:800;border-color:var(--primary);}
+#aviso{position:fixed;left:50%;transform:translateX(-50%);top:14px;z-index:60;padding:10px 22px;
+  border-radius:999px;background:rgba(255,144,77,.16);border:1px solid var(--primary);
+  color:var(--ink);font-size:14px;font-family:Inter,sans-serif;display:none;}
+body.editando [data-ed]{outline:1px dashed rgba(255,144,77,.55);outline-offset:6px;border-radius:4px;}
+body.editando [data-ed]:focus{outline:2px solid var(--primary);background:rgba(255,144,77,.08);}
+body.editando #aviso{display:block;}
+
+/* ---------- impressão em PDF ---------- */
+@media print{#barra,#aviso{display:none !important;}}
+</style>
+</head>
+<body>
+
+<div id="fundo"><div id="malha-wrap"><div id="malha"></div></div><div id="brilho"></div></div>
+
+<div id="barra">
+  <button class="principal" id="btn-editar" title="Tecla E">Editar conteúdo</button>
+  <button id="btn-baixar" title="Salva uma cópia .html com as suas edições">Baixar cópia</button>
+  <button id="btn-restaurar" title="Descarta as edições salvas neste navegador">Restaurar</button>
+</div>
+<div id="aviso">Modo de edição — clique em qualquer texto e escreva. Tecla <b>E</b> para sair.</div>
+
+<div class="reveal"><div class="slides">
+
+<!-- 1 · CAPA -->
+<section>
+  <div class="centro">
+    <div class="eyebrow">Mentoria Regente · Terceiro encontro</div>
+    <h2 class="title grande">Seu primeiro <em>assistente</em></h2>
+    <p class="body">Hoje o pedido do dia para de ser escrito do zero — e passa a ser só preenchido.</p>
+  </div>
+  <aside class="notes">Abertura de 5 minutos: reconheça dois ou três achados de sigilo postados na comunidade, lidos em voz alta, sem entrar em detalhe — é reconhecimento, não retomada de conteúdo. O conteúdo novo é denso, não tem sobra. Transição: "vou contar uma coisa que muda o jeito como vocês vão usar a IA a partir de hoje."</aside>
+</section>
+
+<!-- 2 · CONTEXTO QUE MORA, CONTEXTO QUE VISITA -->
+<section>
+  <div class="duas">
+    <div class="col-texto">
+      <div class="eyebrow">A ideia do dia</div>
+      <h2 class="title grande">O que <em>mora</em>, o que <em>visita</em></h2>
+      <p class="body">A gaveta guarda o que você usa toda semana. A mesa é só o caso de hoje.</p>
+    </div>
+    <div class="col-arte">
+      <div class="cards">
+        <div class="card"><div class="card-t">Mora</div><div class="card-d">instruções permanentes e documentos de referência — escritos uma vez</div></div>
+        <div class="card"><div class="card-t">Visita</div><div class="card-d">o caso de hoje — nome, prazo, motivo — só isso muda</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 2 · 10 min</div>
+  <aside class="notes">A distinção central do encontro. O que você repetiu três vezes, idêntico ou quase, merece morar; o que muda a cada execução visita o pedido do dia, e só ele. Quem deixa tudo em cima da mesa perde tempo procurando; quem tranca tudo na gaveta esquece o que precisa mudar.</aside>
+</section>
+
+<!-- 3 · APLICADO AO PEDIDO DA ALFA -->
+<section>
+  <div class="duas">
+    <div class="col-texto">
+      <div class="eyebrow">Marque o que já é seu</div>
+      <h2 class="title media">O <em>mesmo</em> pedido, dois marcadores</h2>
+      <p class="body">Contexto, tom, qualidade e formato não mudam de um dia para o outro. Tarefa e caso do dia, sim.</p>
+    </div>
+    <div class="col-arte">
+      <div class="cards">
+        <div class="card fragment fade-in"><div class="card-t">Mora</div><div class="card-d">contexto · tom · qualidade · formato</div></div>
+        <div class="card fragment fade-in"><div class="card-t">Visita</div><div class="card-d">tarefa · caso do dia</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 2 · 10 min</div>
+  <aside class="notes">Use o pedido em seis partes da Empresa Alfa, do encontro anterior, marcado com dois marca-textos. Armadilha, dois erros opostos: o nome do cliente de hoje morando fixo (a próxima execução herda um nome errado), ou o tom da empresa visitando o pedido pela quinta vez (sintoma que devia ter acendido o alerta antes). Nomeie os dois erros com esses nomes exatos se aparecerem no palco.</aside>
+</section>
+
+<!-- 4 · A REGRA DO RECORTE -->
+<section>
+  <div class="duas">
+    <div class="col-texto">
+      <div class="eyebrow">Antes de colar algo fixo</div>
+      <h2 class="title">Precisa? <em>Pode?</em></h2>
+      <p class="body">A mesma pergunta que já decide o que entra numa conversa com a IA — agora vale em dobro.</p>
+    </div>
+    <div class="col-arte">
+      <div class="criterios">
+        <div class="crit"><span class="marca">1</span> precisa: só o que a tarefa usa, nunca o documento inteiro</div>
+        <div class="crit"><span class="marca">2</span> pode: o mesmo semáforo do sigilo de sempre</div>
+      </div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 2 · 10 min</div>
+  <aside class="notes">Um documento de referência mora no assistente por semanas — o cuidado na entrada precisa ser maior, não menor, do que numa pergunta avulsa do dia a dia.</aside>
+</section>
+
+<!-- 5 · O PEDIDO-MESTRE: O ANTES -->
+<section>
+  <div class="centro">
+    <div class="eyebrow">O pedido de sempre</div>
+    <h2 class="title">Digitado de novo, <em>toda vez</em></h2>
+    <div class="pill"><b>Seis partes</b> inteiras, reescritas a cada execução — contexto, tom, tarefa, exemplos, qualidade e formato.</div>
+  </div>
+  <div class="rodape">Bloco 3 · 8 min</div>
+  <aside class="notes">É o pedido em 6 partes construído nos dois encontros anteriores. Peça para a turma separar, parte por parte, o que é sempre igual do que muda a cada execução — é o material para o próximo slide.</aside>
+</section>
+
+<!-- 6 · O PEDIDO-MESTRE: O DEPOIS -->
+<section>
+  <div class="duas">
+    <div class="col-texto">
+      <div class="eyebrow">Pare de escrever do zero</div>
+      <h2 class="title">Só <em>preencha</em></h2>
+      <p class="body">O que sobra é a lacuna: quatro linhas, no lugar de um parágrafo inteiro.</p>
+    </div>
+    <div class="col-arte">
+      <div class="cadeia">
+        <span class="tok viva">[nome do cliente]</span>
+        <span class="tok viva">[motivo do atraso]</span>
+        <span class="tok viva">[dias de atraso]</span>
+        <span class="tok viva">[compensação]</span>
+      </div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 3 · 8 min</div>
+  <aside class="notes">Duas armadilhas opostas: colocar tudo entre colchetes "por segurança" (o pedido não encolhe), ou fixar algo que muda todo dia, como o nome do cliente (a execução seguinte repete um nome errado). O teste que resolve as duas: "isso seria igual amanhã, com outro cliente?"</aside>
+</section>
+
+<!-- 7 · QUAL FERRAMENTA USAR -->
+<section>
+  <div class="duas">
+    <div class="col-texto">
+      <div class="eyebrow">Critério técnico, não de marca</div>
+      <h2 class="title media">Ela tem <em>espaço de trabalho</em>?</h2>
+      <p class="body">Se guarda instruções permanentes, ela serve. O resto é discussão de religião.</p>
+    </div>
+    <div class="col-arte">
+      <div class="criterios">
+        <div class="crit fragment fade-in"><span class="marca">+</span> espaço de trabalho fixo</div>
+        <div class="crit fragment fade-in"><span class="marca">+</span> instruções permanentes</div>
+        <div class="crit fragment fade-in"><span class="marca">+</span> documentos de referência</div>
+        <div class="crit fragment fade-in"><span class="marca">=</span> serve para o seu assistente</div>
+      </div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 4 · 7 min</div>
+  <aside class="notes">A pergunta certa não é "qual ferramenta é a melhor" — isso é religião, e o encontro não tem tempo para isso. Se perguntarem qual é a melhor, devolva: "a que você já usa e que tem espaço de trabalho — essa resolve hoje."</aside>
+</section>
+
+<!-- 8 · OS NOMES MUDAM, O CONCEITO É UM SÓ -->
+<section>
+  <div class="duas">
+    <div class="col-texto">
+      <div class="eyebrow">Libera vocês de decorar telas</div>
+      <h2 class="title">O <em>conceito</em> é um só</h2>
+      <p class="body">A cota gratuita é de cada ferramenta — quem domina o conceito carrega reservas de graça no bolso.</p>
+    </div>
+    <div class="col-arte">
+      <div class="cadeia">
+        <span class="tok viva">Habilidades</span>
+        <span class="tok viva">Projects</span>
+        <span class="tok viva">Espaços</span>
+        <span class="tok viva">GPTs</span>
+        <span class="tok prox">mesmo conceito</span>
+      </div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 4 · 7 min</div>
+  <aside class="notes">ChatGPT e Claude chamam de Projetos; o Google está trocando "Gems" por "habilidades" neste mês — exemplo vivo: quem decorou o botão se perdeu, quem aprendeu o conceito nem percebeu (confirme o estado na véspera). Quem aprende o conceito troca de ferramenta sem recomeçar do zero — só muda o nome do botão. Se uma ferramenta esgota a cota da semana, o mesmo assistente nasce em outra em poucos minutos, porque as instruções já estão escritas e prontas para colar.</aside>
+</section>
+
+<!-- 9 · DEMONSTRAÇÃO: NASCENDO, AO VIVO -->
+<section>
+  <div class="duas">
+    <div class="col-texto">
+      <div class="eyebrow">Sem abstração nenhuma</div>
+      <h2 class="title media">Nascendo, ao <em>vivo</em>, na tela</h2>
+      <p class="body">Instruções coladas, documentos anexados, primeira execução só com colchetes.</p>
+    </div>
+    <div class="col-arte">
+      <div class="criterios">
+        <div class="crit fragment fade-in"><span class="marca">1</span> instruções permanentes</div>
+        <div class="crit fragment fade-in"><span class="marca">2</span> documentos de referência</div>
+        <div class="crit fragment fade-in"><span class="marca">3</span> primeira execução, só colchetes</div>
+      </div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 5 · 15 min</div>
+  <aside class="notes">Nomeie o espaço de forma reconhecível ("Atendimento Alfa — reclamações de entrega"): daqui a um mês ninguém adivinha o que é um espaço chamado "Projeto 1". Todo insumo da demonstração é fictício, sempre, sem exceção — nunca use um documento real de algum aluno "só para agilizar".</aside>
+</section>
+
+<!-- 10 · O ENCOLHIMENTO, LADO A LADO -->
+<section>
+  <div class="centro">
+    <div class="eyebrow">O momento que vende o encontro</div>
+    <h2 class="title">O pedido <em>encolheu</em></h2>
+    <div class="cards">
+      <div class="card"><div class="card-t">Ontem</div><div class="card-d">seis partes inteiras, escritas de novo</div></div>
+      <div class="card"><div class="card-t">Hoje</div><div class="card-d">quatro linhas de colchetes preenchidos</div></div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 5 · 15 min</div>
+  <aside class="notes">Deixe os dois pedidos na tela ao mesmo tempo. Pausa de alguns segundos, em silêncio — o silêncio faz o trabalho. O encolhimento precisa ficar visualmente óbvio.</aside>
+</section>
+
+<!-- 11 · MANUTENÇÃO DO ASSISTENTE -->
+<section>
+  <div class="centro">
+    <div class="eyebrow">Fixo não é eterno</div>
+    <h2 class="title">Instrução <em>envelhece</em></h2>
+    <div class="linha-copiar">"Instrução esquecida não fica neutra — ela envelhece e contamina toda resposta nova, em silêncio."</div>
+    <div class="pill"><b>Regra:</b> mudou o padrão do trabalho, atualize no mesmo dia.</div>
+  </div>
+  <div class="rodape">Bloco 6 · 5 min</div>
+  <aside class="notes">Caso clássico, se sobrar tempo: a IA responde estranho numa semana qualquer — quase sempre a causa é instrução velha, não defeito da ferramenta. É um bloco pequeno, mas evita que o assistente vire, com o tempo, fonte de erro silenciosa.</aside>
+</section>
+
+<!-- 12 · MÃO NA MASSA -->
+<section>
+  <div class="esquerda">
+    <div class="eyebrow">Agora é a vez de cada um</div>
+    <h2 class="title">Mão na <em>massa</em></h2>
+    <div class="cards">
+      <div class="card"><div class="card-t">35 min</div><div class="card-d">cada um monta o próprio assistente</div></div>
+      <div class="card"><div class="card-t">25 min</div><div class="card-d">dois ou três casos resolvidos no palco</div></div>
+    </div>
+  </div>
+  <div class="rodape">Bloco 7 · 60 min</div>
+  <aside class="notes">No palco, três perguntas fixas, nesta ordem: o que falta morar ali; o que morou e não devia (uma variável disfarçada de fixa); alguma instrução conflita com o pedido do dia (por exemplo "seja breve" nas instruções e "detalhe tudo" no pedido — quem vence?). Regra de ouro: nunca corrija a pessoa, corrija o assistente.</aside>
+</section>
+
+<!-- 13 · FECHAMENTO -->
+<section>
+  <div class="centro">
+    <div class="eyebrow">Combinado de casa</div>
+    <h2 class="title">Rode e <em>meça</em></h2>
+    <p class="body">Termine o assistente e rode uma execução real, com o tempo de revisão contado. Poste o que mudou de endereço.</p>
+  </div>
+  <div class="rodape">Bloco 8 · 10 min</div>
+  <aside class="notes">Teste-relâmpago de abertura do fechamento: "vocês colaram o mesmo glossário quatro vezes esta semana. Onde ele devia estar?" — resposta esperada: como documento de referência do assistente, não repetido no pedido. Frase de fecho, sem euforia: "hoje o pedido de vocês encolheu. Amanhã ele ganha um segundo colega de equipe — o assistente de uma tarefa diferente da primeira."</aside>
+</section>
+
+</div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/notes/notes.min.js"></script>
+<script id="logica">
+(function(){
+  'use strict';
+
+  /* ---------- fundo: 16x9 pontos, como no deck em vídeo ---------- */
+  var malha = document.getElementById('malha'), cols = 16, rows = 9, html = '';
+  for (var r = 0; r < rows; r++) {
+    for (var c = 0; c < cols; c++) {
+      var depth = ((r * cols + c) % 5) * 40;
+      var atraso = ((r + c) % 7) * 0.21;
+      html += '<i style="left:' + (c / (cols - 1)) * 100 + '%;top:' + (r / (rows - 1)) * 100 +
+              '%;transform:translateZ(' + depth + 'px);animation-delay:' + atraso + 's"></i>';
+    }
+  }
+  malha.innerHTML = html;
+
+  /* ---------- modo de edição de conteúdo ----------
+     Marca os elementos editáveis ANTES de o Reveal tocar no DOM, guarda o HTML
+     original limpo e guarda as edições no navegador (localStorage). */
+  var SELETOR = '.eyebrow,.title,.body,.pill,.card-t,.card-d,.nome,.nota,.tok,.crit,.faixa,.face,.linha-copiar,.barra-rot,.fatia,.rodape';
+  var CHAVE = 'deck-e3-mira-edicoes';
+  var editaveis = document.querySelectorAll(SELETOR);
+  for (var i = 0; i < editaveis.length; i++) editaveis[i].setAttribute('data-ed', i);
+
+  var ORIGINAL_SLIDES = document.querySelector('.reveal').outerHTML;
+  var ORIGINAL_HEAD = document.head.innerHTML;
+
+  function carregarEdicoes(){
+    var bruto;
+    try { bruto = localStorage.getItem(CHAVE); } catch (e) { return; }
+    if (!bruto) return;
+    var dados;
+    try { dados = JSON.parse(bruto); } catch (e) { return; }
+    Object.keys(dados).forEach(function(k){
+      var el = document.querySelector('[data-ed="' + k + '"]');
+      if (el) el.innerHTML = dados[k];
+    });
+  }
+
+  function salvarEdicoes(){
+    var dados = {};
+    document.querySelectorAll('[data-ed]').forEach(function(el){
+      dados[el.getAttribute('data-ed')] = el.innerHTML;
+    });
+    try { localStorage.setItem(CHAVE, JSON.stringify(dados)); } catch (e) {}
+  }
+
+  carregarEdicoes();
+
+  var editando = false;
+  function alternarEdicao(forcar){
+    editando = (typeof forcar === 'boolean') ? forcar : !editando;
+    document.body.classList.toggle('editando', editando);
+    document.getElementById('barra').classList.toggle('editando', editando);
+    document.getElementById('btn-editar').textContent = editando ? 'Sair da edição' : 'Editar conteúdo';
+    document.querySelectorAll('[data-ed]').forEach(function(el){
+      el.contentEditable = editando ? 'true' : 'false';
+    });
+    if (window.Reveal && Reveal.configure) {
+      Reveal.configure({keyboard: !editando, touch: !editando});
+    }
+    if (!editando) salvarEdicoes();
+  }
+
+  document.addEventListener('input', function(e){
+    if (editando && e.target.closest('[data-ed]')) salvarEdicoes();
+  });
+
+  document.getElementById('btn-editar').addEventListener('click', function(){ alternarEdicao(); });
+
+  document.getElementById('btn-restaurar').addEventListener('click', function(){
+    if (!confirm('Descartar as suas edições e voltar ao texto original?')) return;
+    try { localStorage.removeItem(CHAVE); } catch (e) {}
+    location.reload();
+  });
+
+  /* Baixa uma cópia .html já com as edições — a partir do HTML original limpo,
+     sem as marcas que o Reveal injeta ao navegar. */
+  document.getElementById('btn-baixar').addEventListener('click', function(){
+    if (editando) alternarEdicao(false);
+    var molde = document.createElement('div');
+    molde.innerHTML = ORIGINAL_SLIDES;
+    document.querySelectorAll('[data-ed]').forEach(function(el){
+      var alvo = molde.querySelector('[data-ed="' + el.getAttribute('data-ed') + '"]');
+      if (alvo) alvo.innerHTML = el.innerHTML;
+    });
+    molde.querySelectorAll('[data-ed]').forEach(function(el){
+      el.removeAttribute('data-ed');
+      el.removeAttribute('contenteditable');
+    });
+    var barra = document.getElementById('barra').outerHTML +
+                document.getElementById('aviso').outerHTML;
+    var fundo = document.getElementById('fundo').outerHTML.replace(/<i[^>]*><\/i>/g, '');
+    var scripts = Array.prototype.slice.call(document.querySelectorAll('body > script[src]'))
+      .map(function(s){ return '<scr' + 'ipt src="' + s.src + '"></scr' + 'ipt>'; })
+      .join('\n');
+    var saida = '<!doctype html>\n<html lang="pt-BR">\n<head>\n' + ORIGINAL_HEAD +
+      '\n</head>\n<body>\n' + fundo + '\n' + barra + '\n' + molde.innerHTML + '\n' +
+      scripts + '\n<scr' + 'ipt id="logica">' + document.getElementById('logica').textContent + '</scr' + 'ipt>\n</body>\n</html>';
+    var blob = new Blob([saida], {type: 'text/html;charset=utf-8'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'deck-e3-mira.html';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 2000);
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'e' && e.key !== 'E') return;
+    if (e.target.isContentEditable && editando) return;   // "e" digitado no texto
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    e.preventDefault();
+    alternarEdicao();
+  }, true);
+
+  /* ---------- Reveal ---------- */
+  Reveal.initialize({
+    width: 1920, height: 1080, margin: 0.04,
+    controls: true, progress: true, hash: true, slideNumber: 'c/t',
+    transition: 'fade', backgroundTransition: 'fade',
+    plugins: [RevealNotes]
+  });
+
+  /* abrir já em modo de edição:  deck-e1-mira.html?editar=1  */
+  if (/(^|[?&])editar=1/.test(location.search)) alternarEdicao(true);
+})();
+</script>
+</body>
+</html>

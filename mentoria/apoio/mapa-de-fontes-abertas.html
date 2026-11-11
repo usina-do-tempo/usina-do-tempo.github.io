@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa de Fontes Abertas</title>
+<style>
+:root{--bg:#f7f6f3;--paper:#ffffff;--ink:#1f2430;--muted:#5c6470;--accent:#0f4c81;--accent2:#b8860b;--line:#e3e0d8;--code:#f0eee8}
+@media (prefers-color-scheme: dark){:root{--bg:#14161c;--paper:#1c1f27;--ink:#e8e6e1;--muted:#9aa1ad;--accent:#6ea8d8;--accent2:#d4a942;--line:#2c303a;--code:#242832}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif;padding-top:3.2rem}
+.wrap{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+header.top{border-bottom:3px double var(--accent);padding-bottom:1rem;margin-bottom:2rem}
+header.top .kicker{font-family:system-ui,sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:600}
+h1{font-size:1.9rem;line-height:1.25;margin:.3rem 0 0;color:var(--accent)}
+h2{font-size:1.35rem;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:.3rem;margin-top:2.4rem}
+h3{font-size:1.08rem;margin-top:1.6rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-family:system-ui,sans-serif;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--code)}
+.tablewrap{overflow-x:auto}
+blockquote{border-left:3px solid var(--accent2);margin:1rem 0;padding:.2rem 1rem;color:var(--muted)}
+pre{background:var(--code);padding:.8rem 1rem;border-radius:8px;overflow-x:auto;font-size:.82em;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.cpy{display:block;margin:-.4rem 0 1rem auto;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.35rem .9rem;cursor:pointer;font:.8rem system-ui,sans-serif}
+@media print{.cpy{display:none}}
+code{background:var(--code);padding:.1em .35em;border-radius:4px;font-size:.85em}
+pre code{padding:0;background:none}
+hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+.toolbar{position:fixed;top:0;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.5rem 1rem;display:flex;gap:.6rem;align-items:center;font-family:system-ui,sans-serif;font-size:.85rem;z-index:10}
+.toolbar button{background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.4rem .9rem;cursor:pointer;font-size:.82rem}
+.toolbar button.sec{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.toolbar .status{color:var(--muted);margin-left:auto}
+#doc[contenteditable="true"]{outline:2px dashed var(--accent2);outline-offset:8px}
+@media print{.toolbar{display:none}body{padding-top:0;background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <button id="btnPrint" class="sec">🖨️ Imprimir/PDF</button>
+  <span class="status" id="status"></span>
+</div>
+<div class="wrap">
+<header class="top">
+  <div class="kicker">Mentoria Regente · Turma Fundadora · 10/11/2026</div>
+  <h1>Mapa de Fontes Abertas</h1>
+</header>
+<main id="doc">
+<p><strong>Mentoria Regente — material do participante</strong> ·
+Realização: Usina do Tempo Marketing Ltda.</p>
+<h1
+id="mapa-de-fontes-abertas-onde-o-seu-assistente-lê-em-vez-de-adivinhar">Mapa
+de Fontes Abertas — onde o seu assistente lê em vez de adivinhar</h1>
+<p>Links conferidos um a um em 10/11/2026. Fontes mudam: se um link não
+abrir, use a coluna “Reserva se cair”.</p>
+<hr />
+<h2 id="o-que-é-isto-em-um-minuto">O que é isto, em um minuto</h2>
+<p>Quando você pergunta à IA o índice de inflação do mês, ela responde
+de memória. Às vezes acerta, às vezes inventa, sempre com a mesma voz
+segura. Muitos órgãos públicos e bases científicas oferecem os dados
+oficiais por um endereço de internet. Esse endereço tem nome técnico:
+<strong>API</strong>. Pense nela como <strong>o balcão de dados de um
+órgão, aberto por um link</strong>. Você abre o link e o órgão devolve o
+dado.</p>
+<p>O que volta costuma ser um texto estruturado (o formato se chama
+JSON): chaves, aspas e vírgulas. Parece feio, mas é texto comum, e a IA
+lê esse formato muito bem. Alguns links devolvem uma planilha em texto
+(o formato se chama CSV), que abre no Excel ou no Google Planilhas.</p>
+<p><strong>Três jeitos de usar, do mais simples ao mais
+avançado</strong></p>
+<ol type="1">
+<li><strong>Abrir o link no navegador e colar o conteúdo no
+pedido.</strong> Funciona em qualquer ferramenta e em qualquer conta
+gratuita. É o jeito que este Mapa assume.</li>
+<li><strong>Colar o link no pedido.</strong> Algumas ferramentas abrem o
+link sozinhas; nem toda ferramenta gratuita faz isso. Se a sua
+ferramenta não abrir o link, cole o conteúdo.</li>
+<li><strong>O conector.</strong> A ferramenta busca sozinha na fonte,
+sem você colar nada. O nome técnico é MCP. Você vê um funcionando no
+encontro presencial.</li>
+</ol>
+<p><strong>Cinco regras curtas</strong></p>
+<ol type="1">
+<li><strong>Fonte oficial diminui o que a IA inventa e não dispensa
+conferência.</strong> A IA pode ler errado um dado certo. Confira o
+número que ela usou contra o que o link mostrou.</li>
+<li><strong>Anote a data da consulta.</strong> No pedido e no seu passo
+a passo: “fonte: qual link, consultado em que data”.</li>
+<li><strong>Toda fonte sai do ar.</strong> Tenha a reserva anotada.
+Nenhuma fonte deste Mapa promete funcionar todos os dias.</li>
+<li><strong>Resultado com nome de pessoa é amarelo no guia do sigilo,
+mesmo sendo público.</strong> Antes de colar na IA, apague ou anonimize
+os nomes. Exceção natural: o autor de um artigo ou livro publicado, que
+é a própria referência.</li>
+<li><strong>Só conector de quem você sabe quem é.</strong> O conector vê
+tudo o que você pergunta através dele. Antes de autorizar, leia a tela
+de permissões.</li>
+</ol>
+<p><strong>Como ler as tabelas.</strong> “Faixa do sigilo” classifica o
+que o link devolve. A sua pergunta tem faixa própria: nunca ponha dado
+de cliente, paciente ou processo dentro do link ou do pedido. Nos links
+com data, troque a data pela que você precisa.</p>
+<hr />
+<h2 id="advocacia">Advocacia</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonte</th>
+<th>O que entrega</th>
+<th>Link de exemplo</th>
+<th>O que NÃO entrega</th>
+<th>Faixa do sigilo</th>
+<th>Reserva se cair</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Comunicações do diário eletrônico nacional (DJEN, Comunica PJe) —
+CNJ</td>
+<td>Texto das intimações publicadas, por tribunal e data; o exemplo traz
+1 item do TRF5 de 09/11/2026</td>
+<td><a
+href="https://comunicaapi.pje.jus.br/api/v1/comunicacao?siglaTribunal=TRF5&amp;dataDisponibilizacaoInicio=2026-11-09&amp;dataDisponibilizacaoFim=2026-11-09&amp;itensPorPagina=1"
+class="uri">https://comunicaapi.pje.jus.br/api/v1/comunicacao?siglaTribunal=TRF5&amp;dataDisponibilizacaoInicio=2026-11-09&amp;dataDisponibilizacaoFim=2026-11-09&amp;itensPorPagina=1</a></td>
+<td>Os autos; não substitui a publicação oficial para contar prazo</td>
+<td><strong>Amarelo</strong>: o texto e a lista de destinatários trazem
+nome das partes, nome e número de OAB dos advogados</td>
+<td>Site comunica.pje.jus.br, no navegador</td>
+</tr>
+<tr class="even">
+<td>Dados Abertos do Senado — Legislação</td>
+<td>Número, data e ementa de uma lei federal (exemplo: Lei 8.078/1990, o
+CDC)</td>
+<td><a
+href="https://legis.senado.leg.br/dadosabertos/legislacao/lista.json?tipo=LEI&amp;numero=8078&amp;ano=1990"
+class="uri">https://legis.senado.leg.br/dadosabertos/legislacao/lista.json?tipo=LEI&amp;numero=8078&amp;ano=1990</a></td>
+<td>O texto consolidado do artigo; leis estaduais e municipais</td>
+<td>Verde</td>
+<td>Site normas.leg.br ou planalto.gov.br, no navegador</td>
+</tr>
+<tr class="odd">
+<td>Banco Central — série do IPCA mensal (série 433)</td>
+<td>Os últimos 12 meses do IPCA, mês a mês</td>
+<td><a
+href="https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados/ultimos/12?formato=json"
+class="uri">https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados/ultimos/12?formato=json</a></td>
+<td>O cálculo; a escolha do índice certo, que é decisão jurídica</td>
+<td>Verde</td>
+<td>IBGE: <a
+href="https://apisidra.ibge.gov.br/values/t/1737/n1/all/v/63/p/last%2012"
+class="uri">https://apisidra.ibge.gov.br/values/t/1737/n1/all/v/63/p/last%2012</a></td>
+</tr>
+<tr class="even">
+<td>BrasilAPI — feriados nacionais (projeto comunitário, não
+oficial)</td>
+<td>Feriados nacionais do ano, com dia da semana</td>
+<td><a href="https://brasilapi.com.br/api/feriados/v1/2026"
+class="uri">https://brasilapi.com.br/api/feriados/v1/2026</a></td>
+<td>Feriados estaduais, municipais e forenses; suspensões por portaria
+do tribunal</td>
+<td>Verde</td>
+<td>Calendário oficial do tribunal</td>
+</tr>
+<tr class="odd">
+<td>BrasilAPI — cadastro de CNPJ (republica o cadastro aberto da
+Receita)</td>
+<td>Razão social, situação cadastral, endereço, atividade e quadro de
+sócios</td>
+<td><a href="https://brasilapi.com.br/api/cnpj/v1/00000000000191"
+class="uri">https://brasilapi.com.br/api/cnpj/v1/00000000000191</a></td>
+<td>Comprovante oficial; o dado pode estar semanas atrasado; pessoa
+física</td>
+<td><strong>Amarelo</strong>: o quadro de sócios traz nome de pessoa
+física</td>
+<td>OpenCNPJ: <a href="https://api.opencnpj.org/00000000000191"
+class="uri">https://api.opencnpj.org/00000000000191</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Banco Nacional de Precedentes (CNJ):</strong> reúne os
+precedentes qualificados dos tribunais superiores. Para consultar, abra
+o site oficial no navegador: <a href="https://pangeabnp.pdpj.jus.br/"
+class="uri">https://pangeabnp.pdpj.jus.br/</a>. No encontro presencial
+você vê a mesma base consultada por um conector, sem colar link. Nada de
+dado de cliente na pergunta.</p>
+<p>O DataJud, do CNJ, com dados de processos de todos os tribunais,
+existe, mas não abre por link simples: exige um pedido montado com
+cabeçalho especial.</p>
+<h3 id="receita-1-a-lei-que-a-ia-citou-existe">Receita 1 — A lei que a
+IA citou existe?</h3>
+<p><strong>A dor:</strong> a IA citou uma lei na minuta e você não sabe
+se o número, o ano e o assunto batem.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://legis.senado.leg.br/dadosabertos/legislacao/lista.json?tipo=LEI&amp;numero=8078&amp;ano=1990"
+class="uri">https://legis.senado.leg.br/dadosabertos/legislacao/lista.json?tipo=LEI&amp;numero=8078&amp;ano=1990</a>
+(troque o número e o ano pelos da lei citada).</p>
+<pre><code>CONTEXTO: Sou advogado(a) e estou revisando uma minuta em que a IA citou a [Lei nº X/ANO]. Abri o link de dados abertos do Senado, consultado em [data], e colo abaixo o que ele devolveu.
+TOM: Técnico e direto.
+TAREFA: Compare o que a minuta diz sobre essa lei com a ementa e a data que o Senado devolveu. Diga se o número, o ano e o assunto batem.
+EXEMPLOS: (não se aplica — apague esta parte)
+QUALIDADE: Preciso ver a ementa copiada literalmente do conteúdo colado, sem paráfrase, e cada divergência apontada em uma linha. Se o conteúdo colado não permitir afirmar algo, escreva &quot;não dá para saber por esta fonte&quot;.
+FORMATO: Tabela com três colunas: o que a minuta diz, o que o Senado diz, bate ou não bate.
+
+Trecho da minuta: [colar só o trecho, sem nome de cliente]
+Conteúdo do link: [colar]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - A fonte confirma que a lei
+existe, não que o artigo diz o que a IA afirma. Abra o texto oficial e
+leia o artigo. - Confira se a lei não foi revogada ou alterada depois da
+data citada.</p>
+<h3 id="receita-2-prazo-em-dias-úteis">Receita 2 — Prazo em dias
+úteis</h3>
+<p><strong>A dor:</strong> você precisa contar um prazo em dias úteis e
+não quer errar por causa de um feriado.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://brasilapi.com.br/api/feriados/v1/2026"
+class="uri">https://brasilapi.com.br/api/feriados/v1/2026</a></p>
+<pre><code>CONTEXTO: Sou advogado(a) e preciso contar um prazo processual. A intimação foi disponibilizada em [data de disponibilização]. Colo abaixo a lista de feriados nacionais de 2026, consultada em [data].
+TOM: Objetivo.
+TAREFA: Liste, um a um, os dias úteis a partir do termo inicial até completar [N] dias úteis, excluindo sábados, domingos e os feriados nacionais colados. Indique a data final.
+EXEMPLOS: (não se aplica — apague esta parte)
+QUALIDADE: Preciso ver cada dia contado numerado, os feriados excluídos marcados, e a regra de termo inicial que você usou escrita em uma frase.
+FORMATO: Lista numerada e, no fim, uma linha com a data final.
+
+Feriados: [colar]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - A lista só traz feriados
+nacionais. Confira no calendário do tribunal os feriados locais e as
+suspensões de prazo. - Refaça a contagem no calendário e confirme a
+regra do termo inicial no CPC. - Confira a data de disponibilização no
+próprio sistema do tribunal.</p>
+<hr />
+<h2 id="contabilidade-e-finanças">Contabilidade e finanças</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonte</th>
+<th>O que entrega</th>
+<th>Link de exemplo</th>
+<th>O que NÃO entrega</th>
+<th>Faixa do sigilo</th>
+<th>Reserva se cair</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Banco Central — IPCA mensal (série 433)</td>
+<td>IPCA dos últimos 12 meses</td>
+<td><a
+href="https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados/ultimos/12?formato=json"
+class="uri">https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados/ultimos/12?formato=json</a></td>
+<td>O acumulado pronto; a escolha do índice do contrato</td>
+<td>Verde</td>
+<td>IBGE: <a
+href="https://apisidra.ibge.gov.br/values/t/1737/n1/all/v/63/p/last%2012"
+class="uri">https://apisidra.ibge.gov.br/values/t/1737/n1/all/v/63/p/last%2012</a></td>
+</tr>
+<tr class="even">
+<td>Banco Central — Selic acumulada no mês (série 4390)</td>
+<td>Selic acumulada de cada mês, últimos 12 meses</td>
+<td><a
+href="https://api.bcb.gov.br/dados/serie/bcdata.sgs.4390/dados/ultimos/12?formato=json"
+class="uri">https://api.bcb.gov.br/dados/serie/bcdata.sgs.4390/dados/ultimos/12?formato=json</a></td>
+<td>A metodologia exigida pelo contrato ou pela norma</td>
+<td>Verde</td>
+<td>Calculadora do Cidadão, no site do Banco Central</td>
+</tr>
+<tr class="odd">
+<td>Banco Central — dólar PTAX do dia</td>
+<td>Cotação oficial de compra e venda do dólar numa data (no exemplo,
+9/11/2026; a data vai no formato mês-dia-ano)</td>
+<td><a
+href="https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao=%2711-09-2026%27&amp;$format=json"
+class="uri">https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao=%2711-09-2026%27&amp;$format=json</a></td>
+<td>Outras moedas (este link é só do dólar); cotação comercial do
+momento</td>
+<td>Verde</td>
+<td>Página de cotações no site do Banco Central</td>
+</tr>
+<tr class="even">
+<td>BrasilAPI — cadastro de CNPJ (comunitário, não oficial)</td>
+<td>Razão social, situação, data de abertura, atividade, porte e
+sócios</td>
+<td><a href="https://brasilapi.com.br/api/cnpj/v1/00000000000191"
+class="uri">https://brasilapi.com.br/api/cnpj/v1/00000000000191</a></td>
+<td>Comprovante oficial; situação do Simples com segurança; dado
+atualizado no dia</td>
+<td><strong>Amarelo</strong>: quadro de sócios com nome de pessoa
+física</td>
+<td>OpenCNPJ: <a href="https://api.opencnpj.org/00000000000191"
+class="uri">https://api.opencnpj.org/00000000000191</a></td>
+</tr>
+<tr class="odd">
+<td>BrasilAPI — NCM</td>
+<td>Descrição oficial de um código NCM</td>
+<td><a href="https://brasilapi.com.br/api/ncm/v1/8517"
+class="uri">https://brasilapi.com.br/api/ncm/v1/8517</a></td>
+<td>Alíquota de imposto; CEST</td>
+<td>Verde</td>
+<td>Tabela TIPI no site da Receita Federal</td>
+</tr>
+<tr class="even">
+<td>IBGE — CNAE</td>
+<td>Descrição de uma classe de atividade econômica</td>
+<td><a href="https://servicodados.ibge.gov.br/api/v2/cnae/classes/47113"
+class="uri">https://servicodados.ibge.gov.br/api/v2/cnae/classes/47113</a></td>
+<td>O enquadramento tributário do cliente</td>
+<td>Verde</td>
+<td>Site da CNAE no IBGE (concla.ibge.gov.br)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="receita-1-reajuste-de-contrato-pelo-ipca">Receita 1 — Reajuste
+de contrato pelo IPCA</h3>
+<p><strong>A dor:</strong> o contrato reajusta pelo IPCA de 12 meses e
+você quer a conta passo a passo, sem índice inventado.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados/ultimos/12?formato=json"
+class="uri">https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados/ultimos/12?formato=json</a></p>
+<pre><code>CONTEXTO: Sou contador(a) e preciso calcular o reajuste anual de um contrato pelo IPCA. Valor atual: [R$ valor]. Data-base: [mês/ano]. Colo abaixo os 12 meses do IPCA do Banco Central, consultados em [data].
+TOM: Técnico, de memória de cálculo.
+TAREFA: Acumule os 12 índices colados (multiplicando os fatores, não somando) e aplique ao valor atual.
+EXEMPLOS: (não se aplica — apague esta parte)
+QUALIDADE: Preciso ver os 12 índices exatamente como colados, o fator de cada mês, o acumulado e o novo valor. Não use nenhum número que não esteja no conteúdo colado.
+FORMATO: Tabela mês a mês e, no fim, duas linhas: acumulado e novo valor.
+
+Índices: [colar]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - O contrato diz IPCA mesmo,
+ou INPC, ou IGP-M? E qual é o período exato? - Refaça a conta na
+planilha e compare com a Calculadora do Cidadão do Banco Central. - Leia
+o valor de cada mês no link; não confie em número que a IA
+“lembrou”.</p>
+<h3 id="receita-2-triagem-de-fornecedor-novo">Receita 2 — Triagem de
+fornecedor novo</h3>
+<p><strong>A dor:</strong> um fornecedor novo mandou a primeira nota e
+você quer um resumo rápido do cadastro antes de pagar.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://brasilapi.com.br/api/cnpj/v1/00000000000191"
+class="uri">https://brasilapi.com.br/api/cnpj/v1/00000000000191</a>
+(troque pelo CNPJ do fornecedor, só números).</p>
+<pre><code>CONTEXTO: Sou contador(a) e vou cadastrar um fornecedor novo que presta [tipo de serviço]. Consultei o CNPJ em [data] e colo abaixo os dados da empresa, sem o quadro de sócios.
+TOM: Objetivo.
+TAREFA: Resuma o cadastro e aponte o que destoa do serviço contratado.
+EXEMPLOS: (não se aplica — apague esta parte)
+QUALIDADE: Preciso ver situação cadastral, data de abertura, atividade principal, porte e capital social, cada um copiado do conteúdo colado. Diga &quot;não consta&quot; quando o dado não estiver ali.
+FORMATO: Até 6 linhas, uma por item, e uma linha final com o que merece atenção.
+
+Dados: [colar, sem a parte dos sócios]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - Apague a parte dos sócios
+(nomes de pessoas) antes de colar. - Emita o comprovante oficial no site
+da Receita antes de pagar: esta base pode estar semanas atrasada. - A IA
+resume; a decisão de aceitar o fornecedor é sua.</p>
+<hr />
+<h2 id="contabilidade-pública-e-setor-público">Contabilidade pública e
+setor público</h2>
+<p>Licitação, contrato, convênio e prestação de contas. Serve também a
+quem faz análise de conformidade de processos administrativos.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonte</th>
+<th>O que entrega</th>
+<th>Link de exemplo</th>
+<th>O que NÃO entrega</th>
+<th>Faixa do sigilo</th>
+<th>Reserva se cair</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PNCP — contratações publicadas (Ministério da Gestão)</td>
+<td>Contratações publicadas num dia, por modalidade (no exemplo, pregão
+em 05/11/2026), com órgão, objeto, valores e número de controle</td>
+<td><a
+href="https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao?dataInicial=20261105&amp;dataFinal=20261105&amp;codigoModalidadeContratacao=6&amp;pagina=1&amp;tamanhoPagina=10"
+class="uri">https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao?dataInicial=20261105&amp;dataFinal=20261105&amp;codigoModalidadeContratacao=6&amp;pagina=1&amp;tamanhoPagina=10</a></td>
+<td>O que não foi publicado no PNCP (parte dos municípios e contratações
+antigas)</td>
+<td>Verde</td>
+<td>Busca no site pncp.gov.br</td>
+</tr>
+<tr class="even">
+<td>PNCP — contratos</td>
+<td>Contratos publicados num período, com fornecedor, valor, vigência e
+número de controle</td>
+<td><a
+href="https://pncp.gov.br/api/consulta/v1/contratos?dataInicial=20261101&amp;dataFinal=20261105&amp;pagina=1&amp;tamanhoPagina=10"
+class="uri">https://pncp.gov.br/api/consulta/v1/contratos?dataInicial=20261101&amp;dataFinal=20261105&amp;pagina=1&amp;tamanhoPagina=10</a></td>
+<td>Os documentos do processo; correção de erro de digitação da
+origem</td>
+<td><strong>Amarelo</strong>: há contratos com fornecedor pessoa
+física</td>
+<td>Busca no site pncp.gov.br</td>
+</tr>
+<tr class="odd">
+<td>Compras.gov.br — catálogo de materiais (CATMAT)</td>
+<td>Itens do catálogo federal por grupo (no exemplo, grupo 75: material
+de expediente), com código e descrição padrão</td>
+<td><a
+href="https://dadosabertos.compras.gov.br/modulo-material/4_consultarItemMaterial?pagina=1&amp;tamanhoPagina=10&amp;codigoGrupo=75"
+class="uri">https://dadosabertos.compras.gov.br/modulo-material/4_consultarItemMaterial?pagina=1&amp;tamanhoPagina=10&amp;codigoGrupo=75</a></td>
+<td>Preço; o Painel de Preços continua a referência formal</td>
+<td>Verde</td>
+<td>Catálogo no site Compras.gov.br</td>
+</tr>
+<tr class="even">
+<td>Tesouro Nacional — SICONFI, extrato de entregas</td>
+<td>O que um ente entregou ao Tesouro num ano (no exemplo, Fortaleza em
+2025): RREO, RGF, DCA, matrizes</td>
+<td><a
+href="https://apidatalake.tesouro.gov.br/ords/siconfi/tt/extrato_entregas?id_ente=2304400&amp;an_referencia=2025"
+class="uri">https://apidatalake.tesouro.gov.br/ords/siconfi/tt/extrato_entregas?id_ente=2304400&amp;an_referencia=2025</a></td>
+<td>A análise do conteúdo dos relatórios; dado de quem não entregou</td>
+<td>Verde</td>
+<td>Site siconfi.tesouro.gov.br</td>
+</tr>
+<tr class="odd">
+<td>TransfereGov — transferências especiais</td>
+<td>Planos de ação de transferências especiais, com beneficiário,
+situação e banco</td>
+<td><a
+href="https://api.transferegov.gestao.gov.br/transferenciasespeciais/plano_acao_especial?limit=1"
+class="uri">https://api.transferegov.gestao.gov.br/transferenciasespeciais/plano_acao_especial?limit=1</a></td>
+<td>Convênios de outros módulos; transferências estaduais</td>
+<td>Verde</td>
+<td>Site do TransfereGov</td>
+</tr>
+<tr class="even">
+<td>BrasilAPI — cadastro de CNPJ (comunitário, não oficial)</td>
+<td>Situação cadastral e dados do fornecedor</td>
+<td><a href="https://brasilapi.com.br/api/cnpj/v1/00000000000191"
+class="uri">https://brasilapi.com.br/api/cnpj/v1/00000000000191</a></td>
+<td>Certidão; SICAF; sanções</td>
+<td><strong>Amarelo</strong>: quadro de sócios com nome de pessoa
+física</td>
+<td>OpenCNPJ: <a href="https://api.opencnpj.org/00000000000191"
+class="uri">https://api.opencnpj.org/00000000000191</a></td>
+</tr>
+</tbody>
+</table>
+<h3
+id="receita-1-conformidade-o-processo-bate-com-o-que-foi-publicado">Receita
+1 — Conformidade: o processo bate com o que foi publicado?</h3>
+<p><strong>A dor:</strong> você analisa a conformidade de um processo
+administrativo e precisa comparar o que o processo diz com o que foi
+publicado no PNCP.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://pncp.gov.br/api/consulta/v1/contratos?dataInicial=20261101&amp;dataFinal=20261105&amp;pagina=1&amp;tamanhoPagina=10"
+class="uri">https://pncp.gov.br/api/consulta/v1/contratos?dataInicial=20261101&amp;dataFinal=20261105&amp;pagina=1&amp;tamanhoPagina=10</a>
+(troque as datas pelo período da publicação; se não achar o contrato,
+use a busca do site pncp.gov.br com o número de controle).</p>
+<pre><code>CONTEXTO: Sou servidor(a) da área contábil e faço análise de conformidade de processos administrativos. Tenho os dados públicos de um contrato, conforme constam no processo, e o registro do mesmo contrato no PNCP, consultado em [data].
+TOM: Técnico e neutro, sem juízo de irregularidade.
+TAREFA: Compare os dois e liste as divergências em data de publicação, valor, vigência, objeto e fornecedor.
+EXEMPLOS: [cole um item da lista de verificação do seu órgão, se houver; se não, apague esta parte]
+QUALIDADE: Preciso ver cada campo comparado lado a lado, com o valor de cada fonte copiado literalmente. Não conclua se há irregularidade; só aponte a diferença.
+FORMATO: Tabela com quatro colunas: campo, processo, PNCP, diverge (sim/não).
+
+Dados do processo: [colar só os dados públicos: número de controle, valor, datas, objeto]
+Registro do PNCP: [colar, apagando nome de fornecedor pessoa física]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - Nada de documento do
+processo vai para a IA: só os dados que já são públicos. - Abra o número
+de controle no site do PNCP e confirme cada divergência apontada. - A
+conclusão sobre conformidade é sua, não da IA.</p>
+<h3 id="receita-2-descrição-do-item-no-padrão-do-catálogo">Receita 2 —
+Descrição do item no padrão do catálogo</h3>
+<p><strong>A dor:</strong> o termo de referência descreve o item de um
+jeito e o catálogo federal, de outro.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://dadosabertos.compras.gov.br/modulo-material/4_consultarItemMaterial?pagina=1&amp;tamanhoPagina=10&amp;codigoGrupo=75"
+class="uri">https://dadosabertos.compras.gov.br/modulo-material/4_consultarItemMaterial?pagina=1&amp;tamanhoPagina=10&amp;codigoGrupo=75</a>
+(troque o número do grupo pelo do seu material).</p>
+<pre><code>CONTEXTO: Sou servidor(a) e estou revisando a descrição de um item num termo de referência. Colo abaixo itens do catálogo de materiais do Compras.gov.br, consultados em [data].
+TOM: Técnico.
+TAREFA: Indique quais itens do catálogo colado correspondem à descrição que eu uso e proponha a redação no padrão do catálogo.
+EXEMPLOS: (não se aplica — apague esta parte)
+QUALIDADE: Preciso ver o código do item e a descrição do catálogo copiados literalmente, e a diferença entre a minha descrição e a do catálogo em uma linha. Se nenhum item corresponder, diga isso.
+FORMATO: Até 3 candidatos, em lista, com código, descrição do catálogo e diferença.
+
+Minha descrição: [colar]
+Itens do catálogo: [colar]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - Confira o código escolhido
+no site do Compras.gov.br. - O link mostra 10 itens por página; o item
+certo pode estar em outra página.</p>
+<hr />
+<h2 id="engenharia-arquitetura-e-agro">Engenharia, arquitetura e
+agro</h2>
+<p>As coordenadas dos exemplos são de Fortaleza (-3.73, -38.52). Troque
+pelas da sua obra ou propriedade.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonte</th>
+<th>O que entrega</th>
+<th>Link de exemplo</th>
+<th>O que NÃO entrega</th>
+<th>Faixa do sigilo</th>
+<th>Reserva se cair</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Open-Meteo — histórico</td>
+<td>Chuva diária de um período passado num ponto (no exemplo, outubro de
+2026)</td>
+<td><a
+href="https://archive-api.open-meteo.com/v1/archive?latitude=-3.73&amp;longitude=-38.52&amp;start_date=2026-10-01&amp;end_date=2026-10-31&amp;daily=precipitation_sum&amp;timezone=America/Fortaleza"
+class="uri">https://archive-api.open-meteo.com/v1/archive?latitude=-3.73&amp;longitude=-38.52&amp;start_date=2026-10-01&amp;end_date=2026-10-31&amp;daily=precipitation_sum&amp;timezone=America/Fortaleza</a></td>
+<td>Medição de pluviômetro; valor de prova pericial. Gratuito só para
+uso não comercial</td>
+<td>Verde</td>
+<td>Dados de estação no site do INMET</td>
+</tr>
+<tr class="even">
+<td>Open-Meteo — previsão</td>
+<td>Chuva e vento máximo dos próximos 7 dias</td>
+<td><a
+href="https://api.open-meteo.com/v1/forecast?latitude=-3.73&amp;longitude=-38.52&amp;daily=precipitation_sum,wind_speed_10m_max&amp;timezone=America/Fortaleza&amp;forecast_days=7"
+class="uri">https://api.open-meteo.com/v1/forecast?latitude=-3.73&amp;longitude=-38.52&amp;daily=precipitation_sum,wind_speed_10m_max&amp;timezone=America/Fortaleza&amp;forecast_days=7</a></td>
+<td>Garantia de previsão. Gratuito só para uso não comercial</td>
+<td>Verde</td>
+<td>Previsão no site do INMET</td>
+</tr>
+<tr class="odd">
+<td>NASA POWER — radiação solar</td>
+<td>Média mensal de radiação solar no ponto, em kWh/m² por dia</td>
+<td><a
+href="https://power.larc.nasa.gov/api/temporal/climatology/point?parameters=ALLSKY_SFC_SW_DWN&amp;community=RE&amp;longitude=-38.52&amp;latitude=-3.73&amp;format=JSON"
+class="uri">https://power.larc.nasa.gov/api/temporal/climatology/point?parameters=ALLSKY_SFC_SW_DWN&amp;community=RE&amp;longitude=-38.52&amp;latitude=-3.73&amp;format=JSON</a></td>
+<td>Valor do telhado (é média numa área de dezenas de quilômetros);
+estudo de sombreamento</td>
+<td>Verde</td>
+<td>Sem reserva testada; salve o resultado do dia</td>
+</tr>
+<tr class="even">
+<td>IBGE — custo médio do m² (SINAPI agregado)</td>
+<td>Custo médio do m² por estado no último mês (no exemplo, Ceará)</td>
+<td><a
+href="https://apisidra.ibge.gov.br/values/t/2296/n3/23/v/48/p/last%201"
+class="uri">https://apisidra.ibge.gov.br/values/t/2296/n3/23/v/48/p/last%201</a></td>
+<td>As composições de insumos e serviços do SINAPI</td>
+<td>Verde</td>
+<td>Planilhas do SINAPI no site da Caixa</td>
+</tr>
+<tr class="odd">
+<td>INPE — focos de queimada</td>
+<td>Arquivo de planilha com os focos de calor do Brasil num dia (no
+exemplo, 09/11/2026); o navegador baixa o arquivo</td>
+<td><a
+href="https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261109.csv"
+class="uri">https://dataserver-coids.inpe.br/queimadas/queimadas/focos/csv/diario/Brasil/focos_diario_br_20261109.csv</a></td>
+<td>Área queimada; autoria</td>
+<td>Verde</td>
+<td>Painel BDQueimadas no site do INPE</td>
+</tr>
+<tr class="even">
+<td>OpenTopoData — altitude</td>
+<td>Altitude aproximada de um ponto</td>
+<td><a
+href="https://api.opentopodata.org/v1/srtm30m?locations=-3.73,-38.52"
+class="uri">https://api.opentopodata.org/v1/srtm30m?locations=-3.73,-38.52</a></td>
+<td>Levantamento planialtimétrico; precisão de metro</td>
+<td>Verde</td>
+<td>Open-Elevation (não retestado em 10/11)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="receita-1-chuva-no-diário-de-obra">Receita 1 — Chuva no diário
+de obra</h3>
+<p><strong>A dor:</strong> você precisa justificar dias improdutivos por
+chuva e o diário de obra não tem registro confiável.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://archive-api.open-meteo.com/v1/archive?latitude=-3.73&amp;longitude=-38.52&amp;start_date=2026-10-01&amp;end_date=2026-10-31&amp;daily=precipitation_sum&amp;timezone=America/Fortaleza"
+class="uri">https://archive-api.open-meteo.com/v1/archive?latitude=-3.73&amp;longitude=-38.52&amp;start_date=2026-10-01&amp;end_date=2026-10-31&amp;daily=precipitation_sum&amp;timezone=America/Fortaleza</a>
+(troque coordenadas e datas).</p>
+<pre><code>CONTEXTO: Sou engenheiro(a) responsável por uma obra em [cidade]. Colo abaixo a chuva diária de [mês/ano] no ponto da obra, do serviço Open-Meteo, consultada em [data]. Os números são estimativa por modelo, não medição local.
+TOM: Técnico e sóbrio.
+TAREFA: Liste os dias com chuva acima de [X] mm e redija um parágrafo para o diário de obra que registre esses dias, citando a fonte e a data da consulta.
+EXEMPLOS: (não se aplica — apague esta parte)
+QUALIDADE: Preciso ver só datas e valores que estão no conteúdo colado, a fonte citada no parágrafo e a frase de que é estimativa, não medição.
+FORMATO: Tabela com data e chuva em mm, e um parágrafo de até 6 linhas.
+
+Dados: [colar]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - Cruze com o registro do
+mestre de obras. - Se o contrato exigir dado oficial, use estação do
+INMET. - Confira duas ou três datas da tabela contra o link.</p>
+<h3 id="receita-2-o-orçamento-está-na-ordem-de-grandeza-certa">Receita 2
+— O orçamento está na ordem de grandeza certa?</h3>
+<p><strong>A dor:</strong> você quer saber se o custo por m² do seu
+orçamento paramétrico está muito fora da média do estado.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://apisidra.ibge.gov.br/values/t/2296/n3/23/v/48/p/last%201"
+class="uri">https://apisidra.ibge.gov.br/values/t/2296/n3/23/v/48/p/last%201</a>
+(troque o 23 pelo código do seu estado).</p>
+<pre><code>CONTEXTO: Sou engenheiro(a)/arquiteto(a) e fiz um orçamento paramétrico de [tipo de obra] com custo de [R$ por m²]. Colo abaixo o custo médio do m² do SINAPI no meu estado, do IBGE, consultado em [data].
+TOM: Técnico.
+TAREFA: Calcule o desvio percentual entre o meu custo e a média e liste hipóteses que expliquem o desvio.
+EXEMPLOS: (não se aplica — apague esta parte)
+QUALIDADE: Preciso ver o valor da média e o mês de referência copiados do conteúdo colado, a conta do desvio e no máximo 5 hipóteses, cada uma verificável.
+FORMATO: Três linhas de números e uma lista curta de hipóteses.
+
+Dados: [colar]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - A média é agregada. Compare
+com as composições do SINAPI da sua UF, na planilha da Caixa. - Confira
+o mês de referência: o índice sai com atraso.</p>
+<hr />
+<h2 id="saúde">Saúde</h2>
+<blockquote>
+<p><strong>Baliza deste bloco:</strong> só estudo, referência e tarefa
+administrativa. Nunca dado de paciente (nome, documento, prontuário,
+exame ou relato de caso), nem na pergunta, nem no link. Nunca decisão
+clínica.</p>
+</blockquote>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonte</th>
+<th>O que entrega</th>
+<th>Link de exemplo</th>
+<th>O que NÃO entrega</th>
+<th>Faixa do sigilo</th>
+<th>Reserva se cair</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PubMed — Biblioteca Nacional de Medicina dos EUA</td>
+<td>Números de identificação (PMID) dos artigos sobre um tema; cada um
+abre em pubmed.ncbi.nlm.nih.gov/NÚMERO</td>
+<td><a
+href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&amp;term=insomnia+cognitive+behavioral+therapy&amp;retmax=10&amp;retmode=json"
+class="uri">https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&amp;term=insomnia+cognitive+behavioral+therapy&amp;retmax=10&amp;retmode=json</a></td>
+<td>Título e resumo nesta mesma consulta; qualidade da evidência</td>
+<td>Verde</td>
+<td>Europe PMC (linha abaixo)</td>
+</tr>
+<tr class="even">
+<td>Europe PMC — EMBL-EBI</td>
+<td>Artigos sobre um tema com título, autores, revista e ano; o exemplo
+filtra só acesso aberto</td>
+<td><a
+href="https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=insomnia%20cognitive%20behavioral%20therapy%20AND%20OPEN_ACCESS:y&amp;format=json&amp;pageSize=5"
+class="uri">https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=insomnia%20cognitive%20behavioral%20therapy%20AND%20OPEN_ACCESS:y&amp;format=json&amp;pageSize=5</a></td>
+<td>Revisão por pares garantida (inclui preprints)</td>
+<td>Verde (autores de artigo são a própria referência)</td>
+<td>Site pubmed.ncbi.nlm.nih.gov</td>
+</tr>
+<tr class="odd">
+<td>Crossref</td>
+<td>DOI e título de artigos, para conferir uma referência</td>
+<td><a
+href="https://api.crossref.org/works?query=insomnia+cognitive+behavioral+therapy&amp;rows=5&amp;select=DOI,title"
+class="uri">https://api.crossref.org/works?query=insomnia+cognitive+behavioral+therapy&amp;rows=5&amp;select=DOI,title</a></td>
+<td>Resumo; boa busca para descobrir literatura</td>
+<td>Verde</td>
+<td>Site doi.org, colando o DOI</td>
+</tr>
+<tr class="even">
+<td>MeSH — vocabulário controlado da Biblioteca Nacional de Medicina dos
+EUA</td>
+<td>O termo técnico oficial em inglês para buscar no PubMed</td>
+<td><a
+href="https://id.nlm.nih.gov/mesh/lookup/descriptor?label=sleep&amp;match=startswith&amp;limit=10"
+class="uri">https://id.nlm.nih.gov/mesh/lookup/descriptor?label=sleep&amp;match=startswith&amp;limit=10</a></td>
+<td>Termos em português</td>
+<td>Verde</td>
+<td>Busca MeSH no site do PubMed</td>
+</tr>
+<tr class="odd">
+<td>ClinicalTrials.gov — NIH</td>
+<td>Ensaios clínicos registrados, com número NCT, título e situação</td>
+<td><a
+href="https://clinicaltrials.gov/api/v2/studies?query.cond=insomnia&amp;query.intr=cognitive+behavioral+therapy&amp;pageSize=5&amp;fields=NCTId,BriefTitle,OverallStatus"
+class="uri">https://clinicaltrials.gov/api/v2/studies?query.cond=insomnia&amp;query.intr=cognitive+behavioral+therapy&amp;pageSize=5&amp;fields=NCTId,BriefTitle,OverallStatus</a></td>
+<td>Resultado interpretado; todo ensaio brasileiro</td>
+<td>Verde</td>
+<td>Site clinicaltrials.gov</td>
+</tr>
+<tr class="even">
+<td>CNES — Ministério da Saúde</td>
+<td>Cadastro de estabelecimentos de saúde: código, endereço, tipo</td>
+<td><a
+href="https://apidadosabertos.saude.gov.br/cnes/estabelecimentos?limit=2"
+class="uri">https://apidadosabertos.saude.gov.br/cnes/estabelecimentos?limit=2</a></td>
+<td>Dado atualizado no dia; dado de paciente</td>
+<td><strong>Amarelo</strong>: estabelecimento de pessoa física aparece
+com o nome do titular</td>
+<td>Consulta no site do CNES</td>
+</tr>
+</tbody>
+</table>
+<p>O PubMed também tem um conector no diretório do Claude, mantido pela
+própria Anthropic: a ferramenta busca os artigos sozinha. É o exemplo de
+conector que pode aparecer no encontro presencial.</p>
+<h3 id="receita-1-lista-de-estudos-para-o-grupo-de-estudo">Receita 1 —
+Lista de estudos para o grupo de estudo</h3>
+<p><strong>A dor:</strong> você precisa levar ao grupo de estudo uma
+lista de artigos recentes sobre um tema, com link que cada colega possa
+conferir.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=insomnia%20cognitive%20behavioral%20therapy%20AND%20OPEN_ACCESS:y&amp;format=json&amp;pageSize=5"
+class="uri">https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=insomnia%20cognitive%20behavioral%20therapy%20AND%20OPEN_ACCESS:y&amp;format=json&amp;pageSize=5</a>
+(troque o tema, em inglês).</p>
+<pre><code>CONTEXTO: Sou profissional de saúde e preparo material para um grupo de estudo sobre [tema]. Colo abaixo o resultado da Europe PMC, consultado em [data]. Não há nenhum dado de paciente neste pedido.
+TOM: Técnico, sem conclusão clínica.
+TAREFA: Organize os artigos colados numa lista com título, ano, revista, tipo de estudo (se constar) e link.
+EXEMPLOS: (não se aplica — apague esta parte)
+QUALIDADE: Preciso ver só artigos que estão no conteúdo colado, com o link montado a partir do PMID ou DOI que veio nele. Não escreva conclusão que não esteja no título. Se o tipo de estudo não constar, escreva &quot;não informado&quot;.
+FORMATO: Tabela com uma linha por artigo.
+
+Resultado: [colar]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - Abra cada link e confirme
+que o artigo existe e é o que a tabela diz. - Leia o resumo antes de
+levar ao grupo: título não é conclusão. - É material de estudo, não
+conduta.</p>
+<h3 id="receita-2-o-termo-certo-para-a-busca">Receita 2 — O termo certo
+para a busca</h3>
+<p><strong>A dor:</strong> você busca no PubMed com a palavra comum e os
+resultados vêm ruins.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://id.nlm.nih.gov/mesh/lookup/descriptor?label=sleep&amp;match=startswith&amp;limit=10"
+class="uri">https://id.nlm.nih.gov/mesh/lookup/descriptor?label=sleep&amp;match=startswith&amp;limit=10</a>
+(troque “sleep” pelo começo do termo em inglês).</p>
+<pre><code>CONTEXTO: Sou profissional de saúde e quero montar uma busca no PubMed sobre [tema, em português]. Colo abaixo os termos oficiais MeSH que começam com [palavra], consultados em [data].
+TOM: Didático e breve.
+TAREFA: Indique quais termos colados correspondem ao meu tema e monte uma frase de busca para o PubMed usando só esses termos.
+EXEMPLOS: (não se aplica — apague esta parte)
+QUALIDADE: Preciso ver cada termo copiado literalmente da lista colada. Se nenhum servir, diga isso e sugira outra palavra para eu consultar.
+FORMATO: Lista dos termos escolhidos e, no fim, a frase de busca numa linha.
+
+Termos: [colar]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - Só vale o termo que aparece
+na lista do MeSH. - Rode a busca no site do PubMed e veja se os
+primeiros resultados tratam do seu tema.</p>
+<hr />
+<h2 id="pequeno-negócio-vendas-e-rh">Pequeno negócio, vendas e RH</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonte</th>
+<th>O que entrega</th>
+<th>Link de exemplo</th>
+<th>O que NÃO entrega</th>
+<th>Faixa do sigilo</th>
+<th>Reserva se cair</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BrasilAPI — cadastro de CNPJ (comunitário, não oficial)</td>
+<td>Razão social, endereço, situação e atividade de um cliente
+empresa</td>
+<td><a href="https://brasilapi.com.br/api/cnpj/v1/00000000000191"
+class="uri">https://brasilapi.com.br/api/cnpj/v1/00000000000191</a></td>
+<td>Comprovante oficial; dado atualizado no dia</td>
+<td><strong>Amarelo</strong>: quadro de sócios com nome de pessoa
+física. Não use para montar lista de contatos</td>
+<td>OpenCNPJ: <a href="https://api.opencnpj.org/00000000000191"
+class="uri">https://api.opencnpj.org/00000000000191</a></td>
+</tr>
+<tr class="even">
+<td>ViaCEP</td>
+<td>Endereço de um CEP, com código IBGE da cidade e DDD</td>
+<td><a href="https://viacep.com.br/ws/01001000/json/"
+class="uri">https://viacep.com.br/ws/01001000/json/</a></td>
+<td>Número da casa; rua em cidade de CEP único</td>
+<td>Verde (o CEP sozinho; endereço ligado a uma pessoa vira
+amarelo)</td>
+<td>Consulta de CEP da BrasilAPI (não retestada em 10/11)</td>
+</tr>
+<tr class="odd">
+<td>BrasilAPI — feriados nacionais</td>
+<td>Feriados nacionais do ano</td>
+<td><a href="https://brasilapi.com.br/api/feriados/v1/2026"
+class="uri">https://brasilapi.com.br/api/feriados/v1/2026</a></td>
+<td>Feriados estaduais e municipais</td>
+<td>Verde</td>
+<td>Calendário oficial da prefeitura e do estado</td>
+</tr>
+<tr class="even">
+<td>AwesomeAPI — câmbio (comunitário)</td>
+<td>Cotação comercial do dólar no momento</td>
+<td><a href="https://economia.awesomeapi.com.br/json/last/USD-BRL"
+class="uri">https://economia.awesomeapi.com.br/json/last/USD-BRL</a></td>
+<td>A cotação oficial (PTAX), que é a de contrato e contabilidade</td>
+<td>Verde</td>
+<td>PTAX do Banco Central (ver bloco de Contabilidade)</td>
+</tr>
+<tr class="odd">
+<td>IBGE — população estimada do município</td>
+<td>População estimada no último ano (no exemplo, Fortaleza)</td>
+<td><a
+href="https://apisidra.ibge.gov.br/values/t/6579/n6/2304400/v/9324/p/last"
+class="uri">https://apisidra.ibge.gov.br/values/t/6579/n6/2304400/v/9324/p/last</a></td>
+<td>Renda, consumo, faixa etária</td>
+<td>Verde</td>
+<td>Site cidades.ibge.gov.br</td>
+</tr>
+<tr class="even">
+<td>Banco Central — salário mínimo (série 1619)</td>
+<td>Valor do salário mínimo, mês a mês</td>
+<td><a
+href="https://api.bcb.gov.br/dados/serie/bcdata.sgs.1619/dados/ultimos/3?formato=json"
+class="uri">https://api.bcb.gov.br/dados/serie/bcdata.sgs.1619/dados/ultimos/3?formato=json</a></td>
+<td>Pisos de categoria; tabela do INSS</td>
+<td>Verde</td>
+<td>Site do Planalto ou do Ministério do Trabalho</td>
+</tr>
+</tbody>
+</table>
+<p>Sobre o salário mínimo: em 10/11/2026 esta série mostrou também um
+mês que ainda não chegou. Leia o valor e a data no link e confira na
+fonte oficial antes de usar na folha.</p>
+<h3 id="receita-1-vencimento-que-cai-em-feriado">Receita 1 — Vencimento
+que cai em feriado</h3>
+<p><strong>A dor:</strong> você vai emitir cobranças e não quer boleto
+vencendo em dia sem expediente.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://brasilapi.com.br/api/feriados/v1/2026"
+class="uri">https://brasilapi.com.br/api/feriados/v1/2026</a></p>
+<pre><code>CONTEXTO: Tenho um pequeno negócio e vou emitir cobranças com estas datas de vencimento: [lista de datas]. Colo abaixo os feriados nacionais de 2026, consultados em [data].
+TOM: Simples e direto.
+TAREFA: Marque os vencimentos que caem em sábado, domingo ou feriado nacional e proponha o próximo dia útil para cada um.
+EXEMPLOS: (não se aplica — apague esta parte)
+QUALIDADE: Preciso ver o dia da semana de cada data e o nome do feriado quando houver, copiado da lista colada.
+FORMATO: Tabela com vencimento original, dia da semana, problema e nova data.
+
+Feriados: [colar]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - Feriado municipal e estadual
+não vem: confira no calendário da sua cidade. - Confira o dia da semana
+de duas ou três datas no calendário do celular.</p>
+<h3 id="receita-2-tamanho-de-mercado-de-uma-cidade">Receita 2 — Tamanho
+de mercado de uma cidade</h3>
+<p><strong>A dor:</strong> você quer comparar cidades antes de abrir um
+ponto ou começar a vender por lá.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://apisidra.ibge.gov.br/values/t/6579/n6/2304400/v/9324/p/last"
+class="uri">https://apisidra.ibge.gov.br/values/t/6579/n6/2304400/v/9324/p/last</a>
+(troque 2304400 pelo código IBGE da cidade; o ViaCEP mostra esse código
+no campo “ibge”).</p>
+<pre><code>CONTEXTO: Tenho um negócio de [ramo] e estou comparando [cidades] para expandir. Colo abaixo a população estimada de cada uma, do IBGE, consultada em [data].
+TOM: Prático.
+TAREFA: Compare as cidades pelo tamanho da população e escreva um parágrafo sobre o mercado potencial de cada uma para o meu ramo.
+EXEMPLOS: (não se aplica — apague esta parte)
+QUALIDADE: Preciso ver só números que estão no conteúdo colado, com o ano de referência. Se faltar uma cidade, diga que falta; não complete com estimativa.
+FORMATO: Tabela com cidade, população e ano, e um parágrafo de até 8 linhas.
+
+Dados: [colar]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - Confira o número de cada
+cidade no link. - População não é demanda: o parágrafo é ponto de
+partida, não estudo de mercado.</p>
+<hr />
+<h2 id="ensino-e-pesquisa">Ensino e pesquisa</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonte</th>
+<th>O que entrega</th>
+<th>Link de exemplo</th>
+<th>O que NÃO entrega</th>
+<th>Faixa do sigilo</th>
+<th>Reserva se cair</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OpenAlex — OurResearch (sem fins lucrativos)</td>
+<td>Artigos sobre um tema, com título, ano e DOI, inclusive em
+português</td>
+<td><a
+href="https://api.openalex.org/works?search=avaliacao%20formativa&amp;per-page=5&amp;select=id,title,publication_year,doi"
+class="uri">https://api.openalex.org/works?search=avaliacao%20formativa&amp;per-page=5&amp;select=id,title,publication_year,doi</a></td>
+<td>Qualidade do estudo. Sem cadastro, todos na mesma rede dividem uma
+cota diária pequena</td>
+<td>Verde</td>
+<td>Crossref (linha abaixo)</td>
+</tr>
+<tr class="even">
+<td>Crossref</td>
+<td>DOI e título de artigos; confere se uma referência existe</td>
+<td><a
+href="https://api.crossref.org/works?query.bibliographic=avaliacao+formativa+ensino+superior&amp;rows=5&amp;select=DOI,title,issued"
+class="uri">https://api.crossref.org/works?query.bibliographic=avaliacao+formativa+ensino+superior&amp;rows=5&amp;select=DOI,title,issued</a></td>
+<td>Resumo; revista sem DOI</td>
+<td>Verde</td>
+<td>Site doi.org, colando o DOI</td>
+</tr>
+<tr class="odd">
+<td>Open Library — Internet Archive</td>
+<td>Título, autor e ano de primeira publicação de livros</td>
+<td><a
+href="https://openlibrary.org/search.json?q=dom+casmurro&amp;limit=3&amp;fields=title,author_name,first_publish_year"
+class="uri">https://openlibrary.org/search.json?q=dom+casmurro&amp;limit=3&amp;fields=title,author_name,first_publish_year</a></td>
+<td>Cobertura completa de livros brasileiros recentes</td>
+<td>Verde (autor de obra publicada é a própria referência)</td>
+<td>Catálogo da biblioteca da sua instituição</td>
+</tr>
+<tr class="even">
+<td>Wikipedia — Wikimedia</td>
+<td>Resumo de um verbete e o identificador da entidade</td>
+<td><a
+href="https://pt.wikipedia.org/api/rest_v1/page/summary/Fortaleza"
+class="uri">https://pt.wikipedia.org/api/rest_v1/page/summary/Fortaleza</a></td>
+<td>Fonte primária; conteúdo é editável por qualquer pessoa</td>
+<td>Verde</td>
+<td>Site pt.wikipedia.org</td>
+</tr>
+<tr class="odd">
+<td>CAPES — dados abertos</td>
+<td>Catálogo de conjuntos de dados da pós-graduação para baixar</td>
+<td><a
+href="https://dadosabertos.capes.gov.br/api/3/action/package_search?q=periodicos&amp;rows=1"
+class="uri">https://dadosabertos.capes.gov.br/api/3/action/package_search?q=periodicos&amp;rows=1</a></td>
+<td>Busca de artigos; o Portal de Periódicos exige login
+institucional</td>
+<td>Verde</td>
+<td>Site dadosabertos.capes.gov.br</td>
+</tr>
+</tbody>
+</table>
+<p>Em sala de aula ou laboratório com uma só rede, a cota sem cadastro
+do OpenAlex pode acabar no meio da atividade. Veja a seção sobre
+cadastro gratuito no fim.</p>
+<h3 id="receita-1-referência-sem-invenção">Receita 1 — Referência sem
+invenção</h3>
+<p><strong>A dor:</strong> a IA sugeriu referências e você não sabe
+quais existem de verdade.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://api.crossref.org/works?query.bibliographic=avaliacao+formativa+ensino+superior&amp;rows=5&amp;select=DOI,title,issued"
+class="uri">https://api.crossref.org/works?query.bibliographic=avaliacao+formativa+ensino+superior&amp;rows=5&amp;select=DOI,title,issued</a>
+(troque as palavras pelo título da referência, sem acento).</p>
+<pre><code>CONTEXTO: Sou professor(a)/pesquisador(a). A IA me sugeriu as referências abaixo. Para cada uma, consultei o Crossref em [data] e colo o resultado.
+TOM: Rigoroso e direto.
+TAREFA: Para cada referência, diga se ela bate com algum resultado colado em título, ano e DOI.
+EXEMPLOS: (não se aplica — apague esta parte)
+QUALIDADE: Preciso ver, por referência, o DOI copiado do resultado colado ou a frase &quot;não encontrada no Crossref&quot;. Não corrija referência sem base no conteúdo colado.
+FORMATO: Tabela com referência sugerida, resultado do Crossref, bate (sim/parcial/não).
+
+Referências sugeridas: [colar]
+Resultados do Crossref: [colar]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - Abra cada DOI em doi.org e
+leia o resumo. - Referência que não aparece no Crossref não está provada
+como falsa: pode ser livro ou revista sem DOI. Procure no catálogo da
+biblioteca.</p>
+<h3 id="receita-2-bibliografia-inicial-de-um-tema">Receita 2 —
+Bibliografia inicial de um tema</h3>
+<p><strong>A dor:</strong> você vai preparar uma aula ou um projeto e
+precisa de um ponto de partida de leitura com links reais.</p>
+<p><strong>O link a abrir:</strong> <a
+href="https://api.openalex.org/works?search=avaliacao%20formativa&amp;per-page=5&amp;select=id,title,publication_year,doi"
+class="uri">https://api.openalex.org/works?search=avaliacao%20formativa&amp;per-page=5&amp;select=id,title,publication_year,doi</a>
+(troque o tema; para mais itens, aumente o número depois de
+per-page).</p>
+<pre><code>CONTEXTO: Sou professor(a) e preparo [aula/projeto] sobre [tema]. Colo abaixo o resultado do OpenAlex, consultado em [data].
+TOM: Acadêmico e claro.
+TAREFA: Organize os trabalhos colados numa bibliografia inicial, do mais recente para o mais antigo.
+EXEMPLOS: [cole uma referência no padrão que você usa, por exemplo ABNT; se não tiver, apague esta parte]
+QUALIDADE: Preciso ver só trabalhos que estão no conteúdo colado, cada um com o DOI que veio nele. Não complete autor, revista ou página que não estejam ali.
+FORMATO: Lista numerada, um trabalho por linha, com título, ano e link do DOI.
+
+Resultado: [colar]
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue fazer isto bem.</code></pre>
+<p><strong>Confira antes de usar</strong> - Abra cada DOI antes de pôr
+na bibliografia. - Complete autores e revista a partir da página do
+artigo, não da memória da IA.</p>
+<hr />
+<h2 id="o-que-procuramos-e-não-existe-aberto">O que procuramos e não
+existe aberto</h2>
+<p>Para ninguém perder tempo procurando. Situação em 10/11/2026.</p>
+<ul>
+<li><strong>Advocacia:</strong> inteiro teor de peças e decisões por
+link aberto; feriados forenses de cada tribunal; dados de processo por
+link simples (o DataJud exige pedido montado); texto de lei consolidado
+por link estruturado (o Planalto só tem a página para ler).</li>
+<li><strong>Contabilidade e finanças:</strong> consulta do Simples
+Nacional (opção, exclusão, guia); consulta de nota fiscal pela chave de
+acesso (exige certificado digital); eSocial e serviços da Receita para
+contador (são pagos, por contrato); tabela CEST.</li>
+<li><strong>Setor público:</strong> dados do SEI; jurisprudência do TCU
+por link (o site funciona no navegador, mas bloqueia consulta
+automática); consulta de sanções sem cadastro (ver a seção
+seguinte).</li>
+<li><strong>Engenharia, arquitetura e agro:</strong> normas ABNT (são
+pagas); composições do SINAPI por link (só planilha da Caixa); consulta
+de registro e ART no CREA/CONFEA; CAR por link; INCC (é da FGV).</li>
+<li><strong>Saúde:</strong> bula brasileira por link estruturado (o
+bulário da Anvisa só funciona no navegador); checagem de interação
+medicamentosa (e seria decisão clínica de qualquer forma); consulta de
+inscrição em conselho profissional; tabela brasileira de composição de
+alimentos por link; CID sem cadastro.</li>
+<li><strong>Pequeno negócio, vendas e RH:</strong> frete dos Correios
+sem contrato; busca de produtos do Mercado Livre sem cadastro; Google
+Trends oficial; Reclame Aqui; tabela do INSS como série de dados.</li>
+<li><strong>Ensino e pesquisa:</strong> microdados do Censo Escolar,
+IDEB, CAGED e RAIS por link de consulta (só arquivos grandes para
+baixar); Google Books e Semantic Scholar estáveis sem cadastro.</li>
+</ul>
+<hr />
+<h2 id="fontes-que-pedem-cadastro-gratuito">Fontes que pedem cadastro
+gratuito</h2>
+<p>Estas fontes funcionam, mas pedem que você se identifique antes. Em
+geral o órgão manda uma <strong>chave de acesso</strong> (um código
+pessoal) por e-mail. Trate a chave como senha: não cole em pedido à IA,
+não mande para colegas.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fonte</th>
+<th>O que exige</th>
+<th>Para quem vale o esforço</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Portal da Transparência — CGU (sanções CEIS e CNEP, convênios,
+servidores)</td>
+<td>Chave gratuita por e-mail. A chave não vai no link: precisa de
+planilha preparada ou ferramenta</td>
+<td>Quem consulta sanções de fornecedores toda semana. Para consulta
+avulsa, o site do Portal consulta sem chave, no navegador</td>
+</tr>
+<tr class="even">
+<td>OpenAlex</td>
+<td>Chave gratuita por e-mail, com cota diária própria</td>
+<td>Professores que usam em sala com a turma na mesma rede, e
+pesquisadores que consultam todo dia</td>
+</tr>
+<tr class="odd">
+<td>PubMed — NCBI</td>
+<td>Chave opcional, que aumenta o limite de consultas</td>
+<td>Só quem consulta em volume. Para uso comum, não precisa</td>
+</tr>
+<tr class="even">
+<td>Classificação de doenças da OMS (CID-10 e CID-11)</td>
+<td>Cadastro e chave, com etapa técnica</td>
+<td>Quase ninguém deste programa: o navegador oficial da OMS consulta
+sem cadastro</td>
+</tr>
+<tr class="odd">
+<td>ANA — Hidroweb (rios e chuva de estações)</td>
+<td>Cadastro</td>
+<td>Engenheiros que fazem estudo hidrológico com frequência</td>
+</tr>
+<tr class="even">
+<td>Portal de dados abertos do governo federal (dados.gov.br)</td>
+<td>Login gov.br para gerar a chave</td>
+<td>Quem procura conjuntos de dados federais com frequência</td>
+</tr>
+</tbody>
+</table>
+<p>Regra para decidir: se você vai consultar a mesma fonte toda semana
+na tarefa nº 1 ou nº 2, o cadastro se paga. Se é consulta de vez em
+quando, use o site no navegador.</p>
+</main>
+</div>
+<script>
+(function(){
+var doc=document.getElementById("doc"),KEY='mentoria-mapa-fontes-edit';
+var st=document.getElementById("status");
+function note(m){st.textContent=m;setTimeout(function(){st.textContent="";},3000);}
+var editing=false,be=document.getElementById("btnEdit"),bs=document.getElementById("btnSave");
+if(be){try{var saved=localStorage.getItem(KEY);if(saved){doc.innerHTML=saved;note("Versão editada carregada do navegador");}}catch(e){}}
+if(be)be.onclick=function(){editing=!editing;doc.contentEditable=editing;be.textContent=editing?"✅ Concluir edição":"✏️ Editar";bs.style.display=editing?"":"none";if(!editing){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}}};
+if(bs)bs.onclick=function(){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}};
+var bx=document.getElementById("btnExport");if(bx)bx.onclick=function(){var html="<!DOCTYPE html>"+document.documentElement.outerHTML;var b=new Blob([html],{type:"text/html"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download='mentoria-mapa-fontes.html';a.click();};
+document.getElementById("btnPrint").onclick=function(){window.print();};
+var br=document.getElementById("btnReset");if(br)br.onclick=function(){if(confirm("Descartar as edições feitas no navegador e voltar ao original?")){try{localStorage.removeItem(KEY);}catch(e){}location.reload();}};
+document.querySelectorAll("table").forEach(function(t){var w=document.createElement("div");w.className="tablewrap";t.parentNode.insertBefore(w,t);w.appendChild(t);});
+doc.querySelectorAll(".cpy").forEach(function(b){b.remove();});
+doc.querySelectorAll("pre").forEach(function(p){var b=document.createElement("button");b.className="cpy";b.contentEditable=false;b.textContent="📋 Copiar";b.onclick=function(){var t=p.innerText;function ok(){b.textContent="✅ Copiado";setTimeout(function(){b.textContent="📋 Copiar";},2000);}if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,function(){note("Selecione o texto e copie com Ctrl+C");});}else{note("Selecione o texto e copie com Ctrl+C");}};p.parentNode.insertBefore(b,p.nextSibling);});
+})();
+</script>
+</body>
+</html>

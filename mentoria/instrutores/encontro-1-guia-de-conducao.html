@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia de Condução — Primeiro Encontro</title>
+<style>
+:root{--bg:#f7f6f3;--paper:#ffffff;--ink:#1f2430;--muted:#5c6470;--accent:#0f4c81;--accent2:#b8860b;--line:#e3e0d8;--code:#f0eee8}
+@media (prefers-color-scheme: dark){:root{--bg:#14161c;--paper:#1c1f27;--ink:#e8e6e1;--muted:#9aa1ad;--accent:#6ea8d8;--accent2:#d4a942;--line:#2c303a;--code:#242832}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif;padding-top:3.2rem}
+.wrap{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+header.top{border-bottom:3px double var(--accent);padding-bottom:1rem;margin-bottom:2rem}
+header.top .kicker{font-family:system-ui,sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:600}
+h1{font-size:1.9rem;line-height:1.25;margin:.3rem 0 0;color:var(--accent)}
+h2{font-size:1.35rem;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:.3rem;margin-top:2.4rem}
+h3{font-size:1.08rem;margin-top:1.6rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-family:system-ui,sans-serif;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--code)}
+.tablewrap{overflow-x:auto}
+blockquote{border-left:3px solid var(--accent2);margin:1rem 0;padding:.2rem 1rem;color:var(--muted)}
+pre{background:var(--code);padding:.8rem 1rem;border-radius:8px;overflow-x:auto;font-size:.82em;line-height:1.5}
+code{background:var(--code);padding:.1em .35em;border-radius:4px;font-size:.85em}
+pre code{padding:0;background:none}
+hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+.toolbar{position:fixed;top:0;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.5rem 1rem;display:flex;gap:.6rem;align-items:center;font-family:system-ui,sans-serif;font-size:.85rem;z-index:10}
+.toolbar button{background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.4rem .9rem;cursor:pointer;font-size:.82rem}
+.toolbar button.sec{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.toolbar .status{color:var(--muted);margin-left:auto}
+#doc[contenteditable="true"]{outline:2px dashed var(--accent2);outline-offset:8px}
+@media print{.toolbar{display:none}body{padding-top:0;background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <button id="btnPrint" class="sec">🖨️ Imprimir/PDF</button>
+  <span class="status" id="status"></span>
+</div>
+<div class="wrap">
+<header class="top">
+  <div class="kicker">Uso interno dos instrutores · 15/09/2026</div>
+  <h1>Guia de Condução — Primeiro Encontro</h1>
+</header>
+<main id="doc">
+<h1 id="guia-de-condução-primeiro-encontro-a-primeira-delegação">Guia de
+condução — Primeiro encontro: “A primeira delegação”</h1>
+<p><strong>Uso interno da dupla de instrutores.</strong> Duração: 2
+horas (120 min). Formato: online, ao vivo, gravado. Este guia é o que
+fica aberto na sua segunda tela: cada bloco traz o objetivo, a fala de
+abertura sugerida, o que mostrar na tela, a armadilha da vez e a frase
+de transição. Fala sugerida é apoio, não script para ler.</p>
+<p><strong>O aluno sai daqui com:</strong> o pedido bem-feito da tarefa
+nº 1 dele rodado ao vivo, com resultado aproveitável, e o tempo que essa
+tarefa toma hoje anotado na ficha, na frente da turma. É a promessa do
+programa cumprida em miniatura, no primeiro dia.</p>
+<hr />
+<h2 id="antes-de-começar-15-min-antes-de-abrir-a-sala">Antes de começar
+(15 min antes de abrir a sala)</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conferir</th>
+<th>Por quê</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Deck</strong> (<code>deck-e1-mira.html</code>) aberto no
+navegador, tela cheia com <code>F</code>, parado no slide de capa</td>
+<td>A capa fica no ar com o fundo em movimento enquanto a turma chega;
+setas passam, <code>Esc</code> mostra todos, <code>S</code> abre as
+notas na sua segunda tela</td>
+</tr>
+<tr class="even">
+<td>Ferramenta de IA aberta em aba limpa, sem histórico visível na
+tela</td>
+<td>Histórico pessoal aparece em gravação</td>
+</tr>
+<tr class="odd">
+<td>Documento da Empresa Alfa aberto (os dois pedidos, fraco e
+forte)</td>
+<td>A demo é lado a lado, sem digitar do zero</td>
+</tr>
+<tr class="even">
+<td>Gravação ligada e testada</td>
+<td>Encontro gravado é entregável prometido</td>
+</tr>
+<tr class="odd">
+<td>Modelo do pedido e ficha de medição no chat, prontos para colar</td>
+<td>Distribuição no minuto exato, sem procurar</td>
+</tr>
+<tr class="even">
+<td>Lista de quem respondeu o questionário e quem marcou “ainda não
+criei conta”</td>
+<td>Esses três ou quatro alunos você chama pelo nome cedo</td>
+</tr>
+<tr class="odd">
+<td>Quem sobe ao palco (2 nomes escolhidos, 1 reserva)</td>
+<td>Escolha combinada antes evita silêncio constrangedor</td>
+</tr>
+</tbody>
+</table>
+<p>Combinado entre a dupla: <strong>um conduz, o outro observa o
+chat</strong> e anota quem está travado. Trocam a cada bloco grande.
+Quem observa nunca interrompe a demo, escreve.</p>
+<p><strong>O deck, e como ele trabalha a seu favor.</strong> Deixe a
+capa no ar enquanto a sala enche — o fundo se move sozinho e já cria
+clima, sem exigir nada de você. Daí em diante cada slide traz no rodapé
+o bloco e o minuto previsto, os degraus e as seis partes aparecem um a
+um conforme você fala (seta ou clique), e a tecla <code>S</code> abre,
+na sua segunda tela, o resumo deste guia para o bloco em que você está.
+Se precisar corrigir uma palavra no slide na véspera, tecla
+<code>E</code>, escreva por cima e pronto — não depende de ninguém.</p>
+<hr />
+<h2 id="bloco-1-abertura-em-dois-movimentos-8-min">Bloco 1 · Abertura em
+dois movimentos (8 min)</h2>
+<p><strong>Objetivo:</strong> tirar o aluno da sensação de estar perdido
+e mostrar o destino. Ninguém aprende enquanto se sente atrasado em
+relação ao resto do mundo.</p>
+<p><strong>Movimento 1 — o mapa dos termos (90 segundos).</strong>
+Nomeie a enxurrada antes de ensinar qualquer coisa:</p>
+<blockquote>
+<p>“Vocês veem isso todo dia: ‘criei 30 agentes’, ‘curso de skills’,
+‘automação que trabalha enquanto você dorme’. Calma. Tudo isso cabe em
+três degraus. O primeiro é <strong>conversar</strong> com a IA: o chat
+que vocês já usam, que responde bem, mas não abre a sua planilha sozinho
+e não continua depois que você fecha a aba. O segundo é
+<strong>delegar</strong>: montar assistentes que trabalham do jeito que
+você ensinou. É esse que este programa entrega. O terceiro é
+<strong>rodar sozinho</strong>, agente e automação, e vocês vão sair
+daqui sabendo exatamente o que é, mesmo sem montar um. A IA está saindo
+da caixinha de conversa e entrando na rotina de trabalho. Este programa
+é essa travessia.”</p>
+</blockquote>
+<p><strong>Movimento 2 — a visão do destino.</strong> Diga com todas as
+letras o que é o assistente: espaço de trabalho + instruções permanentes
++ documentos de referência, montado para uma tarefa. E o limite, na
+mesma frase: <strong>ele faz do jeito que você ensinou, mas não decide o
+objetivo nem assina — isso é seu.</strong></p>
+<p><strong>Armadilha:</strong> dar exemplo de agente autônomo aqui. Você
+vende o terceiro degrau sem querer e o aluno passa o encontro esperando
+algo que não vai acontecer hoje.</p>
+<p><strong>Transição:</strong> “Antes de delegar, 7 minutos sobre por
+que essa máquina erra com tanta confiança.”</p>
+<hr />
+<h2 id="bloco-2-como-a-ia-funciona-sem-tecniquês-7-min">Bloco 2 · Como a
+IA funciona, sem tecniquês (7 min)</h2>
+<p><strong>Objetivo:</strong> o aluno entender o mecanismo o suficiente
+para desconfiar na hora certa — sem uma linha de tecniquês.</p>
+<p><strong>A ideia única:</strong> ela prevê a próxima palavra provável,
+uma depois da outra. Escreve bem porque aprendeu com muito texto bem
+escrito; <strong>erra com a mesma fluência com que acerta</strong>,
+porque a segurança da escrita não vem da verdade do conteúdo.</p>
+<p><strong>A analogia que fica (use esta, não invente outra):</strong> o
+GPS confiante. A voz é firme, a rua não existe. Quem olha a rua é
+você.</p>
+<p><strong>Faça a turma falar (60s):</strong> “quem já recebeu da IA uma
+resposta que parecia ótima e estava errada? Escreve no chat em uma
+linha.” Leia duas em voz alta. Isso ancora o resto do encontro em
+experiência da própria turma.</p>
+<p><strong>Transição:</strong> “Guardem essa cara de confiança. Agora
+vamos fazer ela trabalhar direito.”</p>
+<hr />
+<h2 id="bloco-3-o-pedido-em-6-partes-20-min">Bloco 3 · O pedido em 6
+partes (20 min)</h2>
+<p><strong>Objetivo:</strong> o método central do dia, demonstrado — não
+explicado no abstrato.</p>
+<p><strong>Como conduzir:</strong> abra o documento da <strong>Empresa
+Alfa</strong> com os dois pedidos lado a lado. Rode o <strong>pedido
+fraco</strong> primeiro e deixe a resposta genérica na tela por alguns
+segundos em silêncio. O silêncio faz o trabalho.</p>
+<p>Depois construa o pedido forte <strong>ao vivo</strong>, nomeando
+cada parte enquanto escreve:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parte</th>
+<th>O que é</th>
+<th>O erro que você corrige na hora</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Contexto</strong></td>
+<td>quem você é, para quem escreve, o que aconteceu antes</td>
+<td>contexto de menos: a IA inventa o que falta</td>
+</tr>
+<tr class="even">
+<td><strong>Tom</strong></td>
+<td>como deve soar (formal, direto, acolhedor)</td>
+<td>pedir “profissional” e esperar que ela adivinhe o seu padrão</td>
+</tr>
+<tr class="odd">
+<td><strong>Tarefa</strong></td>
+<td>o verbo exato: escrever, resumir, comparar, listar</td>
+<td>duas tarefas no mesmo pedido</td>
+</tr>
+<tr class="even">
+<td><strong>Exemplos</strong></td>
+<td>um trecho do jeito que você já escreve</td>
+<td>achar que exemplo é opcional; é a parte que mais muda o
+resultado</td>
+</tr>
+<tr class="odd">
+<td><strong>Qualidade</strong></td>
+<td><strong>o critério de pronto</strong></td>
+<td>ver abaixo, é o ponto delicado do bloco</td>
+</tr>
+<tr class="even">
+<td><strong>Formato</strong></td>
+<td>tamanho, estrutura, onde vai ser usado</td>
+<td>esquecer, e receber três parágrafos quando queria uma tabela</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Diga com todas as letras, na etapa Qualidade:</strong>
+qualidade aqui é <em>“o que eu preciso ver para dizer que isto está
+pronto”</em> — três a cinco critérios objetivos. <strong>Não é pedir à
+IA que se confira.</strong> Os modelos de hoje já revisam sozinhos antes
+de responder; mandar revisar de novo dentro do pedido encarece e não
+melhora. Quem confere é você, e isso vira habilidade com nome no quarto
+encontro.</p>
+<p><strong>Rode o pedido forte.</strong> Compare as duas respostas na
+tela. Pergunte à turma: “qual das seis partes fez a maior diferença
+aqui?” — não responda você.</p>
+<p><strong>Transição:</strong> “Só que ninguém escreve o pedido perfeito
+de primeira. Existe uma linha que conserta pedido malfeito.”</p>
+<hr />
+<h2 id="bloco-4-o-fecho-que-salva-o-pedido-malfeito-5-min">Bloco 4 · O
+fecho que salva o pedido malfeito (5 min)</h2>
+<p><strong>Objetivo:</strong> entregar, no primeiro dia, a técnica de
+maior efeito por minuto de aula.</p>
+<p><strong>A linha:</strong> <em>“Antes de começar, me faça perguntas,
+uma por vez, até você ter certeza de que consegue fazer isto
+bem.”</em></p>
+<p><strong>Demonstre ao vivo, com um pedido vago de propósito</strong>
+(sugestão: “me ajuda a escrever um comunicado sobre a mudança”). Cole a
+linha no fim e deixe a IA perguntar. A turma vê aparecerem na tela
+justamente as coisas que ela sabia e não contou: para quem é, o que
+mudou, quando, quem assina.</p>
+<p><strong>A frase para fixar, dita devagar:</strong></p>
+<blockquote>
+<p>“O que trava a IA quase nunca é a pergunta difícil. É o que era óbvio
+para você e ela não tinha como saber.”</p>
+</blockquote>
+<p><strong>Armadilha:</strong> deixar a IA fazer dez perguntas. Responda
+três ao vivo e corte: “viram? o pedido ficou pronto no meio da
+conversa.”</p>
+<p><strong>Transição:</strong> “Agora a parte que separa este programa
+de um curso de truques: medir.”</p>
+<hr />
+<h2 id="bloco-5-medir-sem-se-enganar-5-min">Bloco 5 · Medir sem se
+enganar (5 min)</h2>
+<p><strong>Objetivo:</strong> instalar a honestidade numérica que
+sustenta a apresentação final.</p>
+<p><strong>A regra de ouro:</strong> o relógio conta
+<strong>tudo</strong> — escrever o pedido, esperar, e principalmente
+<strong>revisar e corrigir</strong>. Ganho que ignora a revisão é ganho
+imaginário, e o aluno descobre isso sozinho no pior momento
+possível.</p>
+<p><strong>Distribua a ficha de medição</strong> (cole o link no chat
+agora) e mostre onde entra o “antes”: quantas vezes por semana a tarefa
+acontece e quantos minutos toma hoje. Estimativa honesta serve; memória
+inflada, não.</p>
+<p><strong>Transição:</strong> “Última regra antes da mão na massa, e é
+a mais importante das duas horas.”</p>
+<hr />
+<h2 id="bloco-6-a-regra-da-casa-desta-semana-3-min">Bloco 6 · A regra da
+casa desta semana (3 min)</h2>
+<p><strong>Objetivo:</strong> proteger a turma até o guia completo do
+sigilo, que vem no próximo encontro.</p>
+<p><strong>Diga assim, sem rodeio:</strong></p>
+<blockquote>
+<p>“Até amanhã, entra na IA só material público, seu, ou inventado. Nada
+de dado de terceiro, nada de processo, nada de cliente identificado.
+Amanhã vocês recebem o guia completo do que pode, do que só pode
+anonimizado e do que nunca entra. Até lá, a regra é essa e ela não tem
+exceção.”</p>
+</blockquote>
+<p><strong>Armadilha:</strong> transformar isso em palestra de dez
+minutos sobre proteção de dados. São três minutos. O aprofundamento tem
+hora marcada.</p>
+<hr />
+<h2 id="bloco-7-mão-na-massa-com-palco-57-min">Bloco 7 · Mão na massa
+com palco (57 min)</h2>
+<p>O coração do encontro. Divida em três tempos e anuncie os três no
+começo, para ninguém se perder.</p>
+<p><strong>Tempo 1 — todos escrevem (15 min).</strong> Cada aluno
+preenche o modelo do pedido com a <strong>própria tarefa nº 1</strong> e
+fecha com a linha das perguntas. Câmeras podem desligar. A dupla circula
+pelo chat: quem não tem tarefa escolhida usa um caso da Empresa Alfa e
+ajusta o caso real pela comunidade até amanhã — isso não trava
+ninguém.</p>
+<p><strong>Tempo 2 — três casos no palco (35 min).</strong> Cerca de 11
+minutos por caso, e o formato é sempre o mesmo:</p>
+<ol type="1">
+<li>O aluno lê o pedido dele (1 min).</li>
+<li>Rodamos ao vivo, na tela dele quando der (3 min).</li>
+<li>Pergunta para a TURMA, nunca para o autor: “qual das seis partes fez
+diferença aqui?” e “o que as perguntas da IA revelaram que faltava?” (4
+min).</li>
+<li>O instrutor faz <strong>um</strong> ajuste, nomeando a parte que
+está mexendo (3 min).</li>
+</ol>
+<p><strong>Regra de ouro do palco:</strong> nunca corrija a pessoa;
+corrija o pedido. E toda crítica vem com o nome de uma das seis partes —
+assim ela vira ensino, não julgamento.</p>
+<p><strong>Tempo 3 — anotar o “antes” (7 min).</strong> Cada aluno
+escreve na ficha o tempo que a tarefa dele toma hoje. Peça os números no
+chat e leia três em voz alta. Ver o número dos outros faz o aluno
+corrigir o próprio para baixo, que é o que queremos: número honesto.</p>
+<p><strong>Se a turma travar</strong> (silêncio, ninguém se voluntaria):
+use o caso do reserva combinado antes, e volte a convidar depois do
+primeiro caso rodado. Palco vazio no dia 1 é normal, some quando alguém
+vê que não é humilhação.</p>
+<hr />
+<h2 id="bloco-8-fechamento-15-min">Bloco 8 · Fechamento (15 min)</h2>
+<ol type="1">
+<li><p><strong>O combinado de casa (30 min do aluno):</strong> rodar o
+pedido mais uma vez em situação real, com material público ou próprio, e
+postar na comunidade o pedido + uma linha do que veio útil + uma linha
+do que veio errado ou faltou. Diga que <strong>o que veio errado é o
+mais valioso</strong>: vira material da caça aos erros de
+amanhã.</p></li>
+<li><p><strong>Enquete rápida:</strong> “qual das seis partes faria mais
+diferença no seu trabalho?” — serve de termômetro e abre o encontro
+seguinte.</p></li>
+<li><p><strong>A dica da cota, como regra da casa:</strong></p>
+<blockquote>
+<p>“Bateu no limite da conta gratuita no meio do exercício? A técnica é
+sua, a cota é da ferramenta. Abre outra ferramenta gratuita e continua
+de onde parou. Ninguém neste programa precisa assinar nada.”</p>
+</blockquote></li>
+<li><p><strong>Uma frase de fecho, sem euforia:</strong> “hoje vocês
+fizeram um pedido bem feito. Amanhã vocês aprendem a não confiar nele —
+e é aí que isso vira trabalho de verdade.”</p></li>
+</ol>
+<hr />
+<h2 id="anexo-a-roteiro-da-demo-empresa-alfa">Anexo A · Roteiro da demo
+(Empresa Alfa)</h2>
+<p><strong>Pedido fraco (cole pronto):</strong> “Escreve um e-mail
+respondendo a reclamação do cliente.”</p>
+<p><strong>Pedido forte (construa ao vivo, nomeando as partes):</strong>
+contexto (você é do atendimento da Empresa Alfa; o cliente reclamou de
+atraso de 5 dias na entrega e é cliente antigo), tom (direto,
+respeitoso, sem desculpa exagerada), tarefa (escrever a resposta),
+exemplos (uma frase do padrão da casa), qualidade (reconhece o atraso,
+dá uma data real, oferece uma compensação concreta, cabe em 150
+palavras), formato (e-mail, assunto + 3 parágrafos curtos).</p>
+<p><strong>Pedido vago para a demo das perguntas:</strong> “me ajuda a
+escrever um comunicado sobre a mudança.”</p>
+<h2 id="anexo-b-planos-b">Anexo B · Planos B</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Se acontecer</th>
+<th>O que fazer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aluno chega sem tarefa escolhida</td>
+<td>Usa um caso da Alfa hoje e traz o caso real na comunidade até
+amanhã</td>
+</tr>
+<tr class="even">
+<td>Aluno sem conta funcionando</td>
+<td>O reserva da dupla atende por chat enquanto o outro conduz; se não
+resolver, ele acompanha e faz depois pela gravação</td>
+</tr>
+<tr class="odd">
+<td>A ferramenta fica lenta ou fora do ar na demo</td>
+<td>Troca de ferramenta na hora, ao vivo, e transforma isso em conteúdo:
+é exatamente a dica da cota, acontecendo</td>
+</tr>
+<tr class="even">
+<td>A demo dá um resultado ruim</td>
+<td>Nunca esconda: mostre o ruim, aponte a parte do pedido que faltou e
+refaça. Vale mais que uma demo perfeita</td>
+</tr>
+<tr class="odd">
+<td>Sobrou tempo</td>
+<td>Rode um quarto caso no palco. Nunca adiante conteúdo do encontro
+seguinte</td>
+</tr>
+<tr class="even">
+<td>Faltou tempo</td>
+<td>Corte o quarto caso e o tempo 3; peça os números do “antes” pela
+comunidade até a noite</td>
+</tr>
+</tbody>
+</table>
+</main>
+</div>
+<script>
+(function(){
+var doc=document.getElementById("doc"),KEY='guia-conducao-e1-edit';
+var st=document.getElementById("status");
+function note(m){st.textContent=m;setTimeout(function(){st.textContent="";},3000);}
+try{var saved=localStorage.getItem(KEY);if(saved){doc.innerHTML=saved;note("Versão editada carregada do navegador");}}catch(e){}
+var editing=false,be=document.getElementById("btnEdit"),bs=document.getElementById("btnSave");
+be.onclick=function(){editing=!editing;doc.contentEditable=editing;be.textContent=editing?"✅ Concluir edição":"✏️ Editar";bs.style.display=editing?"":"none";if(!editing){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}}};
+bs.onclick=function(){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}};
+document.getElementById("btnExport").onclick=function(){var html="<!DOCTYPE html>"+document.documentElement.outerHTML;var b=new Blob([html],{type:"text/html"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download='guia-conducao-e1.html';a.click();};
+document.getElementById("btnPrint").onclick=function(){window.print();};
+document.getElementById("btnReset").onclick=function(){if(confirm("Descartar as edições feitas no navegador e voltar ao original?")){try{localStorage.removeItem(KEY);}catch(e){}location.reload();}};
+document.querySelectorAll("table").forEach(function(t){var w=document.createElement("div");w.className="tablewrap";t.parentNode.insertBefore(w,t);w.appendChild(t);});
+})();
+</script>
+</body>
+</html>

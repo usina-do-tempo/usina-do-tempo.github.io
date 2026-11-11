@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checklist das 4 Perguntas</title>
+<style>
+:root{--bg:#f7f6f3;--paper:#ffffff;--ink:#1f2430;--muted:#5c6470;--accent:#0f4c81;--accent2:#b8860b;--line:#e3e0d8;--code:#f0eee8}
+@media (prefers-color-scheme: dark){:root{--bg:#14161c;--paper:#1c1f27;--ink:#e8e6e1;--muted:#9aa1ad;--accent:#6ea8d8;--accent2:#d4a942;--line:#2c303a;--code:#242832}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif;padding-top:3.2rem}
+.wrap{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+header.top{border-bottom:3px double var(--accent);padding-bottom:1rem;margin-bottom:2rem}
+header.top .kicker{font-family:system-ui,sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:600}
+h1{font-size:1.9rem;line-height:1.25;margin:.3rem 0 0;color:var(--accent)}
+h2{font-size:1.35rem;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:.3rem;margin-top:2.4rem}
+h3{font-size:1.08rem;margin-top:1.6rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-family:system-ui,sans-serif;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--code)}
+.tablewrap{overflow-x:auto}
+blockquote{border-left:3px solid var(--accent2);margin:1rem 0;padding:.2rem 1rem;color:var(--muted)}
+pre{background:var(--code);padding:.8rem 1rem;border-radius:8px;overflow-x:auto;font-size:.82em;line-height:1.5}
+code{background:var(--code);padding:.1em .35em;border-radius:4px;font-size:.85em}
+pre code{padding:0;background:none}
+hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+.toolbar{position:fixed;top:0;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.5rem 1rem;display:flex;gap:.6rem;align-items:center;font-family:system-ui,sans-serif;font-size:.85rem;z-index:10}
+.toolbar button{background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.4rem .9rem;cursor:pointer;font-size:.82rem}
+.toolbar button.sec{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.toolbar .status{color:var(--muted);margin-left:auto}
+#doc[contenteditable="true"]{outline:2px dashed var(--accent2);outline-offset:8px}
+@media print{.toolbar{display:none}body{padding-top:0;background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <button id="btnPrint" class="sec">🖨️ Imprimir/PDF</button>
+  <span class="status" id="status"></span>
+</div>
+<div class="wrap">
+<header class="top">
+  <div class="kicker">Mentoria Regente · Turma Fundadora · 06/09/2026</div>
+  <h1>Checklist das 4 Perguntas</h1>
+</header>
+<main id="doc">
+<p><strong>Mentoria Regente — material do participante</strong> ·
+Realização: Usina do Tempo Marketing Ltda.</p>
+<h1 id="o-checklist-de-4-perguntas">O checklist de 4 perguntas</h1>
+<p>Antes de usar qualquer resposta da IA que vá virar e-mail, relatório
+ou decisão, rode as quatro perguntas abaixo, na ordem. Elas pegam
+justamente o erro que passa despercebido numa leitura corrida — porque a
+resposta está bem escrita, e isso não avisa que está errada.</p>
+<hr />
+<h2 id="as-4-perguntas">As 4 perguntas</h2>
+<p><strong>1. O que ela afirma confere com a fonte?</strong> <em>O que
+pega:</em> fato e fonte inventados — número, data, nome ou citação que
+não existe no material original. <em>Erro comum:</em> responder “de
+memória”, sem abrir a fonte ao lado. Sem isso a pergunta vira suposição,
+não conferência.</p>
+<p><strong>2. Faz sentido no meu caso concreto?</strong> <em>O que
+pega:</em> resposta genérica, que serviria para qualquer situação
+parecida — sinal de que a IA completou com o padrão mais comum, não com
+o seu contexto real. <em>Erro comum:</em> aceitar como “faz sentido”
+algo que só soa bem, sem checar um detalhe específico do seu caso
+(prazo, exceção, pessoa envolvida).</p>
+<p><strong>3. Há dado que pode ter sido inventado?</strong> <em>O que
+pega:</em> a mistura plausível — pedaços verdadeiros combinados numa
+conclusão que nenhum deles sustenta sozinho. O tipo mais perigoso,
+porque não soa estranho. <em>Erro comum:</em> conferir só os números
+chamativos e deixar passar um detalhe pequeno (data, percentual
+secundário) que também precisa de fonte.</p>
+<p><strong>4. Ela trata casos parecidos do mesmo jeito?</strong> <em>O
+que pega:</em> viés — a conclusão favorece uma leitura sobre outra, com
+dois pesos e duas medidas, sem justificar por quê. <em>Erro comum:</em>
+pular essa pergunta por parecer “menos técnica”. É a que mais exige
+julgamento seu, não menos.</p>
+<hr />
+<h2 id="exemplo-preenchido-empresa-alfa">Exemplo preenchido — Empresa
+Alfa</h2>
+<p><em>Situação: a Empresa Alfa fez uma pesquisa interna de clima em
+2026. A IA recebeu os resultados e escreveu um resumo.</em></p>
+<p><strong>A fonte:</strong> participaram 84 dos 120 funcionários (70%);
+satisfação geral 6,8 (era 7,4 em 2025); principal reclamação: sobrecarga
+no fim do mês (61%); elogio mais citado: flexibilidade de horário (45%);
+o setor financeiro teve a menor adesão (40%).</p>
+<p><strong>O que a IA respondeu:</strong> “A pesquisa de clima de 2026,
+que contou com a participação de 84% dos funcionários, mostra satisfação
+geral de 6,8. A principal causa da queda é a insatisfação com os
+salários. O estudo recomenda a criação de um programa de bem-estar.
+Destaque positivo para a flexibilidade de horário, citada por 45%.”</p>
+<p><strong>Aplicando as 4 perguntas:</strong></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pergunta</th>
+<th>Achado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Confere com a fonte?</td>
+<td>Não — a fonte diz 70% de participação, não 84%: fato inventado</td>
+</tr>
+<tr class="even">
+<td>2. Faz sentido no caso concreto?</td>
+<td>Não totalmente — a fonte não fala de salário nenhuma vez</td>
+</tr>
+<tr class="odd">
+<td>3. Há dado inventado?</td>
+<td>Sim — causa e recomendação não estão na fonte: mistura
+plausível</td>
+</tr>
+<tr class="even">
+<td>4. Trata casos iguais igual?</td>
+<td>Não é o problema principal aqui</td>
+</tr>
+</tbody>
+</table>
+<p><strong>O achado extra, que nenhuma pergunta sozinha
+pegaria:</strong> a resposta também <strong>omitiu</strong> a reclamação
+mais citada da pesquisa — a sobrecarga no fim do mês — e a baixa adesão
+do financeiro. É uma lacuna: não está “errada” nesse ponto, está
+incompleta, e o que faltou é justamente o dado que mais importaria para
+decidir o que fazer com a pesquisa.</p>
+<hr />
+<h2 id="antes-de-aproveitar-a-resposta">Antes de aproveitar a
+resposta</h2>
+<ul>
+<li>As 4 perguntas foram respondidas com a fonte aberta ao lado, não de
+memória?</li>
+<li>Todo número, nome, data ou citação foi conferido — não só os que
+pareciam suspeitos?</li>
+<li>Você perguntou “o que eu esperava ver e não vi?” antes de
+encerrar?</li>
+<li>Se não achou erro: sabe dizer o que verificou? “Não olhei” não é
+“está certo”.</li>
+</ul>
+</main>
+</div>
+<script>
+(function(){
+var doc=document.getElementById("doc"),KEY='checklist-4-perguntas-edit';
+var st=document.getElementById("status");
+function note(m){st.textContent=m;setTimeout(function(){st.textContent="";},3000);}
+try{var saved=localStorage.getItem(KEY);if(saved){doc.innerHTML=saved;note("Versão editada carregada do navegador");}}catch(e){}
+var editing=false,be=document.getElementById("btnEdit"),bs=document.getElementById("btnSave");
+be.onclick=function(){editing=!editing;doc.contentEditable=editing;be.textContent=editing?"✅ Concluir edição":"✏️ Editar";bs.style.display=editing?"":"none";if(!editing){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}}};
+bs.onclick=function(){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}};
+document.getElementById("btnExport").onclick=function(){var html="<!DOCTYPE html>"+document.documentElement.outerHTML;var b=new Blob([html],{type:"text/html"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download='checklist-4-perguntas.html';a.click();};
+document.getElementById("btnPrint").onclick=function(){window.print();};
+document.getElementById("btnReset").onclick=function(){if(confirm("Descartar as edições feitas no navegador e voltar ao original?")){try{localStorage.removeItem(KEY);}catch(e){}location.reload();}};
+document.querySelectorAll("table").forEach(function(t){var w=document.createElement("div");w.className="tablewrap";t.parentNode.insertBefore(w,t);w.appendChild(t);});
+})();
+</script>
+</body>
+</html>

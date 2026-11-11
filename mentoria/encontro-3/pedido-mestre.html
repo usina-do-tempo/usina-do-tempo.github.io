@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Pedido-Mestre</title>
+<style>
+:root{--bg:#f7f6f3;--paper:#ffffff;--ink:#1f2430;--muted:#5c6470;--accent:#0f4c81;--accent2:#b8860b;--line:#e3e0d8;--code:#f0eee8}
+@media (prefers-color-scheme: dark){:root{--bg:#14161c;--paper:#1c1f27;--ink:#e8e6e1;--muted:#9aa1ad;--accent:#6ea8d8;--accent2:#d4a942;--line:#2c303a;--code:#242832}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif;padding-top:3.2rem}
+.wrap{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+header.top{border-bottom:3px double var(--accent);padding-bottom:1rem;margin-bottom:2rem}
+header.top .kicker{font-family:system-ui,sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:600}
+h1{font-size:1.9rem;line-height:1.25;margin:.3rem 0 0;color:var(--accent)}
+h2{font-size:1.35rem;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:.3rem;margin-top:2.4rem}
+h3{font-size:1.08rem;margin-top:1.6rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-family:system-ui,sans-serif;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--code)}
+.tablewrap{overflow-x:auto}
+blockquote{border-left:3px solid var(--accent2);margin:1rem 0;padding:.2rem 1rem;color:var(--muted)}
+pre{background:var(--code);padding:.8rem 1rem;border-radius:8px;overflow-x:auto;font-size:.82em;line-height:1.5}
+code{background:var(--code);padding:.1em .35em;border-radius:4px;font-size:.85em}
+pre code{padding:0;background:none}
+hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+.toolbar{position:fixed;top:0;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.5rem 1rem;display:flex;gap:.6rem;align-items:center;font-family:system-ui,sans-serif;font-size:.85rem;z-index:10}
+.toolbar button{background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.4rem .9rem;cursor:pointer;font-size:.82rem}
+.toolbar button.sec{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.toolbar .status{color:var(--muted);margin-left:auto}
+#doc[contenteditable="true"]{outline:2px dashed var(--accent2);outline-offset:8px}
+@media print{.toolbar{display:none}body{padding-top:0;background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <button id="btnPrint" class="sec">🖨️ Imprimir/PDF</button>
+  <span class="status" id="status"></span>
+</div>
+<div class="wrap">
+<header class="top">
+  <div class="kicker">Mentoria Regente · Turma Fundadora · 06/09/2026</div>
+  <h1>O Pedido-Mestre</h1>
+</header>
+<main id="doc">
+<p><strong>Mentoria Regente — material do participante</strong> ·
+Realização: Usina do Tempo Marketing Ltda.</p>
+<h1 id="o-pedido-mestre">O pedido-mestre</h1>
+<p>Depois que as instruções permanentes já moram no seu assistente, o
+pedido de cada dia não precisa mais repetir contexto, tom, critério de
+qualidade nem formato — só o que muda de fato de uma execução para
+outra. Isto é o pedido-mestre: a versão definitiva do seu pedido, com as
+partes fixas escritas uma vez (e já moradas no assistente) e as
+variáveis entre colchetes.</p>
+<h2 id="antes-e-depois-lado-a-lado">Antes e depois, lado a lado</h2>
+<p><strong>Antes</strong> — o pedido inteiro, digitado de novo a cada
+execução (o que você escrevia nos dois primeiros encontros):</p>
+<pre><code>CONTEXTO: Sou atendente da Empresa Alfa e recebi uma reclamação de cliente sobre atraso
+na entrega de um pedido. Preciso responder por e-mail hoje.
+
+TOM: Cordial e resolutivo, sem ser subserviente — reconhece o problema sem exagerar no
+pedido de desculpas.
+
+TAREFA: Escreva uma resposta ao cliente reconhecendo o atraso, explicando em uma frase
+que houve um problema logístico, e oferecendo um cupom de 10% na próxima compra como
+compensação.
+
+QUALIDADE: Preciso ver: reconhecimento claro do atraso, nenhuma promessa de prazo que eu
+não confirmei, e o cupom mencionado com destaque no início ou no fim do e-mail.
+
+FORMATO: E-mail curto, até 8 linhas, com campo de assunto.
+
+Antes de começar, me faça perguntas, uma por vez, até você ter certeza de que consegue
+fazer isto bem.</code></pre>
+<p><strong>Depois</strong> — o mesmo pedido, uma vez que contexto, tom,
+qualidade e formato já moram nas instruções permanentes do assistente.
+Só sobra o que muda a cada cliente:</p>
+<pre><code>[nome do cliente]: Maria Fernandes
+[motivo do atraso]: problema logístico no centro de distribuição
+[dias de atraso]: 6 dias
+[compensação]: cupom de 10% na próxima compra</code></pre>
+<p>Seis partes inteiras viraram quatro linhas de lacuna. É esse o ganho
+que você vai medir na sua tarefa de casa — não em minutos de execução,
+mas em quanto você deixa de reescrever.</p>
+<h2 id="modelo-para-a-sua-tarefa">Modelo para a sua tarefa</h2>
+<p>Depois de montar o seu assistente com o template de instruções,
+escreva aqui só o esqueleto do que muda a cada execução:</p>
+<pre><code>[variável 1]:
+[variável 2]:
+[variável 3]:
+[variável 4, se precisar]:</code></pre>
+<p>Duas perguntas resolvem qualquer dúvida sobre o que vira colchete e o
+que fica fixo:</p>
+<ol type="1">
+<li><strong>Isto seria igual amanhã, com outro caso?</strong> Se sim, é
+fixo — pertence às instruções do assistente, não ao pedido do dia.</li>
+<li><strong>Isto muda a cada execução?</strong> Se sim, é lacuna — fica
+no pedido-mestre, entre colchetes.</li>
+</ol>
+<h2 id="checklist-de-30-segundos-antes-de-enviar">Checklist de 30
+segundos antes de enviar</h2>
+<ol type="1">
+<li>O pedido de hoje tem só as variáveis — nenhuma parte fixa foi
+digitada de novo por hábito?</li>
+<li>Cada colchete tem um nome claro do que preencher, não um “…”
+genérico?</li>
+<li>Nenhuma variável do caso de hoje ficou fixa nas instruções do
+assistente por engano?</li>
+<li>Você leu a resposta inteira antes de usar — nenhum número, nome ou
+prazo inventado passou sem conferência?</li>
+</ol>
+</main>
+</div>
+<script>
+(function(){
+var doc=document.getElementById("doc"),KEY='template-pedido-mestre-edit';
+var st=document.getElementById("status");
+function note(m){st.textContent=m;setTimeout(function(){st.textContent="";},3000);}
+try{var saved=localStorage.getItem(KEY);if(saved){doc.innerHTML=saved;note("Versão editada carregada do navegador");}}catch(e){}
+var editing=false,be=document.getElementById("btnEdit"),bs=document.getElementById("btnSave");
+be.onclick=function(){editing=!editing;doc.contentEditable=editing;be.textContent=editing?"✅ Concluir edição":"✏️ Editar";bs.style.display=editing?"":"none";if(!editing){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}}};
+bs.onclick=function(){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}};
+document.getElementById("btnExport").onclick=function(){var html="<!DOCTYPE html>"+document.documentElement.outerHTML;var b=new Blob([html],{type:"text/html"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download='template-pedido-mestre.html';a.click();};
+document.getElementById("btnPrint").onclick=function(){window.print();};
+document.getElementById("btnReset").onclick=function(){if(confirm("Descartar as edições feitas no navegador e voltar ao original?")){try{localStorage.removeItem(KEY);}catch(e){}location.reload();}};
+document.querySelectorAll("table").forEach(function(t){var w=document.createElement("div");w.className="tablewrap";t.parentNode.insertBefore(w,t);w.appendChild(t);});
+})();
+</script>
+</body>
+</html>

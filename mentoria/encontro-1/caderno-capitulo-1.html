@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caderno do Participante — Capítulo 1</title>
+<style>
+:root{--bg:#f7f6f3;--paper:#ffffff;--ink:#1f2430;--muted:#5c6470;--accent:#0f4c81;--accent2:#b8860b;--line:#e3e0d8;--code:#f0eee8}
+@media (prefers-color-scheme: dark){:root{--bg:#14161c;--paper:#1c1f27;--ink:#e8e6e1;--muted:#9aa1ad;--accent:#6ea8d8;--accent2:#d4a942;--line:#2c303a;--code:#242832}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif;padding-top:3.2rem}
+.wrap{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 5rem}
+header.top{border-bottom:3px double var(--accent);padding-bottom:1rem;margin-bottom:2rem}
+header.top .kicker{font-family:system-ui,sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:600}
+h1{font-size:1.9rem;line-height:1.25;margin:.3rem 0 0;color:var(--accent)}
+h2{font-size:1.35rem;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:.3rem;margin-top:2.4rem}
+h3{font-size:1.08rem;margin-top:1.6rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-family:system-ui,sans-serif;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--code)}
+.tablewrap{overflow-x:auto}
+blockquote{border-left:3px solid var(--accent2);margin:1rem 0;padding:.2rem 1rem;color:var(--muted)}
+pre{background:var(--code);padding:.8rem 1rem;border-radius:8px;overflow-x:auto;font-size:.82em;line-height:1.5}
+code{background:var(--code);padding:.1em .35em;border-radius:4px;font-size:.85em}
+pre code{padding:0;background:none}
+hr{border:none;border-top:1px solid var(--line);margin:2rem 0}
+.toolbar{position:fixed;top:0;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.5rem 1rem;display:flex;gap:.6rem;align-items:center;font-family:system-ui,sans-serif;font-size:.85rem;z-index:10}
+.toolbar button{background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.4rem .9rem;cursor:pointer;font-size:.82rem}
+.toolbar button.sec{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.toolbar .status{color:var(--muted);margin-left:auto}
+#doc[contenteditable="true"]{outline:2px dashed var(--accent2);outline-offset:8px}
+@media print{.toolbar{display:none}body{padding-top:0;background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <button id="btnPrint" class="sec">🖨️ Imprimir/PDF</button>
+  <span class="status" id="status"></span>
+</div>
+<div class="wrap">
+<header class="top">
+  <div class="kicker">Mentoria Regente · Turma Fundadora · 15/09/2026</div>
+  <h1>Caderno do Participante — Capítulo 1</h1>
+</header>
+<main id="doc">
+<h1 id="capítulo-1-a-primeira-delegação">Capítulo 1 — A primeira
+delegação</h1>
+<p>Ao fim deste capítulo você sabe escrever um pedido completo para uma
+IA — não um pedido qualquer, um que traga de volta algo que dá para usar
+de verdade. Você entende por que a IA às vezes erra com toda a confiança
+do mundo, e tem uma frase pronta para destravar qualquer pedido mal
+formulado. E você já mediu, com o relógio na mão, quanto tempo a sua
+tarefa mais repetitiva toma hoje — o número que vai comparar com o de
+amanhã.</p>
+<h2 id="o-mapa-dos-termos">O mapa dos termos</h2>
+<p>A internet fala de IA como se fosse uma coisa só, e não é. Vale
+separar em três degraus, e cada um se define tanto pelo que faz quanto
+pelo que não faz.</p>
+<ul>
+<li><strong>Conversar.</strong> É o chat que você já usa: pergunta,
+resposta, pergunta de novo. O que ele não faz: não guarda o combinado de
+uma conversa para a próxima — feche a aba e ele não lembra de nada. Cada
+conversa nasce do zero.</li>
+<li><strong>Delegar.</strong> É montar, dentro da própria ferramenta de
+IA, um espaço de trabalho fixo para uma tarefa específica: instruções
+permanentes, alguns documentos de referência e um modelo do resultado
+esperado. É o que este programa entrega. O que ele não faz: não decide o
+objetivo da tarefa e não assina o resultado. Ele redige; você decide,
+confere e responde.</li>
+<li><strong>Rodar sozinho.</strong> É a IA recebendo um objetivo maior e
+decidindo sozinha os passos para chegar lá, sem você intervir a cada
+etapa. Não é o assunto desta mentoria — você vai conhecê-lo de relance
+no encontro final. O que se constrói aqui é o degrau do meio.</li>
+</ul>
+<p>A IA está saindo da caixinha de conversa e entrando na rotina de
+trabalho de quem a usa bem. Este programa é essa travessia, do primeiro
+para o segundo degrau.</p>
+<h2 id="como-a-ia-funciona-sem-tecniquês">Como a IA funciona, sem
+tecniquês</h2>
+<p>Por trás de qualquer resposta bem escrita existe uma coisa simples:
+um mecanismo que prevê qual é a próxima palavra mais provável, dada tudo
+o que veio antes. É um autocompletar muito mais sofisticado do que o do
+celular — mas na essência, é isso. Não é uma enciclopédia que vai buscar
+um fato guardado numa gaveta; é um sistema que aprendeu o padrão de como
+as frases costumam continuar.</p>
+<p>Isso explica uma coisa que confunde muita gente: a IA escreve bem até
+quando está errada. Fluência não é fidelidade. Uma frase pode sair
+impecável, com a pontuação certa e o tom seguro, e ainda assim estar
+dizendo algo que não existe.</p>
+<p>A imagem que vale guardar é a do <strong>GPS confiante</strong>:
+aquela voz que anuncia a rota com total segurança, mesmo quando a rua já
+não existe mais. Você não para de usar GPS por causa disso — só não
+larga de olhar a rua. Com a IA é igual: ela ajuda demais, mas quem
+confirma que o caminho existe é você. E como a qualidade da resposta
+depende da qualidade do pedido, vale aprender a fazer um pedido bem
+feito — é o que vem a seguir.</p>
+<h2 id="o-pedido-em-6-partes">O pedido em 6 partes</h2>
+<p>Um pedido fraco (“resuma isto aqui”) devolve uma resposta genérica.
+Um pedido bem construído tem seis partes. Nem sempre as seis aparecem —
+mas quanto mais completo o pedido, menos você precisa adivinhar o que
+faltou.</p>
+<p><strong>Contexto</strong> — quem você é e em que situação o pedido se
+encaixa. Sem isso, a IA responde para um leitor genérico, que não é
+você. <em>Exemplo: “Sou coordenador(a) de uma equipe administrativa da
+Empresa Alfa e recebi o relatório abaixo para apresentar à minha chefia
+em uma reunião de 15 minutos.”</em></p>
+<p><strong>Tom</strong> — como a resposta deve soar. Formal, direto,
+didático, cordial — cada tarefa pede um. <em>Exemplo: “Objetivo e
+profissional, sem jargão técnico.”</em></p>
+<p><strong>Tarefa</strong> — o que fazer, com verbo e limite claros. Não
+basta dizer o assunto; diga a ação exata. <em>Exemplo: “Resuma o
+relatório destacando as 3 conclusões principais, os números que as
+sustentam e qualquer ponto que exija decisão da chefia.”</em></p>
+<p><strong>Exemplos</strong> — um modelo do resultado esperado, mesmo
+que inventado, ajuda a IA a acertar o formato de primeira. <em>Exemplo:
+colar um resumo anterior da Empresa Alfa como referência de
+estilo.</em></p>
+<p><strong>Qualidade</strong> — a parte mais importante e a mais
+esquecida. Qualidade não é pedir para a IA se conferir sozinha: os
+modelos atuais já fazem uma revisão interna antes de responder, e pedir
+revisão de novo dentro do pedido só encarece sem melhorar nada.
+Qualidade aqui é outra coisa: é o <strong>critério de pronto</strong> —
+“o que eu preciso ver para dizer que isto está pronto”. É você
+descrevendo, de antemão, o que separa uma resposta boa de uma ruim.
+<em>Exemplo: “Use somente informações que estão no texto. Se algo não
+constar, escreva ‘não consta’. Ao final, indique de que parte veio cada
+conclusão.”</em> Quem confere se o critério foi atendido continua sendo
+você — isso vira hábito mais adiante, com uma lista própria.</p>
+<p><strong>Formato</strong> — como a resposta deve se apresentar:
+tópicos, tabela, tamanho máximo. <em>Exemplo: “Tópicos curtos; no máximo
+meia página.”</em></p>
+<p>Junte as seis partes num único pedido e o “resuma isto aqui” vago
+vira algo que a IA consegue de fato atender bem — e que você consegue
+conferir depois, porque já disse de antemão o que esperava ver.</p>
+<h2 id="o-fecho-que-salva-o-pedido-malfeito">O fecho que salva o pedido
+malfeito</h2>
+<p>Mesmo com as seis partes, é fácil esquecer algo que era óbvio para
+você e não tinha como ser óbvio para a IA. Existe uma linha simples que
+resolve isso, e ela entra no fim de qualquer pedido:</p>
+<blockquote>
+<p>“Me faça perguntas, uma por vez, até você ter certeza de que consegue
+fazer isto bem.”</p>
+</blockquote>
+<p>Uma de cada vez, não em bloco — porque perguntas em lote viram
+formulário, e formulário a gente responde no automático. Uma por vez,
+você responde com calma, e é aí que aparece o detalhe que faltava.</p>
+<p>Guarde a frase-síntese, porque ela vale para praticamente todo pedido
+malfeito que você vai encontrar daqui para frente: <strong>o que trava a
+IA quase nunca é a pergunta difícil; é o que era óbvio para você e ela
+não tinha como saber.</strong></p>
+<h2 id="medir-sem-se-enganar">Medir sem se enganar</h2>
+<p>Uma regra para não se enganar mais adiante: o relógio conta
+<strong>tudo</strong> — preparar o material, escrever o pedido, esperar
+a resposta e também revisar. Quem não conta a revisão acaba achando que
+ganhou mais tempo do que ganhou de fato. A ficha de medição que você vai
+preencher nas próximas semanas só serve se o número nela for
+honesto.</p>
+<h2 id="a-regra-da-casa-desta-semana">A regra da casa desta semana</h2>
+<p>Até o próximo encontro, uma regra provisória e simples: <strong>só
+entra na IA material público, seu ou inventado — nunca dado de
+terceiro.</strong> O guia completo do que pode e não pode entrar, com
+todas as exceções e cuidados, vem no próximo encontro. Por enquanto, na
+dúvida, não cola.</p>
+<h2 id="sua-tarefa-até-amanhã-30-min">Sua tarefa até amanhã (30
+min)</h2>
+<p>Rode o pedido em 6 partes mais uma vez, numa situação real do seu
+trabalho (sempre com material público ou seu, nunca de terceiro),
+fechando com a linha das perguntas. Depois, poste na comunidade três
+coisas: o pedido que você escreveu, uma linha do que veio útil e uma
+linha do que veio errado ou ficou faltando. O erro que você encontrar
+vale tanto quanto o acerto — é matéria-prima do próximo encontro.</p>
+<h2 id="o-que-você-já-consegue-fazer">O que você já consegue fazer</h2>
+<ul>
+<li>Nomear os três degraus da IA e saber em qual deles este programa
+está te formando.</li>
+<li>Explicar, sem tecniquês, por que a IA pode escrever bem e errar ao
+mesmo tempo.</li>
+<li>Montar um pedido completo nas seis partes, com um critério de pronto
+que é seu, não da IA.</li>
+<li>Usar a linha das perguntas para destravar qualquer pedido
+malfeito.</li>
+<li>Medir uma tarefa contando o tempo todo, revisão incluída.</li>
+</ul>
+</main>
+</div>
+<script>
+(function(){
+var doc=document.getElementById("doc"),KEY='caderno-participante-cap1-edit';
+var st=document.getElementById("status");
+function note(m){st.textContent=m;setTimeout(function(){st.textContent="";},3000);}
+try{var saved=localStorage.getItem(KEY);if(saved){doc.innerHTML=saved;note("Versão editada carregada do navegador");}}catch(e){}
+var editing=false,be=document.getElementById("btnEdit"),bs=document.getElementById("btnSave");
+be.onclick=function(){editing=!editing;doc.contentEditable=editing;be.textContent=editing?"✅ Concluir edição":"✏️ Editar";bs.style.display=editing?"":"none";if(!editing){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}}};
+bs.onclick=function(){try{localStorage.setItem(KEY,doc.innerHTML);note("Salvo no navegador");}catch(e){note("Não foi possível salvar");}};
+document.getElementById("btnExport").onclick=function(){var html="<!DOCTYPE html>"+document.documentElement.outerHTML;var b=new Blob([html],{type:"text/html"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download='caderno-participante-cap1.html';a.click();};
+document.getElementById("btnPrint").onclick=function(){window.print();};
+document.getElementById("btnReset").onclick=function(){if(confirm("Descartar as edições feitas no navegador e voltar ao original?")){try{localStorage.removeItem(KEY);}catch(e){}location.reload();}};
+document.querySelectorAll("table").forEach(function(t){var w=document.createElement("div");w.className="tablewrap";t.parentNode.insertBefore(w,t);w.appendChild(t);});
+})();
+</script>
+</body>
+</html>
