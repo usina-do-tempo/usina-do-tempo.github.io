@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa dos cursos grátis da Anthropic · Usina do Tempo</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F4EF;--card:#fff;--line:#D9D4CA;--ink:#222E48;--ink2:#3A4560;--muted:#747474;--red:#DF432C;--teal:#80C6B5}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:400 17px/1.55 Montserrat,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px 80px}
+header{padding:36px 0 22px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+header img{width:150px;height:auto}
+h1{font-style:italic;font-weight:800;font-size:clamp(28px,5vw,46px);line-height:1.1;margin:10px 0 8px}
+h2{font-style:italic;font-weight:800;font-size:26px;margin:38px 0 12px}
+.lead{color:var(--ink2);max-width:700px}
+.selo{display:inline-block;border:2px solid var(--red);color:var(--red);font-weight:700;font-size:12px;letter-spacing:.08em;padding:4px 10px;margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+.chips button{font:600 14px Montserrat,Arial,sans-serif;padding:8px 14px;border:1.5px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:999px}
+.chips button.on{background:var(--ink);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;margin-top:14px}
+.card{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--teal);padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.card .g{font-size:12px;font-weight:700;letter-spacing:.07em;color:var(--red);text-transform:uppercase}
+.card h3{font-size:18px;line-height:1.25}
+.card p{font-size:15px;color:var(--ink2)}
+.card .meta{font-size:13px;color:var(--muted)}
+.card a{margin-top:auto;font-weight:700;font-size:14px;color:var(--ink)}
+.box{background:#fff;border:1px solid var(--line);border-left:6px solid var(--red);padding:18px 22px;margin-top:12px}
+.box li{margin:6px 0 6px 20px}
+.nota{font-size:13px;color:var(--muted);margin-top:36px;border-top:1px solid var(--line);padding-top:16px}
+#ed{position:fixed;right:14px;bottom:14px;font:700 13px Montserrat,Arial,sans-serif;padding:10px 14px;background:var(--ink);color:#fff;border:0;border-radius:8px;cursor:pointer;z-index:9}
+#bx{position:fixed;right:14px;bottom:60px;font:700 13px Montserrat,Arial,sans-serif;padding:10px 14px;background:#fff;color:var(--ink);border:1.5px solid var(--ink);border-radius:8px;cursor:pointer;z-index:9;display:none}
+body.edit #bx{display:block}
+[contenteditable="true"]{outline:2px dashed rgba(223,67,44,.6);outline-offset:3px}
+@media print{#ed,#bx,.chips{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap" id="doc">
+<header>
+  <img src="img/logo-original.png" alt="Usina do Tempo">
+  <div>
+    <span class="selo">MAPA DA USINA</span>
+    <h1 data-e="titulo">Mapa dos cursos grátis da Anthropic</h1>
+    <p class="lead" data-e="lead">22 cursos, organizados por perfil, com o link oficial de cada um. Conferido no catálogo da Anthropic em 31/10/2026.</p>
+  </div>
+</header>
+
+<h2 data-e="h-comece">Comece por aqui</h2>
+<div class="box" data-e="comece">
+  <p><b>Em dúvida?</b> Faça nesta ordem: <b>AI Fluency: Framework &amp; Foundations</b> (a base, 4 h), depois <b>AI Capabilities and Limitations</b> (3,5 h) e então o curso do seu perfil. Os cursos técnicos ficam para o fim, se um dia fizerem sentido.</p>
+  <p style="margin-top:8px;font-size:14px;color:var(--muted)">Ordem sugerida pela Usina do Tempo. Não é recomendação oficial da Anthropic.</p>
+</div>
+
+<h2 data-e="h-lista">Os 22 cursos</h2>
+<div class="chips" id="chips"></div>
+<div class="grid" id="grid"></div>
+
+<h2 data-e="h-aviso">3 avisos antes de se inscrever</h2>
+<div class="box" data-e="avisos"><ol>
+  <li><b>As páginas estão em inglês.</b> O tradutor do navegador ajuda no texto. Para vídeos, ative a legenda.</li>
+  <li><b>Certificado de conclusão não é certificação.</b> A certificação oficial (Claude Certified Architect – Foundations) custa US$ 125, é aplicada pela Pearson e só vale para pessoas de organizações parceiras da Anthropic. Os cursos gratuitos falam em certificado de conclusão: confira na página de cada um.</li>
+  <li><b>Duração e nível variam.</b> A Anthropic informa a carga horária de poucos cursos. Onde não informa, o Mapa também não inventa.</li>
+</ol></div>
+
+<h2 data-e="h-insc">Como se inscrever</h2>
+<div class="box" data-e="insc"><ol>
+  <li>Clique em "Abrir curso" no cartão que você escolheu.</li>
+  <li>Na página do curso, clique em <b>Register | FREE</b> e crie sua conta na plataforma de cursos (Skilljar).</li>
+  <li>Não é preciso ter conta da Anthropic. Comece pela aula 1.</li>
+</ol></div>
+
+<h2 data-e="h-extra">Também existe</h2>
+<div class="box" data-e="extra">
+  <p><b>AI Fluency for pK-12 Educators</b>: trilha com 2 cursos para professores da educação básica. <a href="https://anthropic.skilljar.com/path/ai-fluency-for-pk-12-educators" target="_blank" rel="noopener">Abrir trilha</a></p>
+</div>
+
+<p class="nota" data-e="nota">Material independente produzido pela Usina do Tempo. Não é afiliado, patrocinado nem endossado pela Anthropic. Nomes de cursos e marcas pertencem aos seus titulares. O catálogo muda: confirme sempre na página oficial (anthropic.skilljar.com). Agrupamento por perfil: critério editorial da Usina do Tempo. Última conferência: 31/10/2026.</p>
+</div>
+<button id="bx">Baixar HTML editado</button>
+<button id="ed">Modo de edição: desligado</button>
+
+<script>
+const C=[
+["claude-101","Claude 101","Comece aqui","Usar o Claude em tarefas do dia a dia e conhecer recursos para temas mais avançados.",""],
+["introduction-to-claude-cowork","Introduction to Claude Cowork","Comece aqui","Trabalhar com o Claude em arquivos e projetos reais, com plugins, skills e fluxos de pesquisa.",""],
+["ai-capabilities-and-limitations","AI Capabilities and Limitations","Comece aqui","Introdução a como a IA funciona: o que ela faz bem e onde falha.","3,5 h · 13 aulas · 1 quiz"],
+["ai-fluency-framework-foundations","AI Fluency: Framework & Foundations","Comece aqui","Colaborar com sistemas de IA de forma efetiva, ética e segura. É a base dos demais cursos de AI Fluency.","4 h · 14 aulas · 1 quiz"],
+["ai-fluency-for-educators","AI Fluency for Educators","Por perfil","Aplicar AI Fluency na prática docente e na estratégia da instituição de ensino.",""],
+["ai-fluency-for-students","AI Fluency for Students","Por perfil","Desenvolver AI Fluency para aprender melhor, planejar a carreira e ter sucesso acadêmico.",""],
+["ai-fluency-for-small-businesses","AI Fluency for Small Businesses","Por perfil","Para equipes de pequenos negócios: atendimento, gestão administrativa, cadeia de suprimentos e liderança.",""],
+["ai-fluency-for-nonprofits","AI Fluency for Nonprofits","Por perfil","Ampliar o impacto de organizações sem fins lucrativos sem perder a missão e os valores.",""],
+["ai-fluency-for-creative-work","AI Fluency for Creative Work","Por perfil","Tomar decisões conscientes sobre o uso de IA na prática criativa.",""],
+["ai-fluency-for-builders","AI Fluency for Builders","Por perfil","Para quem constrói produtos e soluções: do problema à solução entregue.",""],
+["teaching-ai-fluency","Teaching AI Fluency","Por perfil","Ensinar e avaliar AI Fluency em contextos presenciais.",""],
+["deploying-claude-enterprise-with-confidence","Deploying Claude Enterprise with Confidence","Gestão","As cinco decisões que moldam a implantação do Claude numa organização, registradas no plano de rollout.",""],
+["claude-code-101","Claude Code 101","Técnico","Usar o Claude Code no fluxo diário de desenvolvimento.",""],
+["claude-code-in-action","Claude Code in Action","Técnico","Sessões longas e autônomas no Claude Code: direcionar, configurar, automatizar e verificar.",""],
+["claude-platform-101","Claude Platform 101","Técnico","Construir com a plataforma Claude, do básico ao avançado.",""],
+["claude-with-the-anthropic-api","Building with the Claude API","Técnico","Panorama completo do trabalho com os modelos Claude pela API.",""],
+["introduction-to-model-context-protocol","Introduction to Model Context Protocol","Técnico","Criar servidores e clientes MCP em Python, com tools, resources e prompts.",""],
+["model-context-protocol-advanced-topics","Model Context Protocol: Advanced Topics","Técnico","Padrões avançados de MCP: sampling, notificações, acesso a arquivos e transporte.",""],
+["claude-in-amazon-bedrock","Claude with Amazon Bedrock","Técnico","Curso criado para um programa de credenciamento da AWS, disponibilizado na íntegra.",""],
+["claude-with-google-vertex","Claude on Google Cloud","Técnico","Panorama completo do trabalho com modelos da Anthropic no Google Cloud.",""],
+["introduction-to-agent-skills","Introduction to agent skills","Técnico","Criar, configurar e compartilhar Skills no Claude Code.",""],
+["introduction-to-subagents","Introduction to subagents","Técnico","Usar e criar subagentes no Claude Code para delegar tarefas.",""]
+];
+const grupos=["Todos","Comece aqui","Por perfil","Gestão","Técnico"];
+const chips=document.getElementById("chips"),grid=document.getElementById("grid");
+function pinta(g){
+  grid.innerHTML=C.filter(c=>g==="Todos"||c[2]===g).map(c=>`<div class="card"><span class="g">${c[2]}</span><h3>${c[1]}</h3><p>${c[3]}</p>${c[4]?`<span class="meta">${c[4]}</span>`:""}<a href="https://anthropic.skilljar.com/${c[0]}" target="_blank" rel="noopener">Abrir curso →</a></div>`).join("");
+  chips.querySelectorAll("button").forEach(b=>b.classList.toggle("on",b.dataset.g===g));
+}
+grupos.forEach(g=>{const b=document.createElement("button");b.textContent=g==="Todos"?"Todos (22)":g+" ("+C.filter(c=>c[2]===g).length+")";b.dataset.g=g;b.onclick=()=>pinta(g);chips.appendChild(b)});
+pinta("Todos");
+const KEY="mapa-usina-cursos:"+location.pathname,ed=document.getElementById("ed");
+const els=()=>document.querySelectorAll("[data-e]");
+try{const s=JSON.parse(localStorage.getItem(KEY)||"{}");els().forEach(e=>{if(s[e.dataset.e])e.innerHTML=s[e.dataset.e]})}catch(e){}
+function salvar(){try{const s={};els().forEach(e=>s[e.dataset.e]=e.innerHTML);localStorage.setItem(KEY,JSON.stringify(s))}catch(e){}}
+ed.onclick=()=>{const on=!document.body.classList.contains("edit");document.body.classList.toggle("edit",on);ed.textContent="Modo de edição: "+(on?"ligado":"desligado");els().forEach(e=>e.contentEditable=on?"true":"false");if(!on)salvar()};
+document.addEventListener("input",salvar);
+document.getElementById("bx").onclick=()=>{els().forEach(e=>e.removeAttribute("contenteditable"));const h="<!doctype html>\n"+document.documentElement.outerHTML;const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([h],{type:"text/html"}));a.download="guia-editado.html";a.click();els().forEach(e=>e.contentEditable="true")};
+</script>
+</body>
+</html>
