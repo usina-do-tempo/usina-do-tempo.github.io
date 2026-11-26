@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projetos de Claude Code · Mentoria Regente</title>
+<style>
+:root{--ink:#1C1917;--muted:#57534E;--paper:#F7F4EF;--rule:#E4DDD3;--accent:#B84710;--deep:#9A3412;--soft:#F6E4D4;--orange:#FF904D}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.m{max-width:900px;margin:0 auto;padding:0 18px}
+header{background:#000;color:#fff;padding:30px 0 28px}
+.k{margin:0;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+h1{margin:6px 0 8px;font-size:clamp(26px,5vw,36px);line-height:1.12;letter-spacing:-.03em}
+header p{margin:0;color:#D6D3D1;max-width:640px}
+.baixar{display:inline-block;margin-top:18px;background:var(--orange);color:#000;font-weight:800;padding:12px 20px;border-radius:999px;text-decoration:none}
+h2{font-size:21px;margin:30px 0 10px;letter-spacing:-.02em}
+.grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.card{background:#fff;border:1px solid var(--rule);border-radius:14px;padding:16px 18px}
+.card h3{margin:0 0 2px;font-size:17px}
+.card .p{margin:0 0 8px;font-size:13px;font-weight:700;color:var(--deep);text-transform:uppercase;letter-spacing:.06em}
+.card p{margin:0;font-size:15px;color:var(--muted)}
+.card code{font-size:13px}
+ol li{margin-bottom:6px}
+code{background:#fff;border:1px solid var(--rule);border-radius:5px;padding:1px 6px;font-size:14px}
+.aviso{background:#F8EBD3;border:1px solid #EBD29F;border-radius:14px;padding:14px 18px;margin:16px 0}
+.aviso ul{margin:6px 0 0;padding-left:20px}
+footer{color:var(--muted);font-size:13px;border-top:1px solid var(--rule);margin-top:34px;padding:16px 0 30px}
+[contenteditable="true"]{outline:2px dashed var(--orange);outline-offset:2px}
+#ed{position:fixed;right:12px;bottom:12px;display:none;gap:6px}
+#ed button{font:700 13px system-ui;padding:9px 12px;border-radius:8px;border:1px solid #000;background:#fff;cursor:pointer}
+</style>
+</head>
+<body>
+<header><div class="m">
+<p class="k">Mentoria Regente · prática</p>
+<h1>Projetos prontos de Claude Code</h1>
+<p>Quatro pastas para abrir no Claude Code, colar um pedido e conferir o resultado. Tudo fictício. A lição é sempre a mesma: <b>pasta → pedido → achados → conferência humana</b>.</p>
+<a class="baixar" href="projetos-claude-code.zip" download>Baixar as quatro pastas (.zip)</a>
+</div></header>
+<main class="m">
+<h2>O que tem dentro</h2>
+<div class="grade">
+<div class="card"><p class="p">Servidor · secretaria</p><h3>Triagem de processos</h3><p>16 petições da caixa de tarefas classificadas por prioridade, com a providência sugerida. Pasta <code>triagem-processos</code>.</p></div>
+<div class="card"><p class="p">Servidor · caixa da unidade</p><h3>Triagem de e-mails</h3><p>20 e-mails por prioridade, com prazo, responsável e rascunho de resposta. Pasta <code>triagem-emails</code>.</p></div>
+<div class="card"><p class="p">Advocacia</p><h3>Pasta do cliente</h3><p>Linha do tempo, índice dos documentos e o que falta pedir ao cliente antes da reunião. Pasta <code>advocacia-pasta-do-cliente</code>.</p></div>
+<div class="card"><p class="p">Contabilidade pública</p><h3>Declarado × recolhido</h3><p>Cruzamento em lote, com as divergências e a memória de cálculo. Pasta <code>contabilidade-cruzamento</code>.</p></div>
+</div>
+
+<h2>Como usar</h2>
+<ol>
+<li>Baixe o .zip e extraia.</li>
+<li>Abra a pasta do projeto no Claude Code (no app, ou no terminal: entre na pasta e digite <code>claude</code>).</li>
+<li>Abra o arquivo <code>COMECE-AQUI.md</code> da pasta e cole no Claude Code o pedido que está lá.</li>
+<li>Abra a pasta <code>saida</code> e confira com a lista de 60 segundos do próprio COMECE-AQUI.</li>
+<li>Para adaptar à sua rotina, edite <code>regras/criterios.md</code>.</li>
+</ol>
+
+<div class="aviso"><b>Antes de usar com material de verdade</b>
+<ul>
+<li>Material real só com autorização do seu órgão ou escritório. <b>Processo sigiloso, ou de sigilo desconhecido, não entra.</b></li>
+<li>Rodar no seu computador não mantém o conteúdo no computador: o texto vai para o serviço de IA. Use plano pago com o treinamento desligado.</li>
+<li>O Claude Code destes projetos não entra no PJe, não abre sua caixa de e-mail e não envia nada: ele lê o que estiver em <code>entrada</code> e escreve em <code>saida</code>.</li>
+</ul></div>
+</main>
+<footer><div class="m"><p>Uso da turma da Mentoria Regente · Usina do Tempo · dados fictícios. Quem decide continua sendo você.</p></div></footer>
+<div id="ed"><button type="button" id="bE">Editar textos</button><button type="button" id="bS">Baixar HTML</button></div>
+<script>
+/* modo de edição: abrir a página com ?editar */
+if(new URLSearchParams(location.search).has("editar")){
+  const ed=document.getElementById("ed");ed.style.display="flex";
+  const alvos=()=>document.querySelectorAll("h1,h2,h3,p,li");
+  document.getElementById("bE").onclick=e=>{const on=e.target.dataset.on!=="1";e.target.dataset.on=on?"1":"0";
+    e.target.textContent=on?"Concluir":"Editar textos";alvos().forEach(n=>on?n.setAttribute("contenteditable","true"):n.removeAttribute("contenteditable"));};
+  document.getElementById("bS").onclick=()=>{alvos().forEach(n=>n.removeAttribute("contenteditable"));
+    const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["<!DOCTYPE html>\n"+document.documentElement.outerHTML],{type:"text/html"}));
+    a.download="index.html";a.click();};
+}
+</script>
+</body>
+</html>
